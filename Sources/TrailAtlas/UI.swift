@@ -83,13 +83,13 @@ struct TrailUI: Sendable {
             "@@RADAR_DATE@@":state.lastScan.isEmpty ? "Noch kein Prüflauf" : esc(state.lastScan),
             "@@RADAR_CHANGES@@":"\(state.findings.filter{!state.session.ignored.contains($0.id)}.count) offen",
             "@@RADAR_PROGRESS@@":state.isScanning ? "Veranstalterseiten werden geprüft …" : "Letzter Prüflauf abgeschlossen oder noch nicht gestartet",
-            "@@RADAR_PENDING@@":renderFindings(state,f:f),
-            "@@RADAR_CONFIRMED@@":renderApproved(state),
-            "@@RADAR_HISTORY@@":state.checks.suffix(10).reversed().map{"<li>\(esc($0.checkedAt)): \(esc($0.name)) – \(esc($0.message))</li>"}.joined(),
-            "@@RADAR_CUSTOM_LIST@@":state.session.customSources.map{source in
+            "@@RADAR_PENDING@@":f.section=="radar" ? renderFindings(state,f:f) : "",
+            "@@RADAR_CONFIRMED@@":f.section=="radar" ? renderApproved(state) : "",
+            "@@RADAR_HISTORY@@":f.section=="radar" ? state.checks.suffix(10).reversed().map{"<li>\(esc($0.checkedAt)): \(esc($0.name)) – \(esc($0.message))</li>"}.joined() : "",
+            "@@RADAR_CUSTOM_LIST@@":f.section=="radar" ? state.session.customSources.map{source in
                 "<li>\(esc(source.name)) · <a href=\"\(esc(source.url))\" target=\"_blank\" rel=\"noopener noreferrer\">Quelle ↗</a> · <a href=\"\(f.link(["section":"radar","action":"remove-source","sourceID":source.id]))\">Entfernen</a></li>"
-            }.joined(),
-            "@@RADAR_CHECKS@@":state.checks.map{"<li>\(esc($0.name)) · \(esc($0.message))</li>"}.joined(),
+            }.joined() : "",
+            "@@RADAR_CHECKS@@":f.section=="radar" ? state.checks.map{"<li>\(esc($0.name)) · \(esc($0.message))</li>"}.joined() : "",
             "@@INSTANT_SYNC_MESSAGE@@":state.isScanning ? "Die Terminprüfung läuft im Hintergrund …" : "Termine werden beim Aufruf serverseitig überprüft, falls eine Kontrolle fällig ist.",
             "@@INSTANT_SYNC_DETAIL@@":state.lastScan.isEmpty ? "Noch keine Quellenkontrolle – Internetverbindung des Servers erforderlich." : "Letzte Prüfung: \(esc(state.lastScan)). Eindeutige Veranstaltertermine werden automatisch übernommen; mehrdeutige Hinweise bleiben zur Prüfung offen.",
             "@@MINI_RADAR_STATUS@@":state.isScanning ? "Aktualisiert …" : "\(state.findings.count) mögliche Termine",
