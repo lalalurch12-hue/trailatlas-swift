@@ -1,6 +1,0 @@
-{
-  "result": "PASS",
-  "schema": "https://render.com/schema/render.yaml.json",
-  "cli": "Not run against account: workspace confirmation is required",
-  "deployment": "not-created"
-}

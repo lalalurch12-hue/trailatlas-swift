@@ -1,9 +1,0 @@
-{
-  "run": 41455599430,
-  "status": "interrupted by controlled Render deployment",
-  "httpStatus": 502,
-  "path": "/?q=Loon+Mountain+Race&detail=old-0104&page=25",
-  "deployment": "dep-dbk991mtlv9c73f7qnh0",
-  "timestamp": "2026-11-02T13:48:18Z",
-  "followUp": "A new acceptance run starts after the deployment is live."
-}
