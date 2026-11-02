@@ -1,0 +1,50 @@
+name: Build the TrailAtlas Unikraft image
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/unikraft-build.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install the official checksum-verified Unikraft CLI
+        run: |
+          python3 - <<'PYCLI'
+          import hashlib, io, os, pathlib, tarfile, urllib.request
+          base = 'https://pkg.unikraft.com/endpoints/cli/content/v0.6.2/'
+          with urllib.request.urlopen(base + 'unikraft-linux-amd64.tar.gz', timeout=120) as response:
+              archive = response.read()
+          expected = '7ebdf1fd3b1bfb459c9008a92ff1429070a5a6d4ce7917b373ad99600d28a97d'
+          assert hashlib.sha256(archive).hexdigest() == expected, 'CLI checksum mismatch'
+          bundle = tarfile.open(fileobj=io.BytesIO(archive), mode='r:gz')
+          member = bundle.getmember('unikraft')
+          assert member.isfile()
+          target = pathlib.Path(os.environ['RUNNER_TEMP']) / 'unikraft-bin'
+          target.mkdir()
+          binary = target / 'unikraft'
+          binary.write_bytes(bundle.extractfile(member).read())
+          binary.chmod(0o755)
+          with open(os.environ['GITHUB_PATH'], 'a') as path:
+              path.write(str(target) + '\n')
+          print('PASS: official Unikraft CLI checksum verified')
+          PYCLI
+      - name: Build the complete Swift server as an Unikraft OCI archive
+        run: |
+          mkdir -p dist
+          docker run -d --name trailatlas-buildkit --privileged moby/buildkit:latest
+          export BUILDKIT_HOST=docker-container://trailatlas-buildkit
+          unikraft --telemetry=false --timeout=20m build . --output ./dist/trailatlas.oci.tar
+          sha256sum dist/trailatlas.oci.tar > dist/trailatlas.oci.tar.sha256
+          docker inspect trailatlas-buildkit --format '{{.Image}}' > dist/buildkit-image.txt
+          git rev-parse HEAD > dist/source-commit.txt
+      - name: Preserve the deployment archive without credentials
+        uses: actions/upload-artifact@v4
+        with:
+          name: trailatlas-unikraft-image-${{ github.run_attempt }}
+          path: dist/
+          retention-days: 14

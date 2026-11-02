@@ -1,5 +1,5 @@
 name: One-time Tangled migration
-# Transfer the prepared Unikraft configuration to the primary Tangled repository.
+# Transfer the authenticated Unikraft build configuration to the primary Tangled repository.
 on:
   push:
     branches: [main]
