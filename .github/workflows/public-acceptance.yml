@@ -1,5 +1,5 @@
 name: Public HTTPS acceptance
-# Verify the primary Unikraft website after the mobile correction is deployed.
+# Verify the final Unikraft runtime including the accurate tracking status message.
 on:
   push:
     branches: [main]

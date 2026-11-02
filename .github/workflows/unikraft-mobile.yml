@@ -1,5 +1,5 @@
 name: Unikraft mobile and JavaScript-free browser acceptance
-# Verify the deployed narrow-phone header correction with JavaScript disabled.
+# Verify final layouts and tracking status with JavaScript disabled.
 on:
   push:
     branches: [main]

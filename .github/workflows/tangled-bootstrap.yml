@@ -1,5 +1,5 @@
 name: One-time Tangled migration
-# Transfer the accurate tracking status message and final Swift rebuild to Tangled.
+# Transfer acceptance checks for the final Unikraft runtime to Tangled.
 on:
   push:
     branches: [main]
