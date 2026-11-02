@@ -1,5 +1,5 @@
 name: One-time Tangled migration
-# Temporary bridge for migration completion; remove its secret after acceptance.
+# Final audit handoff; the temporary repository secret is removed after this transfer.
 on:
   push:
     branches: [main]

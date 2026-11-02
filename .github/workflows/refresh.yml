@@ -1,17 +1,7 @@
 name: Refresh public event dates and tracking sources
+# Automatic execution moved to Tangled Spindle; keep manual compatibility checks.
 on:
-  schedule:
-    - cron: '17 */2 * * *'
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/refresh.yml'
-      - 'scripts/refresh_public_data.sh'
-      - 'Sources/TrailAtlas/**'
-      - 'Resources/races.json'
-      - 'Resources/sources.json'
-      - 'Resources/tracking_verified.json'
 permissions:
   contents: write
 concurrency:

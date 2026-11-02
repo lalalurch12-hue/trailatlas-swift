@@ -1,0 +1,46 @@
+{
+  "publicUrl": "https://trailatlas-swift.onrender.com/",
+  "applicationRepository": "https://tangled.org/lalalurch.tngl.sh/trailatlas-swift",
+  "applicationCommit": "eaddc37eefb69e95710b76479f499569fd5ef401",
+  "renderBootstrapCommit": "49c9c25f7b3cd9468548f006ee53e25659bed0c4",
+  "renderBootstrapBranch": "render-bootstrap",
+  "bootstrapFiles": [
+    "Dockerfile",
+    "README.md"
+  ],
+  "healthCheckPath": "/health",
+  "sharedDataBase": "https://tangled.org/lalalurch.tngl.sh/trailatlas-swift/raw/trailatlas-data",
+  "sessionSecretRetained": true,
+  "deploy": {
+    "commit": {
+      "createdAt": "2026-11-02T18:05:53Z",
+      "id": "49c9c25f7b3cd9468548f006ee53e25659bed0c4",
+      "message": "Build the pinned TrailAtlas source from Tangled for Render"
+    },
+    "createdAt": "2026-11-02T18:10:39.675391Z",
+    "finishedAt": "2026-11-02T18:14:52.997328Z",
+    "id": "dep-dbkd47jbgr1c738213d0",
+    "startedAt": "2026-11-02T18:14:29.56977Z",
+    "status": "live",
+    "trigger": "service_updated",
+    "updatedAt": "2026-11-02T18:15:25.648076Z"
+  },
+  "service": {
+    "id": "srv-dbjtulou01pc738gf810",
+    "name": "trailatlas-swift",
+    "repo": "https://github.com/lalalurch12-hue/trailatlas-swift",
+    "branch": "render-bootstrap",
+    "plan": "free",
+    "region": "frankfurt",
+    "healthCheckPath": "/health",
+    "url": "https://trailatlas-swift.onrender.com"
+  },
+  "directTangledGitUrl": "Render dashboard rejected the filled repository URL as invalid; no unsupported source override was performed",
+  "screenshot": "trailatlas-tangled-live-1793643412764.jpg",
+  "observedBrowser": {
+    "scripts": 0,
+    "viewportWidth": 1348,
+    "contentWidth": 1348,
+    "sourceCheck": "2026-11-02T18:10:19Z"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "commit": "eaddc37eefb69e95710b76479f499569fd5ef401",
+  "createdAt": "2026-11-02T20:05:27+02:00",
+  "id": "3mzdvytlppr22",
+  "repo": "did:plc:sew3yuioawady5nrhjvqmzix",
+  "trigger": {
+    "$type": "org.tangled.event.push",
+    "actor": "did:plc:phei4tdhruwqgpcijwgd757v",
+    "newSha": "eaddc37eefb69e95710b76479f499569fd5ef401",
+    "oldSha": "59e48b6af9a7ebee6889a7f810a227e95978c6fc",
+    "ref": "refs/heads/main",
+    "repo": "did:plc:sew3yuioawady5nrhjvqmzix"
+  },
+  "workflows": [
+    {
+      "definition": {
+        "id": "trailatlas.yml",
+        "name": "trailatlas.yml",
+        "source": {
+          "$type": "org.tangled.ci.defs#fileSource",
+          "commit": "eaddc37eefb69e95710b76479f499569fd5ef401",
+          "path": ".tangled/workflows/trailatlas.yml",
+          "repo": "did:plc:sew3yuioawady5nrhjvqmzix"
+        },
+        "triggers": [
+          "org.tangled.event.push",
+          "org.tangled.ci.trigger.manual",
+          "org.tangled.ci.trigger.schedule"
+        ]
+      },
+      "finishedAt": "2026-11-02T20:10:35.954185906+02:00",
+      "id": "trailatlas.yml",
+      "name": "trailatlas.yml",
+      "startedAt": "2026-11-02T20:05:27.433435005+02:00",
+      "status": "success"
+    }
+  ]
+}

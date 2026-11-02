@@ -1,0 +1,22 @@
+{
+  "pipeline": "3mzdvytlppr22",
+  "url": "https://tangled.org/lalalurch.tngl.sh/trailatlas-swift/pipelines/3mzdvytlppr22/workflow/trailatlas.yml",
+  "sourceCommit": "eaddc37eefb69e95710b76479f499569fd5ef401",
+  "workflowStatus": "success",
+  "build": "Full Swift release build completed in 182.31 seconds",
+  "httpRegressionStatus": "PASS",
+  "raceCardsOpened": 352,
+  "originalSourceLinksPresent": 120,
+  "countries": 65,
+  "months": 12,
+  "personalStateRecovery": "Favorites, manual timing URLs and custom sources survive restart and complete cache deletion",
+  "scriptFree": true,
+  "publicRefresh": {
+    "sourcesCheckedCumulatively": 79,
+    "automaticDates": 21,
+    "trackingSources": 5,
+    "privateSessionsExported": 0,
+    "dataCommit": "2e746fa"
+  },
+  "buildCache": "swift62-tangled-release: saved; no ModuleCache permission error after UID/GID correction"
+}

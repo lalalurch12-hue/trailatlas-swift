@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "url": "https://trailatlas-swift.onrender.com",
+  "checkedAt": "2026-11-02T18:16:02.424190+00:00",
+  "requests": 5,
+  "originalRaces": 352,
+  "effectiveRaces": 352,
+  "checks": [
+    "HTTPS, /health, public APIs and all 352 original race IDs",
+    "Saved secure-cookie favorite survives the actual Render redeployment"
+  ],
+  "serverStatus": {
+    "automaticDates": 21,
+    "browserJavaScript": false,
+    "dateScanRunning": false,
+    "dateSources": 123,
+    "durablePersonalCookiesConfigured": true,
+    "durablePublicDataConfigured": true,
+    "lastDateScan": "2026-11-02T18:10:19Z",
+    "lastTrackingScan": "2026-11-02T18:10:30Z",
+    "races": 352,
+    "racesSearched": 34,
+    "trackingError": "Keine eindeutige Quelle für diese Rennausgabe im öffentlichen Suchindex gefunden",
+    "trackingScanRunning": false,
+    "trackingSources": 5
+  }
+}

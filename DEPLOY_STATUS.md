@@ -2,12 +2,15 @@
 
 Öffentliche Website: https://trailatlas-swift.onrender.com/
 
-- Swift, Hummingbird und Elementary laufen als kostenloser Docker-Webdienst auf Render in Frankfurt.
-- Der vollständige Docker-Build und echte GitHub-Build-/Funktionstests sind erfolgreich.
-- Die abschließende öffentliche Abnahme mit 462 HTTPS-Anfragen und allen 352 Rennkarten ist bestanden. Ein gespeicherter Favorit blieb nach tatsächlichem Render-Neustart erhalten.
-- Gemeinsame Daten werden im Branch `trailatlas-data` gesichert; geplante Quellenläufe sind aktiv und tatsächlich ausgeführt.
-- Persönliche Daten bleiben als verschlüsselte Cookies im jeweiligen Browser wiederherstellbar; auf Render ist ein stabiler Sitzungsschlüssel gesetzt.
-- Code-Deploys erfolgen gezielt, da derzeit eine öffentliche Git-Adresse verwendet wird. Datenaktualisierungen benötigen keinen Deploy.
-- Der gewünschte Wechsel zu Tangled wartet auf eine gültige Kontoanmeldung. Tangled meldete, dass der eingegebene Handle nicht aufgelöst werden konnte.
+Hauptrepository: https://tangled.org/lalalurch.tngl.sh/trailatlas-swift
 
-Die Abnahme und Einschränkungen sind in `PRUEFBERICHT.md` dokumentiert. Es wurde kein kostenpflichtiger Dienst eingerichtet.
+- Swift, Hummingbird und Elementary laufen auf demselben kostenlosen Render-Dienst in Frankfurt.
+- Der Render-Build lädt den festgelegten Tangled-Commit `eaddc37eefb69e95710b76479f499569fd5ef401` und prüft dessen Git-ID vor dem vollständigen Swift-Release-Build.
+- Render weist die Tangled-Gitadresse als ungültig zurück. Der GitHub-Branch `render-bootstrap` enthält deshalb ausschließlich Dockerfile und README; er ist weiterhin als Build-Einstieg nötig.
+- Tangled Spindle baut und prüft den Server einschließlich aller 352 Karten. Der Cachefehler durch unterschiedliche Dateieigentümer ist behoben und ein gespeicherter Build-Cache ist nachgewiesen.
+- Quellenprüfungen und der öffentliche Datenbranch laufen auf Tangled. Ein tatsächlich geplanter Lauf und die Sicherung ohne persönliche Sessions sind nachgewiesen.
+- `SHARED_DATA_BASE_URL` zeigt auf Tangled. Render verwendet `/health` als HTTP-Healthcheck.
+- Der stabile Sitzungsschlüssel wurde beibehalten; die browsergebundene Wiederherstellung persönlicher Daten bleibt erhalten.
+- GitHub-Zeitpläne werden durch manuell startbare Kompatibilitätsprüfungen ersetzt. Der temporäre Übertragungsschlüssel wird nach der abschließenden Übernahme aus GitHub entfernt.
+
+Die öffentliche Abnahme und unvermeidbaren Einschränkungen stehen in `PRUEFBERICHT.md`. Es wurden keine kostenpflichtigen Dienste eingerichtet.

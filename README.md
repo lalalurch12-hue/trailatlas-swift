@@ -6,7 +6,7 @@ TrailAtlas verwendet Swift 6.2, Hummingbird und Elementary. Alle 352 ursprüngli
 
 Der vollständige Debug- und Release-Build wurde mit echten Paketabhängigkeiten ausgeführt. Filter, persönliche Speicherung und öffentliche Ergebnisquellen werden gegen den laufenden Hummingbird-Server geprüft. Der vollständige Bericht steht in `PRUEFBERICHT.md`.
 
-**Veröffentlicht: https://trailatlas-swift.onrender.com/**. Der kostenlose Docker-Webdienst läuft; wiederkehrende GitHub-Quellenprüfungen und der öffentliche Datenbranch sind eingerichtet und erfolgreich ausgeführt. Die aktuelle Prüfung steht in `PRUEFBERICHT.md`. Der gewünschte Wechsel zu Tangled wartet noch auf die sichere Kontoanmeldung.
+**Veröffentlicht: https://trailatlas-swift.onrender.com/**. Der kostenlose Docker-Webdienst läuft; wiederkehrende Tangled-Quellenprüfungen und der öffentliche Datenbranch sind eingerichtet und erfolgreich ausgeführt. Die aktuelle Prüfung steht in `PRUEFBERICHT.md`. Hauptrepository und automatische Prüfungen: https://tangled.org/lalalurch.tngl.sh/trailatlas-swift . Render benötigt derzeit eine kleine Build-Datei im GitHub-Branch `render-bootstrap`; diese lädt und prüft den festgelegten Quellstand aus Tangled. Diese verbleibende Abhängigkeit ist im Prüfbericht dokumentiert.
 
 ## Funktionen
 
@@ -25,9 +25,9 @@ Der vollständige Debug- und Release-Build wurde mit echten Paketabhängigkeiten
 
 Persönliche Daten werden als komprimierte, authentifiziert verschlüsselte, HttpOnly-Cookies gespeichert. Bei gleichbleibendem `SESSION_SECRET` bleiben sie nach einem vollständigen Verlust des lokalen Serverspeichers erhalten. Sie sind an den Browser gebunden; Cookie-Löschung oder ein Wechsel des Schlüssels entfernt diese Wiederherstellungsmöglichkeit. Es gibt keine Synchronisierung zwischen Geräten. Größenlimits werden ausdrücklich gemeldet.
 
-Öffentliche Prüfergebnisse werden durch `.github/workflows/refresh.yml` regelmäßig im separaten Branch `trailatlas-data` gesichert. Der Swift-Dienst liest diesen über `SHARED_DATA_BASE_URL`. Personenbezogene Sessions, Favoriten und persönliche Quellen werden aus öffentlichen Exporten entfernt. Dieser Branch und der Zeitplan sind eingerichtet; tatsächliche Cloud-Läufe haben Daten geschrieben. Neue, nur auf einer Render-Instanz gefundene Links sind bis zur unabhängigen Sicherung durch den GitHub-Prüflauf lediglich lokal zwischengespeichert.
+Öffentliche Prüfergebnisse werden durch `.tangled/workflows/trailatlas.yml` regelmäßig im separaten Branch `trailatlas-data` gesichert. Der Swift-Dienst liest diesen über `SHARED_DATA_BASE_URL`. Personenbezogene Sessions, Favoriten und persönliche Quellen werden aus öffentlichen Exporten entfernt. Dieser Branch und der Zeitplan sind auf Tangled eingerichtet; ein echter geplanter Spindle-Lauf und erfolgreiche Git-Pushes sind nachgewiesen. Neue, nur auf einer Render-Instanz gefundene Links sind bis zur unabhängigen Sicherung durch den Tangled-Prüflauf lediglich lokal zwischengespeichert.
 
-Render Free kann schlafen und besitzt keinen dauerhaften lokalen Datenträger. Die Serverprüfung läuft deshalb nur bei aktiver Instanz. Der eingerichtete GitHub-Zeitplan arbeitet davon unabhängig ungefähr alle zwei Stunden; Ausführungen können sich verzögern oder vom Anbieter ausgesetzt werden. Der Server prüft im 96-Minuten-Takt rotierende Teilmengen, nicht sämtliche 352 Rennen gleichzeitig.
+Render Free kann schlafen und besitzt keinen dauerhaften lokalen Datenträger. Die Serverprüfung läuft deshalb nur bei aktiver Instanz. Der eingerichtete Tangled-Zeitplan arbeitet davon unabhängig ungefähr alle zwei Stunden; Ausführungen können sich verzögern oder vom Anbieter ausgesetzt werden. Der Server prüft im 96-Minuten-Takt rotierende Teilmengen, nicht sämtliche 352 Rennen gleichzeitig.
 
 ## Konfiguration
 

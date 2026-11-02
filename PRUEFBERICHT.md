@@ -1,6 +1,6 @@
 # TrailAtlas – Funktions- und Veröffentlichungsprüfung
 
-Stand: 2. November 2026. Öffentliche Website: https://trailatlas-swift.onrender.com/ . Angaben zu Prüfläufen verwenden UTC-Zeitstempel; der Nutzer befindet sich in Europe/Berlin.
+Stand: 2. November 2026. Öffentliche Website: https://trailatlas-swift.onrender.com/ . Angaben im Bericht verwenden UTC-Zeitstempel; Rohprotokolle können zusätzlich explizite Zeitzonen-Offsets enthalten.
 
 ## Ergebnis
 
@@ -8,7 +8,7 @@ TrailAtlas ist als Swift-/Hummingbird-/Elementary-Dienst auf Render veröffentli
 
 Der kostenlose Render-Webdienst, ein stabiler Sitzungsschlüssel und die externe Sicherung gemeinsamer Daten sind eingerichtet. GitHub-Build, HTTP-Regressionen, alle 352 Detailkarten und der geplante Quellenlauf sind erfolgreich ausgeführt worden. Die abschließende öffentliche HTTPS-Abnahme ist unten gesondert dokumentiert. Es wurden keine kostenpflichtigen Dienste eingerichtet.
 
-Der gewünschte Wechsel von GitHub zu Tangled ist noch nicht vollzogen: Tangled konnte den im sicheren Anmeldefeld eingegebenen Handle nicht auflösen. GitHub bleibt bis zu einer erfolgreichen Übernahme die bestehende Quelle. Das ist keine technische Bindung von Swift oder Render an GitHub; die Workflows, die öffentliche Abrufadresse und deren Freigabe in der Swift-Konfiguration müssen beim Wechsel angepasst werden.
+Tangled ist jetzt das Hauptrepository: **https://tangled.org/lalalurch.tngl.sh/trailatlas-swift**. Git-Historie, Quellcode und öffentlicher Datenbranch wurden übertragen. Spindle baut und prüft die Anwendung und führt die geplanten Quellenläufe aus. Render lehnt die Tangled-Gitadresse als direkte Buildquelle ab. Deshalb bleibt ein kleiner GitHub-Branch `render-bootstrap` mit ausschließlich Dockerfile und README als Einstieg nötig; er lädt den festgelegten Quellstand aus Tangled. Ein vollständiger Verzicht auf GitHub wurde mit diesem Render-Betriebsweg nicht erreicht und wird nicht behauptet.
 
 ## Anforderungen und Nachweis
 
@@ -18,13 +18,13 @@ Der gewünschte Wechsel von GitHub zu Tangled ist noch nicht vollzogen: Tangled 
 | 352 Rennen vollständig erhalten | Bestanden | `races.json` bytegleich zum Eingangspaket; 352 eindeutige IDs; alle 352 Detailkarten per HTTP geöffnet |
 | Originaldesign erhalten | Bestanden im geprüften Umfang | Original-HTML bytegleich; ursprüngliches CSS als unveränderter Präfix erhalten; Browserprüfung von Desktop, Raster und Mobilansichten; zusätzliche Regeln nur für serverseitige Bedienung und Ergebnisdarstellung |
 | Browser ohne JavaScript | Bestanden | Keine Skripte oder Ereignishandler im aktiven HTML; Content-Security-Policy mit `script-src 'none'`; Formulare, Links und CSS bedienen die Oberfläche |
-| Automatische Terminübernahme | Bestanden für eindeutige Quellen | Zuerst sechs, im gesicherten Cloud-Stand acht Terminübernahmen; Datumsänderungen wirken auf Karten, Filter, Reihenfolge, Wochenenden und öffentliche API |
+| Automatische Terminübernahme | Bestanden für eindeutige Quellen | Zuerst sechs, im dokumentierten Tangled-Stand 21 Terminübernahmen; Datumsänderungen wirken auf Karten, Filter, Reihenfolge, Wochenenden und öffentliche API |
 | Internationale und chinesische Tracking-/Ergebnissuche | Implementiert und teilweise live nachgewiesen | Veranstalterlinks, Providerzuordnung, Jahresprüfung, WeRun-Verzeichnis und ergänzender Suchindex; Yangxian-Quelle tatsächlich automatisch gefunden. Keine vollständige Abdeckung aller 352 Rennen behauptet |
 | Live-Ergebnisse innerhalb der Website | Bestanden für abrufbare Daten | Tatsächliche UTMB-Live-API-Daten als native HTML-Tabellen; öffentliche HTML-/JSON-Tabellen weiterer Quellen nach Strukturerkennung; eingeschränkter iframe-Fallback und Originalverweis |
 | Regelmäßige Aktualisierung der Ergebnisse | Implementiert und öffentlich geprüft | Ergebnis-Cache etwa 80 Sekunden; HTML-Meta-Refresh etwa alle 90 Sekunden. Keine Garantie für die Aktualität der Daten beim Anbieter |
-| Termin- und Trackingquellen erneut prüfen | Aktiv | Server prüft bei Fälligkeit und im 96-Minuten-Takt Teilmengen; GitHub-Zeitplan ungefähr alle zwei Stunden eingerichtet, tatsächliche Cloud-Läufe erfolgreich |
+| Termin- und Trackingquellen erneut prüfen | Aktiv | Server prüft bei Fälligkeit und im 96-Minuten-Takt Teilmengen; Tangled-Zeitplan ungefähr alle zwei Stunden eingerichtet, tatsächlicher geplanter Lauf und Cloud-Läufe erfolgreich |
 | Dauerhafte Favoriten und persönliche Quellen | Bestanden unter dokumentierten Voraussetzungen | Verschlüsselte Cookies; Neustart und vollständige Löschung des lokalen Servercaches getestet. Stabiler Sitzungsschlüssel und erhaltener Browser-Cookie erforderlich |
-| Dauerhafte gemeinsame Daten und gefundene Quellen | Eingerichtet und getestet | GitHub-Datenbranch `trailatlas-data` mit tatsächlichen Sicherungen; erneuter Abruf durch den Render-Server. Neue reine Serverfunde bleiben bis zum unabhängigen Quellenlauf lokal |
+| Dauerhafte gemeinsame Daten und gefundene Quellen | Eingerichtet und getestet | Tangled-Datenbranch `trailatlas-data` mit tatsächlichen Sicherungen; erneuter Abruf durch den Render-Server. Neue reine Serverfunde bleiben bis zum unabhängigen Quellenlauf lokal |
 | Alle Filter, Links, Rennkarten und Mobilansichten testen | Bestanden im beschriebenen Umfang | Alle 65 Ländergruppen, zwölf Monate, Jahre, Kategorien und Distanzfilter; alle 352 Karten; 120 Originalquellen tatsächlich abgerufen; Desktop und drei mobile Breiten geprüft |
 | Vollständigen Swift-Build durchführen | Bestanden | Swift 6.2.4 in GitHub und Docker; reale Abhängigkeiten und vollständiger Release-Build erfolgreich |
 | Veröffentlichung auf Render und echte HTTPS-Abnahme | Veröffentlicht | Kostenloser Docker-Webdienst in Frankfurt im Zustand live; öffentliche Prüfungen separat protokolliert |
@@ -46,7 +46,7 @@ Der gewünschte Wechsel von GitHub zu Tangled ist noch nicht vollzogen: Tangled 
 
 ## Reale Internetabrufe
 
-Der erste vollständige Swift-Prüflauf kontrollierte zwölf Quellenseiten und exportierte sechs eindeutige Terminbereiche. Die späteren Cloud-Läufe setzten den Cursor fort; ein nachweislich gesicherter Stand enthält acht Terminübernahmen, fünf bekannte Trackingquellen und **keine persönlichen Sessions**. Das bedeutet keine komplette Aktualitätsprüfung sämtlicher Kalendereinträge in einem Durchlauf.
+Der erste vollständige Swift-Prüflauf kontrollierte zwölf Quellenseiten und exportierte sechs eindeutige Terminbereiche. Die späteren Cloud-Läufe setzten den Cursor fort; ein dokumentierter Tangled-Stand enthält 21 Terminübernahmen, fünf bekannte Trackingquellen und **keine persönlichen Sessions**. Das bedeutet keine komplette Aktualitätsprüfung sämtlicher Kalendereinträge in einem Durchlauf.
 
 | Veranstaltung / Ausgabe | Erkannter Zeitraum | Art des Nachweises |
 |---|---|---|
@@ -106,9 +106,9 @@ Persönliche Daten liegen als komprimierte, authentifiziert verschlüsselte Http
 
 Diese Lösung bleibt an den jeweiligen Browser gebunden. Cookie-Löschung, Ablauf oder ein Wechsel des Sitzungsschlüssels verhindert die Wiederherstellung. Eine geräteübergreifende Benutzerkonten-Synchronisierung wurde nicht hinzugefügt. Bei Erreichen des Cookie-Größenlimits meldet die Anwendung den Fehler ausdrücklich, statt Favoriten stillschweigend zu verwerfen.
 
-Gemeinsame Termin- und Trackingdaten werden durch den eingerichteten GitHub-Workflow in `trailatlas-data` dauerhaft versioniert. Die Website liest öffentliche Momentaufnahmen daraus ein. Sessions, persönliche Quellen und Favoriten werden nicht in diesen Branch veröffentlicht. Dieser Betriebsweg wurde mit dem echten Repository aktiviert; mehrere erfolgreiche Cloud-Läufe haben öffentliche Daten geschrieben, und der Render-Server hat sie eingelesen. Insbesondere schreibt eine kostenlose Render-Instanz neue Funde nicht sofort selbst in GitHub zurück; bis zum unabhängigen Prüflauf sind solche Funde nur lokal vorhanden.
+Gemeinsame Termin- und Trackingdaten werden durch den eingerichteten Tangled-Workflow in `trailatlas-data` dauerhaft versioniert. Die Website liest öffentliche Momentaufnahmen daraus ein. Sessions, persönliche Quellen und Favoriten werden nicht in diesen Branch veröffentlicht. Dieser Betriebsweg wurde mit dem echten Repository aktiviert; mehrere erfolgreiche Cloud-Läufe haben öffentliche Daten geschrieben, und der Render-Server hat sie eingelesen. Insbesondere schreibt eine kostenlose Render-Instanz neue Funde nicht sofort selbst in Tangled zurück; bis zum unabhängigen Prüflauf sind solche Funde nur lokal vorhanden.
 
-Der Render-Plan `free` besitzt keinen dauerhaften lokalen Datenträger und kann bei Inaktivität schlafen. Währenddessen läuft seine periodische Swift-Prüfung nicht. Der eingerichtete GitHub-Zeitplan arbeitet davon unabhängig; GitHub kann geplante Ausführungen verzögern oder aussetzen. Im Serverlauf werden pro Runde Teilmengen kontrolliert, nicht alle Rennen im 96-Minuten-Abstand. Ein vollständiger Quelldurchlauf dauert entsprechend länger.
+Der Render-Plan `free` besitzt keinen dauerhaften lokalen Datenträger und kann bei Inaktivität schlafen. Währenddessen läuft seine periodische Swift-Prüfung nicht. Der eingerichtete Tangled-Zeitplan arbeitet davon unabhängig; der Anbieter kann geplante Ausführungen verzögern oder aussetzen. Im Serverlauf werden pro Runde Teilmengen kontrolliert, nicht alle Rennen im 96-Minuten-Abstand. Ein vollständiger Quelldurchlauf dauert entsprechend länger.
 
 ## Unvermeidbare und offene Einschränkungen
 
@@ -118,8 +118,8 @@ Der Render-Plan `free` besitzt keinen dauerhaften lokalen Datenträger und kann 
 4. Der vorhandene optionale Mechanismus für Ergebnis-Bildaufnahmen bleibt im Quelltext erhalten, ist standardmäßig deaktiviert und benötigt zusätzliche Laufzeitsoftware. Das vorbereitete Render-Image enthält kein Chromium. Es wird kein kostenpflichtiger Screenshotdienst verwendet.
 5. Der HTML-Export enthält sämtliche Kalenderkarten als Momentaufnahme. Offline sind die Swift-Filter, persönlichen Aktionen und Netzprüfungen nicht ausführbar.
 6. Der Stopp-Knopf beendet einen eigenen gestarteten Prüflauf; öffentliche Besucher können keine fremden oder geplanten Läufe beenden. Das Entfernen einer persönlichen Trackingvorgabe löscht keine gemeinsam verifizierte Anbieterquelle.
-7. Render verwendet derzeit eine öffentliche Git-Adresse ohne integrierte Git-Provider-Anmeldung. Codeänderungen benötigen daher einen gezielten Deploy. Laufende Quellenaktualisierungen nutzen den separaten Datenbranch und benötigen keinen Code-Deploy.
-8. Eine vollständige Umstellung auf Tangled ist vor erfolgreicher Kontoanmeldung, Repository-Import, Spindle-Prüflauf und Umstellung der Datenadresse nicht als erledigt bestätigt.
+7. Render akzeptiert die geprüfte Tangled-Gitadresse nicht als direkte Quelle. Ein minimaler GitHub-Buildadapter bleibt nötig. Neue Codeveröffentlichungen aktualisieren dessen festgelegte Tangled-Commit-ID und lösen einen gezielten Deploy aus. Laufende Quellenaktualisierungen nutzen ausschließlich den Tangled-Datenbranch und benötigen keinen Code-Deploy.
+8. Tangled ist Hauptrepository für Anwendung, Prüfungen und öffentliche Daten. Das alte GitHub-Repository bleibt als Historie und für den minimalen Render-Buildadapter bestehen. Drittbibliotheken können weiterhin von GitHub geladen werden.
 
 ## Veröffentlichung und Konten
 
@@ -127,9 +127,9 @@ Der Benutzer hat den Render-Workspace bestätigt. Das GitHub-Repository `lalalur
 
 Der erste GitHub-Quellenlauf scheiterte an der Eigentümerprüfung des Container-Arbeitsverzeichnisses. Die Korrektur vertraut ausschließlich dem eigenen Checkout und seinem Daten-Arbeitsverzeichnis. Anschließende vollständige Cloud-Läufe waren erfolgreich und schrieben den Datenbranch.
 
-Die Tangled-Anmeldung steht beim Fehler „Unable to look up that handle“. Es wurden keine Zugangsdaten im Chat angefordert und keine bestehenden Daten entfernt. Die Übernahme kann mit einem gültigen Tangled-/Bluesky-Handle weitergehen.
+Die Anmeldung als `lalalurch.tngl.sh` und die ausdrückliche Freigabe des SSH-Schlüssels waren erfolgreich. Ein zunächst abgewiesener SSH-Lauf wurde durch die konkrete Kontozuordnung im SSH-Benutzernamen korrigiert. Es wurde kein unveränderter, automatisch abgelehnter Wiederholungsversuch ausgeführt. Der private Schlüssel wurde ausschließlich in den freigegebenen CI-Geheimnissen hinterlegt und ist kein Bestandteil des Repositorys oder Prüfberichts.
 
-## Abschließende öffentliche Abnahme
+## Erste öffentliche Abnahme vor der Tangled-Übernahme
 
 Die vollständige Abnahme gegen **https://trailatlas-swift.onrender.com/** bestand am **2. November 2026 um 13:59:49 UTC** mit **462 HTTPS-Anfragen**. Der maschinenlesbare Bericht steht in `reports/public-https-final.json`; er enthält keine persönlichen Cookies.
 
@@ -143,11 +143,31 @@ Die vollständige Abnahme gegen **https://trailatlas-swift.onrender.com/** besta
 | Reale UTMB-Schnittstelle vom Render-Server abgerufen und chinesische WeRun-Quelle angezeigt | Bestanden; für Yangxian weiterhin keine erfundenen gemessenen Zeiten |
 | Bereits gespeicherter Favorit nach tatsächlichem Render-Neustart/Deploy | Bestanden, gesonderter öffentlicher Nachtest um 13:50:05 UTC; `reports/render-cookie-recovery.json` |
 
-Der erfolgreiche öffentliche GitHub-Prüflauf ist [41456672999](https://github.com/lalalurch12-hue/trailatlas-swift/actions/runs/41456672999). Der vollständige Swift-Build einschließlich Kern-, HTTP- und Kartenprüfungen desselben Quellstands ist [41456672847](https://github.com/lalalurch12-hue/trailatlas-swift/actions/runs/41456672847) und ebenfalls erfolgreich. Geplante Quellenprüfung und tatsächliche Sicherung sind zusätzlich durch [41453335356](https://github.com/lalalurch12-hue/trailatlas-swift/actions/runs/41453335356) nachgewiesen. Zeitpläne können vom Anbieter verzögert werden.
+Der erfolgreiche erste Versuch des öffentlichen GitHub-Prüflaufs ist [41456672999](https://github.com/lalalurch12-hue/trailatlas-swift/actions/runs/41456672999). Der vollständige Swift-Build einschließlich Kern-, HTTP- und Kartenprüfungen desselben Quellstands ist [41456672847](https://github.com/lalalurch12-hue/trailatlas-swift/actions/runs/41456672847) und ebenfalls erfolgreich. Geplante Quellenprüfung und tatsächliche Sicherung sind zusätzlich durch [41453335356](https://github.com/lalalurch12-hue/trailatlas-swift/actions/runs/41453335356) nachgewiesen. Zeitpläne können vom Anbieter verzögert werden.
 
-Der aktive Render-Deploy `dep-dbk991mtlv9c73f7qnh0` ist seit 13:48:15 UTC im Zustand `live` und verwendet Commit `07755cd5bafb5248d9f04fa688492b3d449a3d8b`. Der abschließend geprüfte Commit `8d40b0666c11928946df92d26fa8b377d74ad4de` änderte danach ausschließlich den Namen des CI-Berichtsartefakts. Der Swift-Laufzeitcode ist gegenüber dem erfolgreich gebauten und veröffentlichten Stand `fa3189b6ee30dee1f9c329509143ac6a70d41fe6` unverändert. Spätere reine Berichtsänderungen benötigen keinen weiteren Deploy.
+Der damals aktive Render-Deploy `dep-dbk991mtlv9c73f7qnh0` ist seit 13:48:15 UTC im Zustand `live` und verwendet Commit `07755cd5bafb5248d9f04fa688492b3d449a3d8b`. Der abschließend geprüfte Commit `8d40b0666c11928946df92d26fa8b377d74ad4de` änderte danach ausschließlich den Namen des CI-Berichtsartefakts. Der Swift-Laufzeitcode ist gegenüber dem erfolgreich gebauten und veröffentlichten Stand `fa3189b6ee30dee1f9c329509143ac6a70d41fe6` unverändert. Spätere reine Berichtsänderungen benötigen keinen weiteren Deploy.
 
 Ein früherer öffentlicher Gesamtlauf war mit dem absichtlich ausgelösten Render-Neustart überlappt und erhielt dabei einen einzelnen HTTP 502. Dieser Lauf wird ausdrücklich nicht als bestanden gezählt. Der oben angegebene Wiederholungslauf erfolgte nach abgeschlossenem Deploy und bestand vollständig. Kurze Unterbrechungen beim Deploy und Kaltstarts bleiben beim gewählten kostenlosen Betriebsweg möglich.
+
+## Abnahme nach der Tangled-Übernahme
+
+Die vorangehende öffentliche Abnahme dokumentiert den ersten veröffentlichten Stand. Für die Übernahme wurde der Server mit unverändertem Originaldesign und denselben 352 Originaldatensätzen erneut gebaut und veröffentlicht.
+
+- Tangled-Quellstand: `eaddc37eefb69e95710b76479f499569fd5ef401`.
+- Erfolgreicher vollständiger Spindle-Lauf: [3mzdvytlppr22](https://tangled.org/lalalurch.tngl.sh/trailatlas-swift/pipelines/3mzdvytlppr22/workflow/trailatlas.yml). Kernprüfungen, Release-Build, HTTP-Regressionen, alle 352 Karten, 120 Quellenverweise und persönliche Wiederherstellung nach vollständigem Cacheverlust bestanden. Der Build-Cache wurde erfolgreich gespeichert.
+- Ein tatsächlich geplanter Lauf ist durch Pipeline `3mzdpwvzrgx22` nachgewiesen, geplant um 16:17 UTC und erfolgreich abgeschlossen um 16:21:23 UTC. Die Weboberfläche bezeichnete ihn als „Manual dispatch“; der öffentliche Spindle-Datensatz weist korrekt `org.tangled.ci.trigger.schedule` aus.
+- Dokumentierte rotierende Quellenprüfung: 79 Quellen kumulativ geprüft, 21 eindeutige Termine, fünf Trackingquellen und keine exportierten persönlichen Sessions. Dies ist weiterhin keine Bestätigung einer vollständigen Abdeckung aller 352 Rennen in jedem Durchlauf.
+- Öffentlicher Tangled-Datenstand `2e746fac01b0ac3b60b5ca443604a7dd5360a248`, letzte Terminprüfung 18:10:19 UTC. Die veröffentlichte Website zeigte denselben Stand an.
+- Render-Adaptercommit `49c9c25f7b3cd9468548f006ee53e25659bed0c4`, Branch `render-bootstrap`. Der echte Render-Build klonte den Tangled-Quellcode, prüfte die festgelegte Commit-ID und baute das vollständige Swift-Paket.
+- Render-Deploy `dep-dbkd47jbgr1c738213d0` ist seit 18:14:52 UTC live. Datenadresse auf Tangled umgestellt, HTTP-Healthcheck `/health`, Plan weiterhin `free`, unveränderte öffentliche HTTPS-Adresse und stabiler Sitzungsschlüssel.
+- Der bereits vor dem Wechsel gespeicherte Favorit blieb nach dem tatsächlichen neuen Render-Deploy erhalten; gesondertes Prüfprotokoll `reports/render-tangled-cookie-recovery.json`.
+- Browserprüfung an der echten Adresse: keine Skriptelemente, 1348 Pixel Inhalts- und Seitenbreite ohne horizontalen Überlauf, unveränderte sichtbare Gestaltung.
+
+Die erneute vollständige Abnahme gegen **https://trailatlas-swift.onrender.com/** bestand am **2. November 2026 um 18:25:25 UTC** mit **462 HTTPS-Anfragen**, nachdem der neue Render-Deploy vollständig live war. Alle 65 Länder, zwölf Monate, Jahre, Kategorien, Distanzbereiche, Suchfälle, Sortierungen und Ansichten sowie alle 352 Detailkarten mit 120 ursprünglichen Quellenverweisen bestanden erneut. Favoriten, CSRF-Abweisung, Besuchertrennung, sicherer Cookie, vollständiger Export und skriptfreie Ausgabe bestanden. Der Render-Server rief echte UTMB-Daten ab und zeigte die chinesische WeRun-Quelle sicher an.
+
+Der unabhängige öffentliche Prüflauf [41456672999](https://github.com/lalalurch12-hue/trailatlas-swift/actions/runs/41456672999), **Versuch 2**, endete erfolgreich; Job `125460830505`, Artefakt `13168795625` (`public-https-acceptance-2`). Die Prüfdatei ist gegenüber dem bereits geprüften Ausgangsstand unverändert. Maschinenlesbare Ergebnisse: `reports/public-https-tangled.json`; Zeitstempel und Laufnachweise: `reports/public-https-tangled-evidence.json`.
+
+GitHub-Zeitpläne sind zugunsten der Tangled-Zeitpläne deaktiviert; manuelle Kompatibilitätsprüfungen bleiben vorhanden. Der temporäre GitHub-Schlüssel ist für den laufenden Dienst nicht erforderlich und wird nach der abschließenden Übertragung entfernt. Der freigegebene Tangled-CI-Schlüssel bleibt für die automatischen öffentlichen Datensicherungen aktiv.
 
 ## Beiliegende Evidenz
 
