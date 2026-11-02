@@ -6,7 +6,7 @@ TrailAtlas verwendet Swift 6.2, Hummingbird und Elementary. Alle 352 ursprüngli
 
 Der vollständige Debug- und Release-Build wurde mit echten Paketabhängigkeiten ausgeführt. Filter, persönliche Speicherung und öffentliche Ergebnisquellen werden gegen den laufenden Hummingbird-Server geprüft. Der vollständige Bericht steht in `PRUEFBERICHT.md`.
 
-**Die Veröffentlichung auf Render ist noch nicht erfolgt.** Es werden weder eine öffentliche URL noch aktivierte GitHub-Zeitpläne behauptet. Die kontobezogenen Voraussetzungen stehen in `DEPLOY_STATUS.md`.
+**Veröffentlicht: https://trailatlas-swift.onrender.com/**. Der kostenlose Docker-Webdienst läuft; wiederkehrende GitHub-Quellenprüfungen und der öffentliche Datenbranch sind eingerichtet und erfolgreich ausgeführt. Die aktuelle Prüfung steht in `PRUEFBERICHT.md`. Der gewünschte Wechsel zu Tangled wartet noch auf die sichere Kontoanmeldung.
 
 ## Funktionen
 
@@ -25,9 +25,9 @@ Der vollständige Debug- und Release-Build wurde mit echten Paketabhängigkeiten
 
 Persönliche Daten werden als komprimierte, authentifiziert verschlüsselte, HttpOnly-Cookies gespeichert. Bei gleichbleibendem `SESSION_SECRET` bleiben sie nach einem vollständigen Verlust des lokalen Serverspeichers erhalten. Sie sind an den Browser gebunden; Cookie-Löschung oder ein Wechsel des Schlüssels entfernt diese Wiederherstellungsmöglichkeit. Es gibt keine Synchronisierung zwischen Geräten. Größenlimits werden ausdrücklich gemeldet.
 
-Öffentliche Prüfergebnisse können durch `.github/workflows/refresh.yml` regelmäßig in einem separaten Branch `trailatlas-data` gesichert werden. Der Swift-Dienst liest diesen über `SHARED_DATA_BASE_URL`. Personenbezogene Sessions, Favoriten und persönliche Quellen werden aus öffentlichen Exporten entfernt. Die Einrichtung dieses Branches und die Aktivierung des Zeitplans sind Bestandteil der noch ausstehenden Veröffentlichung. Neue, nur auf einer Render-Instanz gefundene Links sind bis zur unabhängigen Sicherung durch den GitHub-Prüflauf lediglich lokal zwischengespeichert.
+Öffentliche Prüfergebnisse werden durch `.github/workflows/refresh.yml` regelmäßig im separaten Branch `trailatlas-data` gesichert. Der Swift-Dienst liest diesen über `SHARED_DATA_BASE_URL`. Personenbezogene Sessions, Favoriten und persönliche Quellen werden aus öffentlichen Exporten entfernt. Dieser Branch und der Zeitplan sind eingerichtet; tatsächliche Cloud-Läufe haben Daten geschrieben. Neue, nur auf einer Render-Instanz gefundene Links sind bis zur unabhängigen Sicherung durch den GitHub-Prüflauf lediglich lokal zwischengespeichert.
 
-Render Free kann schlafen und besitzt keinen dauerhaften lokalen Datenträger. Die Serverprüfung läuft deshalb nur bei aktiver Instanz. Der vorbereitete GitHub-Zeitplan arbeitet davon unabhängig ungefähr alle zwei Stunden; Ausführungen können sich verzögern oder vom Anbieter ausgesetzt werden. Der Server prüft im 96-Minuten-Takt rotierende Teilmengen, nicht sämtliche 352 Rennen gleichzeitig.
+Render Free kann schlafen und besitzt keinen dauerhaften lokalen Datenträger. Die Serverprüfung läuft deshalb nur bei aktiver Instanz. Der eingerichtete GitHub-Zeitplan arbeitet davon unabhängig ungefähr alle zwei Stunden; Ausführungen können sich verzögern oder vom Anbieter ausgesetzt werden. Der Server prüft im 96-Minuten-Takt rotierende Teilmengen, nicht sämtliche 352 Rennen gleichzeitig.
 
 ## Konfiguration
 
@@ -43,6 +43,6 @@ Render Free kann schlafen und besitzt keinen dauerhaften lokalen Datenträger. D
 
 ## Prüfungen
 
-`Package.resolved` hält die tatsächlich aufgelösten Abhängigkeiten fest. Die CI-Konfiguration baut den vollständigen Release-Server und führt die Kernprüfungen sowie echte HTTP-Tests aus. Die lokale Testausführung und der zukünftige GitHub-Actions-Lauf werden im Prüfbericht getrennt ausgewiesen.
+`Package.resolved` hält die tatsächlich aufgelösten Abhängigkeiten fest. Die CI-Konfiguration baut den vollständigen Release-Server und führt die Kernprüfungen sowie echte HTTP-Tests aus. Die lokale Testausführung, erfolgreiche Cloud-Läufe und die bestandene öffentliche Abnahme mit 462 HTTPS-Anfragen werden im Prüfbericht getrennt ausgewiesen.
 
 `/health` ist ein schneller Bereitschaftscheck. `/api/races` enthält die wirksamen öffentlichen Kalenderdaten; `/api/status` meldet Prüfstände und Konfiguration ohne persönliche Daten oder Geheimnisse.

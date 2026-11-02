@@ -1,24 +1,13 @@
 # Veröffentlichungsstatus
 
-## Nachgewiesen
+Öffentliche Website: https://trailatlas-swift.onrender.com/
 
-- Swift-Projekt mit Hummingbird und Elementary vollständig gebaut, einschließlich Release-Konfiguration.
-- 352 Originalrennen und die ursprünglichen CSS-Regeln erhalten.
-- Tatsächliche HTTP- und Internetprüfungen durchgeführt; Einzelheiten im Prüfbericht.
-- Render-Docker-Konfiguration und kostenloser Plan vorbereitet.
-- `render.yaml` gegen das aktuelle offizielle JSON-Schema validiert.
-- Eigener GitHub-Workflow für wiederkehrende öffentliche Quellenprüfungen vorbereitet.
+- Swift, Hummingbird und Elementary laufen als kostenloser Docker-Webdienst auf Render in Frankfurt.
+- Der vollständige Docker-Build und echte GitHub-Build-/Funktionstests sind erfolgreich.
+- Die abschließende öffentliche Abnahme mit 462 HTTPS-Anfragen und allen 352 Rennkarten ist bestanden. Ein gespeicherter Favorit blieb nach tatsächlichem Render-Neustart erhalten.
+- Gemeinsame Daten werden im Branch `trailatlas-data` gesichert; geplante Quellenläufe sind aktiv und tatsächlich ausgeführt.
+- Persönliche Daten bleiben als verschlüsselte Cookies im jeweiligen Browser wiederherstellbar; auf Render ist ein stabiler Sitzungsschlüssel gesetzt.
+- Code-Deploys erfolgen gezielt, da derzeit eine öffentliche Git-Adresse verwendet wird. Datenaktualisierungen benötigen keinen Deploy.
+- Der gewünschte Wechsel zu Tangled wartet auf eine gültige Kontoanmeldung. Tangled meldete, dass der eingegebene Handle nicht aufgelöst werden konnte.
 
-## Noch nicht veröffentlicht
-
-Es existiert noch keine bestätigte öffentliche Render-Adresse dieses Projekts. Es wurde kein kostenpflichtiger Dienst eingerichtet.
-
-Das öffentliche GitHub-Repository `lalalurch12-hue/trailatlas-swift` wurde nach sicherer Anmeldung erstellt. Der geprüfte Quellstand wird jetzt übertragen; anschließend folgen die kostenlosen Render-Ressourcen und die öffentliche HTTPS-Abnahme.
-
-Der gewünschte Render-Workspace wurde vom Benutzer bestätigt und über die verbundene Schnittstelle erfolgreich abgefragt. Vor dem ersten Deploy wurden keine vorhandenen Dienste gemeldet. Die JSON-Schema-Prüfung ist erfolgreich; ein tatsächlicher Docker-Build auf Render steht noch aus.
-
-## Veröffentlichung nach Klärung der Kontovoraussetzungen
-
-Der vorbereitete Stand wird in das Projekt-Repository übernommen. Danach werden der kostenlose Docker-Webdienst, ein stabiler Sitzungsschlüssel, der öffentliche Datenbranch und dessen Abrufadresse verbunden. Ein erfolgreicher Build allein gilt nicht als Veröffentlichung: Erst ein Render-Deploy im Zustand `live`, ein erfolgreicher HTTPS-Healthcheck und Funktionsprüfungen an dieser Adresse erfüllen die Abnahme.
-
-GitHub-Zeitpläne und Datenbranch sind bis dahin vorbereitet, nicht als aktiv bestätigt. Ein echter Docker-Build auf Render sowie Prüfungen über dessen öffentliche HTTPS-Adresse stehen ebenfalls aus.
+Die Abnahme und Einschränkungen sind in `PRUEFBERICHT.md` dokumentiert. Es wurde kein kostenpflichtiger Dienst eingerichtet.

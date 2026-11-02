@@ -1,12 +1,14 @@
 # TrailAtlas – Funktions- und Veröffentlichungsprüfung
 
-Stand: 2. November 2026, UTC. Geprüft wurde das übergebene Swift-Projekt mit 352 Originalrennen. Dieser Bericht unterscheidet nachgewiesene lokale Funktionen, tatsächliche Internetabrufe und die noch ausstehende Veröffentlichung.
+Stand: 2. November 2026. Öffentliche Website: https://trailatlas-swift.onrender.com/ . Angaben zu Prüfläufen verwenden UTC-Zeitstempel; der Nutzer befindet sich in Europe/Berlin.
 
 ## Ergebnis
 
-Die Anwendung wurde mit Swift 6.2.1, Hummingbird und Elementary erfolgreich als vollständiger Debug- und Release-Server gebaut. Die 352 ursprünglichen Datensätze und die unveränderte Originalreferenz sind erhalten. Die aktive Browseroberfläche arbeitet ohne JavaScript. Zahlreiche Fehler in Formularen, Filtern, Terminübernahme, Quellenprüfung und Ergebnisanzeige wurden behoben.
+TrailAtlas ist als Swift-/Hummingbird-/Elementary-Dienst auf Render veröffentlicht: **https://trailatlas-swift.onrender.com/**. Das verwendete Laufzeitpaket wurde mit Swift 6.2.4 vollständig gebaut; zuvor bestanden auch lokale Builds mit Swift 6.2.1. Die 352 Originalrennen, die Originalreferenz und das ursprüngliche CSS sind erhalten. Die aktive Oberfläche enthält kein Browser-JavaScript.
 
-**Es gibt noch keine bestätigte öffentliche HTTPS-Adresse.** Der Render-Workspace ist bestätigt und erreichbar. Die sichere GitHub-Anmeldung ist abgeschlossen; das Repository `lalalurch12-hue/trailatlas-swift` wurde erstellt. Die Quellübertragung und Veröffentlichung laufen. Docker-Build auf Render, öffentliche HTTPS-Abnahme, Aktivierung der GitHub-Zeitpläne und gemeinsame dauerhafte Datensicherung sind noch offen. Es wurde kein kostenpflichtiger Dienst angelegt.
+Der kostenlose Render-Webdienst, ein stabiler Sitzungsschlüssel und die externe Sicherung gemeinsamer Daten sind eingerichtet. GitHub-Build, HTTP-Regressionen, alle 352 Detailkarten und der geplante Quellenlauf sind erfolgreich ausgeführt worden. Die abschließende öffentliche HTTPS-Abnahme ist unten gesondert dokumentiert. Es wurden keine kostenpflichtigen Dienste eingerichtet.
+
+Der gewünschte Wechsel von GitHub zu Tangled ist noch nicht vollzogen: Tangled konnte den im sicheren Anmeldefeld eingegebenen Handle nicht auflösen. GitHub bleibt bis zu einer erfolgreichen Übernahme die bestehende Quelle. Das ist keine technische Bindung von Swift oder Render an GitHub; die Workflows, die öffentliche Abrufadresse und deren Freigabe in der Swift-Konfiguration müssen beim Wechsel angepasst werden.
 
 ## Anforderungen und Nachweis
 
@@ -16,16 +18,16 @@ Die Anwendung wurde mit Swift 6.2.1, Hummingbird und Elementary erfolgreich als 
 | 352 Rennen vollständig erhalten | Bestanden | `races.json` bytegleich zum Eingangspaket; 352 eindeutige IDs; alle 352 Detailkarten per HTTP geöffnet |
 | Originaldesign erhalten | Bestanden im geprüften Umfang | Original-HTML bytegleich; ursprüngliches CSS als unveränderter Präfix erhalten; Browserprüfung von Desktop, Raster und Mobilansichten; zusätzliche Regeln nur für serverseitige Bedienung und Ergebnisdarstellung |
 | Browser ohne JavaScript | Bestanden | Keine Skripte oder Ereignishandler im aktiven HTML; Content-Security-Policy mit `script-src 'none'`; Formulare, Links und CSS bedienen die Oberfläche |
-| Automatische Terminübernahme | Bestanden für eindeutige Quellen | Reale Quellenabrufe mit sechs erkannten Terminbereichen; Datumsänderungen wirken auf Karten, Filter, Reihenfolge, Wochenenden und öffentliche API |
+| Automatische Terminübernahme | Bestanden für eindeutige Quellen | Zuerst sechs, im gesicherten Cloud-Stand acht Terminübernahmen; Datumsänderungen wirken auf Karten, Filter, Reihenfolge, Wochenenden und öffentliche API |
 | Internationale und chinesische Tracking-/Ergebnissuche | Implementiert und teilweise live nachgewiesen | Veranstalterlinks, Providerzuordnung, Jahresprüfung, WeRun-Verzeichnis und ergänzender Suchindex; Yangxian-Quelle tatsächlich automatisch gefunden. Keine vollständige Abdeckung aller 352 Rennen behauptet |
 | Live-Ergebnisse innerhalb der Website | Bestanden für abrufbare Daten | Tatsächliche UTMB-Live-API-Daten als native HTML-Tabellen; öffentliche HTML-/JSON-Tabellen weiterer Quellen nach Strukturerkennung; eingeschränkter iframe-Fallback und Originalverweis |
-| Regelmäßige Aktualisierung der Ergebnisse | Implementiert und lokal geprüft | Ergebnis-Cache etwa 80 Sekunden; geöffnete Ergebnisansicht lädt per HTML-Meta-Refresh etwa alle 90 Sekunden neu; öffentliche Dauerprüfung noch nicht möglich |
-| Termin- und Trackingquellen erneut prüfen | Lokal nachgewiesen, Cloud-Zeitplan offen | Server prüft bei Fälligkeit und im 96-Minuten-Takt rotierende Teilmengen; GitHub-Workflow ungefähr alle zwei Stunden vorbereitet, noch nicht aktiviert |
+| Regelmäßige Aktualisierung der Ergebnisse | Implementiert und öffentlich geprüft | Ergebnis-Cache etwa 80 Sekunden; HTML-Meta-Refresh etwa alle 90 Sekunden. Keine Garantie für die Aktualität der Daten beim Anbieter |
+| Termin- und Trackingquellen erneut prüfen | Aktiv | Server prüft bei Fälligkeit und im 96-Minuten-Takt Teilmengen; GitHub-Zeitplan ungefähr alle zwei Stunden eingerichtet, tatsächliche Cloud-Läufe erfolgreich |
 | Dauerhafte Favoriten und persönliche Quellen | Bestanden unter dokumentierten Voraussetzungen | Verschlüsselte Cookies; Neustart und vollständige Löschung des lokalen Servercaches getestet. Stabiler Sitzungsschlüssel und erhaltener Browser-Cookie erforderlich |
-| Dauerhafte gemeinsame Daten und gefundene Quellen | Vorbereitet, noch nicht in Betrieb | Öffentlicher GitHub-Datenbranch und privatsphäreschonender Export implementiert. Repository und geplanter Cloud-Lauf fehlen noch; nur lokal entdeckte Daten sind bis zur externen Sicherung flüchtig |
+| Dauerhafte gemeinsame Daten und gefundene Quellen | Eingerichtet und getestet | GitHub-Datenbranch `trailatlas-data` mit tatsächlichen Sicherungen; erneuter Abruf durch den Render-Server. Neue reine Serverfunde bleiben bis zum unabhängigen Quellenlauf lokal |
 | Alle Filter, Links, Rennkarten und Mobilansichten testen | Bestanden im beschriebenen Umfang | Alle 65 Ländergruppen, zwölf Monate, Jahre, Kategorien und Distanzfilter; alle 352 Karten; 120 Originalquellen tatsächlich abgerufen; Desktop und drei mobile Breiten geprüft |
-| Vollständigen Swift-Build durchführen | Bestanden | Swift 6.2.1, reale Abhängigkeiten, vollständiger Release-Build erfolgreich |
-| Veröffentlichung auf Render und echte HTTPS-Abnahme | Läuft | Kostenloser Docker-Webdienst und gültiges Blueprint vorbereitet; Render-Workspace bestätigt und Projekt-Repository erstellt |
+| Vollständigen Swift-Build durchführen | Bestanden | Swift 6.2.4 in GitHub und Docker; reale Abhängigkeiten und vollständiger Release-Build erfolgreich |
+| Veröffentlichung auf Render und echte HTTPS-Abnahme | Veröffentlicht | Kostenloser Docker-Webdienst in Frankfurt im Zustand live; öffentliche Prüfungen separat protokolliert |
 
 ## Durchgeführte Reparaturen
 
@@ -34,6 +36,7 @@ Die Anwendung wurde mit Swift 6.2.1, Hummingbird und Elementary erfolgreich als 
 - Die Distanzanalyse erkennt auch deutsche Meilenangaben, gemeinsam verwendete Einheiten wie „10 / 30 / 50 km“, Halbmarathon/Marathon und lange Ultras. Höhenmeter werden nicht als Laufdistanz gewertet.
 - Mehrtägige laufende Rennen werden in Zukunfts- und Wochenendansichten berücksichtigt. Details und Ergebnisbereiche sind auch im Kartenraster sichtbar und wieder schließbar.
 - Die mobile Filterleiste öffnet und schließt über CSS-Anker. Ihre Abdeckung bleibt auf dem Desktop verborgen und verschiebt den Kalender nicht.
+- HTML-Vorlage und Formularlinks werden in einem Durchlauf ausgegeben. Datum und Distanzfilter werden nur bei Bedarf neu berechnet. Umfangreiche Radarlisten entstehen beim Öffnen des Radars; Kalender und Karten behalten ihre unveränderte sichtbare Gestaltung. Blockierende Netzabrufe belegen keine Swift-Kooperationsthreads.
 - Terminextraktion unterstützt strukturierte Veranstaltungsdaten, mehrere europäische Datumsformen, chinesische Jahres-/Monats-/Tagesangaben und Datumsbereiche über Monatsgrenzen. Anmeldungs-, Veröffentlichungs- und Lotteriedaten werden nicht blind übernommen.
 - Ein Festivalzeitraum ersetzt nicht automatisch den abweichenden Termin eines Einzelrennens. Die Lavaredo-120K-Karte behält deshalb ihren eigenen Starttermin statt des Beginns der Veranstaltungswoche.
 - Bestätigte spätere Ausgaben können als zusätzliche Karten erscheinen. Alle 352 Originaleinträge bleiben dabei vorhanden. Persönliche manuelle Bestätigungen wirken nur im betreffenden Browserprofil.
@@ -43,7 +46,7 @@ Die Anwendung wurde mit Swift 6.2.1, Hummingbird und Elementary erfolgreich als 
 
 ## Reale Internetabrufe
 
-Ein vollständiger Swift-Prüflauf kontrollierte eine rotierende Gruppe von zwölf Quellenseiten. Er exportierte sechs eindeutige Terminbereiche, fünf bekannte Trackingquellen und **keine persönlichen Sessions**. Das bedeutet keine komplette Aktualitätsprüfung sämtlicher Kalendereinträge in einem Durchlauf.
+Der erste vollständige Swift-Prüflauf kontrollierte zwölf Quellenseiten und exportierte sechs eindeutige Terminbereiche. Die späteren Cloud-Läufe setzten den Cursor fort; ein nachweislich gesicherter Stand enthält acht Terminübernahmen, fünf bekannte Trackingquellen und **keine persönlichen Sessions**. Das bedeutet keine komplette Aktualitätsprüfung sämtlicher Kalendereinträge in einem Durchlauf.
 
 | Veranstaltung / Ausgabe | Erkannter Zeitraum | Art des Nachweises |
 |---|---|---|
@@ -73,7 +76,7 @@ Die automatische Terminüberwachung umfasst insgesamt 123 konfigurierte öffentl
 | Prüfung | Ergebnis |
 |---|---|
 | Originaldaten und Originalreferenz gegen Eingangs-ZIP vergleichen | Bytegleich, SHA-256 im Evidenzordner |
-| Vollständiger Swift-Debug-Build mit realen Abhängigkeiten | Erfolgreich |
+| Vollständiger Swift-Debug-Build mit realen Abhängigkeiten | Lokaler früherer Stand erfolgreich; der abschließende Quellstand ist durch den vollständigen Release-Build geprüft |
 | Vollständiger Swift-Release-Build mit realen Abhängigkeiten | Erfolgreich |
 | Kernregressionen, Datumsanalyse, Kalenderübernahme, Quellenmigration | Erfolgreich |
 | Schutz persönlicher Quellendaten und Ausschluss aus öffentlichem Export | Erfolgreich |
@@ -87,25 +90,25 @@ Die automatische Terminüberwachung umfasst insgesamt 123 konfigurierte öffentl
 | Aktive Seiten ohne Skripte, Ereignishandler, doppelte Attribute und offene Platzhalter | Erfolgreich |
 | Echte UTMB-Daten und echte WeRun-Quelle | Erfolgreich im beschriebenen Umfang |
 | Blueprint gegen aktuelles offizielles Render-JSON-Schema | Erfolgreich |
-| Tatsächlicher Docker-Image-Build / Render-Deploy | Noch nicht ausgeführt |
-| GitHub-Actions-Lauf und Wiederherstellung aus dauerhaftem Datenbranch | Noch nicht ausgeführt |
-| Öffentliche HTTPS-Seite nach Render-Veröffentlichung | Noch nicht vorhanden, daher nicht abgenommen |
+| Tatsächlicher Docker-Image-Build / Render-Deploy | Erfolgreich; Dienst live |
+| GitHub-Actions-Lauf und öffentlicher Datenbranch | Erfolgreich ausgeführt; Datenbranch enthält ausschließlich öffentliche Daten |
+| Öffentliche HTTPS-Seite nach Render-Veröffentlichung | Siehe abschließendes öffentliches Prüfprotokoll |
 
 Hummingbird wurde in Version 2.28.1 und Elementary in Version 0.8.4 aufgelöst; die vollständigen Abhängigkeiten sind durch `Package.resolved` festgehalten. Die Swift-Kernprüfungen verwenden für die isolierte Ausführung einen kleinen Elementary-Testersatz; die vollständigen Paket-Builds und HTTP-Prüfungen verwenden die tatsächlichen Bibliotheken. Es wird kein isolierter Test als Ersatz für den realen Serverbuild ausgegeben.
 
-Die Browser-Sichtprüfung verwendete statische Momentaufnahmen des vom tatsächlichen Swift-Server erzeugten HTML. Die Interaktionen und Speicherung wurden zusätzlich über echte HTTP-Anfragen am Swift-Server geprüft. Die interne Vorschau ist keine veröffentlichte Website.
+Die Browser-Sichtprüfung verwendete statische Momentaufnahmen des vom tatsächlichen Swift-Server erzeugten HTML. Die Interaktionen und Speicherung wurden zusätzlich über echte HTTP-Anfragen am Swift-Server geprüft. Zusätzlich wurde die echte Render-Adresse im Browser geöffnet: Länderfilter, Rasteransicht und geöffnete Details funktionierten; die Desktop-Seite zeigte keinen horizontalen Überlauf und kein Skriptelement.
 
 Bei nominal 360, 390 und 768 Pixel breiten mobilen Ansichten waren Seitenbreite und Inhaltsscrollbreite jeweils gleich; es gab keinen horizontalen Seitenüberlauf. Das Filtermenü ließ sich bei 360 Pixeln öffnen und per Schließen-Link beziehungsweise Tastatur wieder schließen. Desktop- und Rasterdarstellung wurden zusätzlich kontrolliert. Dies ersetzt keine Prüfung auf jedem existierenden Mobilgerät.
 
 ## Speicherung und regelmäßiger Betrieb
 
-Persönliche Daten liegen als komprimierte, authentifiziert verschlüsselte HttpOnly-Cookies vor; serverseitige Daten dienen als zusätzlicher Cache. Wiederherstellung nach Cacheverlust wurde mit gleichbleibendem Sitzungsschlüssel getestet. Für die Veröffentlichung erzeugt die Render-Konfiguration einen stabilen geheimen Schlüssel. Cookies werden für HTTPS als `Secure` ausgeliefert und besitzen eine begrenzte Laufzeit.
+Persönliche Daten liegen als komprimierte, authentifiziert verschlüsselte HttpOnly-Cookies vor; serverseitige Daten dienen als zusätzlicher Cache. Wiederherstellung nach Cacheverlust wurde mit gleichbleibendem Sitzungsschlüssel getestet. Auf Render wurde ein stabiler geheimer Sitzungsschlüssel gesetzt. Cookies werden für HTTPS als `Secure` ausgeliefert und besitzen eine begrenzte Laufzeit.
 
 Diese Lösung bleibt an den jeweiligen Browser gebunden. Cookie-Löschung, Ablauf oder ein Wechsel des Sitzungsschlüssels verhindert die Wiederherstellung. Eine geräteübergreifende Benutzerkonten-Synchronisierung wurde nicht hinzugefügt. Bei Erreichen des Cookie-Größenlimits meldet die Anwendung den Fehler ausdrücklich, statt Favoriten stillschweigend zu verwerfen.
 
-Gemeinsame Termin- und Trackingdaten können durch den vorbereiteten GitHub-Workflow in `trailatlas-data` dauerhaft versioniert werden. Die Website liest öffentliche Momentaufnahmen daraus ein. Sessions, persönliche Quellen und Favoriten werden nicht in diesen Branch veröffentlicht. Dieser Betriebsweg wurde implementiert, aber noch nicht mit einem echten Repository aktiviert und verifiziert. Insbesondere schreibt eine kostenlose Render-Instanz neue Funde nicht sofort selbst in GitHub zurück; bis zum unabhängigen Prüflauf sind solche Funde nur lokal vorhanden.
+Gemeinsame Termin- und Trackingdaten werden durch den eingerichteten GitHub-Workflow in `trailatlas-data` dauerhaft versioniert. Die Website liest öffentliche Momentaufnahmen daraus ein. Sessions, persönliche Quellen und Favoriten werden nicht in diesen Branch veröffentlicht. Dieser Betriebsweg wurde mit dem echten Repository aktiviert; mehrere erfolgreiche Cloud-Läufe haben öffentliche Daten geschrieben, und der Render-Server hat sie eingelesen. Insbesondere schreibt eine kostenlose Render-Instanz neue Funde nicht sofort selbst in GitHub zurück; bis zum unabhängigen Prüflauf sind solche Funde nur lokal vorhanden.
 
-Der Render-Plan `free` besitzt keinen dauerhaften lokalen Datenträger und kann bei Inaktivität schlafen. Währenddessen läuft seine periodische Swift-Prüfung nicht. Der vorbereitete GitHub-Zeitplan arbeitet davon unabhängig; GitHub kann geplante Ausführungen verzögern oder aussetzen. Im Serverlauf werden pro Runde Teilmengen kontrolliert, nicht alle Rennen im 96-Minuten-Abstand. Ein vollständiger Quelldurchlauf dauert entsprechend länger.
+Der Render-Plan `free` besitzt keinen dauerhaften lokalen Datenträger und kann bei Inaktivität schlafen. Währenddessen läuft seine periodische Swift-Prüfung nicht. Der eingerichtete GitHub-Zeitplan arbeitet davon unabhängig; GitHub kann geplante Ausführungen verzögern oder aussetzen. Im Serverlauf werden pro Runde Teilmengen kontrolliert, nicht alle Rennen im 96-Minuten-Abstand. Ein vollständiger Quelldurchlauf dauert entsprechend länger.
 
 ## Unvermeidbare und offene Einschränkungen
 
@@ -115,15 +118,36 @@ Der Render-Plan `free` besitzt keinen dauerhaften lokalen Datenträger und kann 
 4. Der vorhandene optionale Mechanismus für Ergebnis-Bildaufnahmen bleibt im Quelltext erhalten, ist standardmäßig deaktiviert und benötigt zusätzliche Laufzeitsoftware. Das vorbereitete Render-Image enthält kein Chromium. Es wird kein kostenpflichtiger Screenshotdienst verwendet.
 5. Der HTML-Export enthält sämtliche Kalenderkarten als Momentaufnahme. Offline sind die Swift-Filter, persönlichen Aktionen und Netzprüfungen nicht ausführbar.
 6. Der Stopp-Knopf beendet einen eigenen gestarteten Prüflauf; öffentliche Besucher können keine fremden oder geplanten Läufe beenden. Das Entfernen einer persönlichen Trackingvorgabe löscht keine gemeinsam verifizierte Anbieterquelle.
-7. Docker-Build, Render-Ressourcen, tatsächlicher Datenbranch und Cloud-Zeitpläne müssen nach der Kontofreigabe noch gemeinsam geprüft werden. Eine funktionierende lokale Anwendung wird nicht als abgeschlossene Veröffentlichung ausgegeben.
+7. Render verwendet derzeit eine öffentliche Git-Adresse ohne integrierte Git-Provider-Anmeldung. Codeänderungen benötigen daher einen gezielten Deploy. Laufende Quellenaktualisierungen nutzen den separaten Datenbranch und benötigen keinen Code-Deploy.
+8. Eine vollständige Umstellung auf Tangled ist vor erfolgreicher Kontoanmeldung, Repository-Import, Spindle-Prüflauf und Umstellung der Datenadresse nicht als erledigt bestätigt.
 
-## Konkrete Veröffentlichungshindernisse
+## Veröffentlichung und Konten
 
-Die GitHub-Schnittstelle konnte anfangs kein zugängliches Repository melden und bietet keine Repository-Erstellung. Die sichere Anmeldung im GitHub-Browser ist inzwischen abgeschlossen; das öffentliche Projekt-Repository wurde kostenlos erstellt und ist über die verbundene Schnittstelle mit Schreibrechten erreichbar. Es wurden keine Zugangsdaten im Chat erfasst.
+Der Benutzer hat den Render-Workspace bestätigt. Das GitHub-Repository `lalalurch12-hue/trailatlas-swift` und der kostenlose Render-Webdienst `trailatlas-swift` wurden eingerichtet. Persönliche Testcookies und Produktionsschlüssel sind nicht Teil des Repositorys.
 
-Der Benutzer hat den gewünschten Render-Workspace ausdrücklich bestätigt. Die Dienste konnten über die verbundene Schnittstelle erfolgreich abgefragt werden; vor der Veröffentlichung wurden keine vorhandenen Dienste gemeldet. Die Kontovoraussetzungen sind damit geklärt.
+Der erste GitHub-Quellenlauf scheiterte an der Eigentümerprüfung des Container-Arbeitsverzeichnisses. Die Korrektur vertraut ausschließlich dem eigenen Checkout und seinem Daten-Arbeitsverzeichnis. Anschließende vollständige Cloud-Läufe waren erfolgreich und schrieben den Datenbranch.
 
-Nach Klärung werden der geprüfte Quellstand, der kostenlose Docker-Webdienst, der stabile Sitzungsschlüssel und der öffentliche Datenbranch verbunden. Erst ein tatsächlich erfolgreicher Render-Deploy mit überprüftem HTTPS-Healthcheck und erneuten Funktionsprüfungen an der öffentlichen Adresse schließt die Abnahme ab.
+Die Tangled-Anmeldung steht beim Fehler „Unable to look up that handle“. Es wurden keine Zugangsdaten im Chat angefordert und keine bestehenden Daten entfernt. Die Übernahme kann mit einem gültigen Tangled-/Bluesky-Handle weitergehen.
+
+## Abschließende öffentliche Abnahme
+
+Die vollständige Abnahme gegen **https://trailatlas-swift.onrender.com/** bestand am **2. November 2026 um 13:59:49 UTC** mit **462 HTTPS-Anfragen**. Der maschinenlesbare Bericht steht in `reports/public-https-final.json`; er enthält keine persönlichen Cookies.
+
+| Öffentlich geprüfter Bereich | Ergebnis |
+|---|---|
+| HTTPS, `/health`, öffentliche APIs und unveränderte 352 Original-IDs | Bestanden |
+| 65 Länder, zwölf Monate, Jahre, Kategorien, Distanzen, Suche, Sortierungen und Ansichten | Bestanden |
+| Alle 352 Detailkarten und ihre 120 ursprünglichen Quellenverweise | Bestanden; die Erreichbarkeit der externen Zielseiten wurde zusätzlich separat wie oben beschrieben geprüft |
+| Favorit per POST mit Weiterleitung, sichere GETs, CSRF-Abweisung und Besuchertrennung | Bestanden; Cookies `Secure` und `HttpOnly` |
+| Vollständiger HTML-Export, HTML-Escaping und skriptfreie geprüfte Seiten | Bestanden |
+| Reale UTMB-Schnittstelle vom Render-Server abgerufen und chinesische WeRun-Quelle angezeigt | Bestanden; für Yangxian weiterhin keine erfundenen gemessenen Zeiten |
+| Bereits gespeicherter Favorit nach tatsächlichem Render-Neustart/Deploy | Bestanden, gesonderter öffentlicher Nachtest um 13:50:05 UTC; `reports/render-cookie-recovery.json` |
+
+Der erfolgreiche öffentliche GitHub-Prüflauf ist [41456672999](https://github.com/lalalurch12-hue/trailatlas-swift/actions/runs/41456672999). Der vollständige Swift-Build einschließlich Kern-, HTTP- und Kartenprüfungen desselben Quellstands ist [41456672847](https://github.com/lalalurch12-hue/trailatlas-swift/actions/runs/41456672847) und ebenfalls erfolgreich. Geplante Quellenprüfung und tatsächliche Sicherung sind zusätzlich durch [41453335356](https://github.com/lalalurch12-hue/trailatlas-swift/actions/runs/41453335356) nachgewiesen. Zeitpläne können vom Anbieter verzögert werden.
+
+Der aktive Render-Deploy `dep-dbk991mtlv9c73f7qnh0` ist seit 13:48:15 UTC im Zustand `live` und verwendet Commit `07755cd5bafb5248d9f04fa688492b3d449a3d8b`. Der abschließend geprüfte Commit `8d40b0666c11928946df92d26fa8b377d74ad4de` änderte danach ausschließlich den Namen des CI-Berichtsartefakts. Der Swift-Laufzeitcode ist gegenüber dem erfolgreich gebauten und veröffentlichten Stand `fa3189b6ee30dee1f9c329509143ac6a70d41fe6` unverändert. Spätere reine Berichtsänderungen benötigen keinen weiteren Deploy.
+
+Ein früherer öffentlicher Gesamtlauf war mit dem absichtlich ausgelösten Render-Neustart überlappt und erhielt dabei einen einzelnen HTTP 502. Dieser Lauf wird ausdrücklich nicht als bestanden gezählt. Der oben angegebene Wiederholungslauf erfolgte nach abgeschlossenem Deploy und bestand vollständig. Kurze Unterbrechungen beim Deploy und Kaltstarts bleiben beim gewählten kostenlosen Betriebsweg möglich.
 
 ## Beiliegende Evidenz
 

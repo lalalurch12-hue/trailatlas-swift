@@ -1,0 +1,19 @@
+[
+  "2026-11-02T13:52:16.2005994Z PASS HTTPS, /health, public APIs and all 352 original race IDs",
+  "2026-11-02T13:54:11.4486003Z PASS All 65 countries, 12 months, years, categories, distances, search, sorts and views",
+  "2026-11-02T13:54:40.1365459Z PROGRESS 32/352 public race cards",
+  "2026-11-02T13:55:06.6325184Z PROGRESS 64/352 public race cards",
+  "2026-11-02T13:55:34.6411469Z PROGRESS 96/352 public race cards",
+  "2026-11-02T13:56:02.3356895Z PROGRESS 128/352 public race cards",
+  "2026-11-02T13:56:29.1474269Z PROGRESS 160/352 public race cards",
+  "2026-11-02T13:56:55.1372155Z PROGRESS 192/352 public race cards",
+  "2026-11-02T13:57:23.7398328Z PROGRESS 224/352 public race cards",
+  "2026-11-02T13:57:51.5316969Z PROGRESS 256/352 public race cards",
+  "2026-11-02T13:58:18.6489489Z PROGRESS 288/352 public race cards",
+  "2026-11-02T13:58:45.9425453Z PROGRESS 320/352 public race cards",
+  "2026-11-02T13:59:10.6885347Z PROGRESS 352/352 public race cards",
+  "2026-11-02T13:59:10.6892438Z PASS All 352 detail cards and 120 original source links over public HTTPS",
+  "2026-11-02T13:59:21.0366282Z PASS Favorite POST/redirect, safe GET, CSRF rejection, isolation and Secure HttpOnly cookies",
+  "2026-11-02T13:59:27.1494646Z PASS Complete HTML export and escaping; no browser scripts across tested pages",
+  "2026-11-02T13:59:49.7064410Z PASS Real UTMB API fetched by Render and Chinese WeRun source displayed safely"
+]
