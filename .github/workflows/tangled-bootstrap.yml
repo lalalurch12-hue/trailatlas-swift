@@ -34,8 +34,10 @@ jobs:
           printf '%s' "$TANGLED_BOOTSTRAP_KEY_B64" | base64 --decode > .runtime/tangled-write-key
           trap 'rm -f .runtime/tangled-write-key' EXIT
           unset TANGLED_BOOTSTRAP_KEY_B64
+          test "$(ssh-keygen -lf .runtime/tangled-write-key | awk '{print $2}')" = 'SHA256:q9mRXI8is/+s2oetxesiuLySKAOChzXCY65MhzRleUA'
           export GIT_SSH_COMMAND="ssh -i $PWD/.runtime/tangled-write-key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$PWD/.runtime/tangled-known-hosts"
-          git remote add tangled git@tangled.org:did:plc:sew3yuioawady5nrhjvqmzix
+          git remote add tangled lalalurch.tngl.sh@tangled.org:did:plc:sew3yuioawady5nrhjvqmzix
+          git ls-remote tangled
           git push tangled HEAD:refs/heads/main
           git for-each-ref --format='%(refname)' refs/remotes/origin/ | while read -r ref; do
             branch=${ref#refs/remotes/origin/}

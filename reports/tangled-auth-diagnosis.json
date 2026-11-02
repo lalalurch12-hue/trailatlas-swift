@@ -1,0 +1,16 @@
+{
+  "firstTransfer": "Permission denied (publickey); no code pushed",
+  "automaticReview": "Unchanged retry rejected; no retry executed",
+  "correction": "SSH user explicitly claims lalalurch.tngl.sh; the official server validates the offered public key against that account PDS instead of requiring the global key index",
+  "officialServerCommit": "3b91e31d83fa9a17e0dc6c099b660e2f6663879d",
+  "officialServerFiles": [
+    "knot2/crates/knot-ssh/src/server.rs",
+    "knot2/crates/knot-ssh/src/identity.rs"
+  ],
+  "accountDid": "did:plc:phei4tdhruwqgpcijwgd757v",
+  "publicKeyRecord": "at://did:plc:phei4tdhruwqgpcijwgd757v/org.tangled.key.sshKey/3mzdle2tl52fe",
+  "repositoryDid": "did:plc:sew3yuioawady5nrhjvqmzix",
+  "verifiedRepositoryOwner": "did:plc:phei4tdhruwqgpcijwgd757v",
+  "expectedPublicKeyFingerprint": "SHA256:q9mRXI8is/+s2oetxesiuLySKAOChzXCY65MhzRleUA",
+  "privateKeyValuesInEvidence": false
+}

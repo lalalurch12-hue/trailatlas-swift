@@ -18,7 +18,7 @@ cache:
     paths: [.build]
     when: always
 environment:
-  TANGLED_PUSH_URL: git@tangled.org:did:plc:sew3yuioawady5nrhjvqmzix
+  TANGLED_PUSH_URL: lalalurch.tngl.sh@tangled.org:did:plc:sew3yuioawady5nrhjvqmzix
 steps:
   - name: Swift build, regression tests and durable public source refresh
     command: bash scripts/tangled_ci.sh
