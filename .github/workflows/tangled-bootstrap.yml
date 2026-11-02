@@ -1,5 +1,5 @@
 name: One-time Tangled migration
-# Transfer the verified Swift build and free Unikraft migration checkpoint to Tangled.
+# Transfer public browser acceptance checks for the free Unikraft deployment to Tangled.
 on:
   push:
     branches: [main]

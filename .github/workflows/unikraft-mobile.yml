@@ -1,0 +1,30 @@
+name: Unikraft mobile and JavaScript-free browser acceptance
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/unikraft-mobile.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install the official browser test tools
+        run: |
+          python -m pip install playwright==1.64.1
+          python -m playwright install --with-deps chromium
+      - name: Test mobile menus, layouts and forms without browser JavaScript
+        run: python tests/browser_checks.py --url https://silent-water-yl7acse4.fra.unikraft.app --report-dir browser-acceptance
+      - name: Preserve screenshots and the public test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unikraft-browser-acceptance-${{ github.run_attempt }}
+          path: browser-acceptance/
+          retention-days: 7

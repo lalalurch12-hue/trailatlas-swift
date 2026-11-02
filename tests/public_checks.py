@@ -76,7 +76,7 @@ def main():
 
         if args.check_saved_favorite:
             assert page('/?favs=1')[0].rows == 1, 'Favorite lost after server replacement'
-            record('Saved secure-cookie favorite survives the actual Render redeployment')
+            record('Saved secure-cookie favorite survives the actual server restart or redeployment')
         else:
             def check_country(country):
                 reader=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
@@ -149,7 +149,7 @@ def main():
             assert 'http-equiv="refresh"' in live
             _, china = page('/?section=live&race=old-0208')
             assert 'WeRun' in china and 'https://werun.hk/game/yangxian100' in china
-            record('Real UTMB API fetched by Render and Chinese WeRun source displayed safely')
+            record('Real UTMB API fetched by the Swift server and Chinese WeRun source displayed safely')
 
         if args.cookie_file:
             jar.save(ignore_discard=True,ignore_expires=True)

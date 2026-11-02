@@ -1,6 +1,6 @@
 # Umzug auf Unikraft Cloud
 
-Status: Konto und kostenloser Hobby-Tarif bestätigt; vollständiger Swift-Release-Build erfolgreich. Noch nicht auf Unikraft veröffentlicht: Die automatische Freigabeprüfung hat den Klick auf „Grant Access“ für die lokale CLI blockiert und verlangt dafür die ausdrückliche Zustimmung des Benutzers zur Organisation „Trail Atlas“. Es wurde keine Unikraft-Instanz erstellt. Die bestehende Render-Seite bleibt bis zur erfolgreichen Unikraft-Abnahme unter https://trailatlas-swift.onrender.com/ erreichbar.
+Status: Auf Unikraft veröffentlicht; vollständige öffentliche Abnahme läuft. Neue HTTPS-Adresse: https://silent-water-yl7acse4.fra.unikraft.app/ . Der tatsächliche Swift-Server beantwortet `/health` mit HTTP 200. Die CLI-Freigabe für „Trail Atlas“ wurde nach ausdrücklicher Zustimmung des Benutzers erfolgreich abgeschlossen. Der kostenlose Hobby-Tarif ist im tatsächlichen Konto bestätigt. Die bestehende Render-Seite bleibt unter https://trailatlas-swift.onrender.com/ als Rückfallmöglichkeit erreichbar.
 
 ## Nachgewiesener Stand vom 2. November 2026
 
@@ -10,6 +10,8 @@ Status: Konto und kostenloser Hobby-Tarif bestätigt; vollständiger Swift-Relea
 - Die 352 ursprünglichen Rennen und die originale HTML-Designreferenz sind bytegleich erhalten. Anwendungsquellcode und Ressourcen wurden für diesen Umzug nicht geändert. Das Image enthält keinen Sitzungsschlüssel.
 - Die CI baut und exportiert ausschließlich das Docker-Laufzeitdateisystem. Unikraft-Zugangsdaten wurden nicht an GitHub übertragen. Die abschließende Unikraft-Paketierung und Veröffentlichung erfolgen nach der CLI-Freigabe mit dem lokalen Client.
 - Das heruntergeladene Archiv liegt lokal bereit; das CI-Artefakt wird bis zum 5. November 2026, 19:23 UTC aufbewahrt. Der Build ist aus dem angegebenen Commit reproduzierbar.
+- Die lokale CLI hat das vollständige Unikraft-OCI-Image gebaut und in die Registry `index.unikraft.io/trailatlas/trailatlas-swift:ee5045d` hochgeladen. Instanz `trailatlas-swift` in Frankfurt: 512 MiB RAM, eine vCPU, eine Replik, HTTPS und HTTP-Weiterleitung. Der stabile Sitzungsschlüssel wird ausschließlich zur Laufzeit gesetzt.
+- Der persistente ext4-Datenträger `trailatlas-data` (128 MiB, innerhalb des im kostenlosen Konto angezeigten 1-GiB-Speicherkontingents) ist für `/data` vorgesehen; `DATA_DIR=/data/trailatlas`. Der Datenträger bleibt auch nach dem Löschen der Instanz erhalten. Die tatsächliche Wiederherstellung nach Neustart wird separat geprüft.
 
 ## Festgelegter Betriebsweg
 
@@ -22,12 +24,13 @@ Status: Konto und kostenloser Hobby-Tarif bestätigt; vollständiger Swift-Relea
 
 ## Noch ausstehende Schritte
 
-1. Ausdrückliche Zustimmung zum CLI-Zugriff auf die Organisation „Trail Atlas“ einholen und den blockierten „Grant Access“-Schritt erst danach ausführen. Bei abgelaufener Anmeldeanfrage ist danach eine neue reguläre Anfrage erforderlich.
-2. Das bereits geprüfte Swift-Laufzeitdateisystem mit der Unikraft-Kompatibilitätslaufzeit paketieren, hochladen und innerhalb des kostenlosen Kontingents starten. Der erfolgreiche Linux-/Swift-Build allein weist noch keine Kompatibilität mit der Unikraft-Laufzeit nach.
-3. Eigenheiten der Unikraft-Laufzeit testen: Dateizugriff, Netzwerk, TLS-Abrufe, Threads und Swift NIO. Die Docker-Anweisung USER wird von der Kompatibilitätslaufzeit nicht automatisch als Laufzeitbenutzer übernommen; der Benutzerwechsel ist vor der Produktionsabnahme zu prüfen.
-4. Quellenabruf von Tangled, `/health`, alle Filter und 352 Rennkarten, Favoriten, Ergebnisansichten, Export und Mobilansicht an der neuen HTTPS-Adresse prüfen.
-5. Favoriten beim Wechsel der Domain ausdrücklich übernehmen: bestehende Cookies für `onrender.com` werden vom Browser nicht an die neue Domain gesendet. Ein unveränderter Sitzungsschlüssel allein löst diesen Domainwechsel nicht.
-6. Erst nach bestandener Abnahme die neue Adresse als Hauptveröffentlichung setzen und den bisherigen Render-Betrieb als Rückfallmöglichkeit entsprechend dokumentieren.
+1. Die öffentliche HTTPS-Prüfung für alle Filter und 352 Rennkarten, Favoriten, Ergebnisansichten und Export abschließen.
+2. Kalender, Raster, Live-Ergebnisse und mobile Filter bei 360, 390, 768 und 1280 Pixeln mit ausgeschaltetem Browser-JavaScript prüfen.
+3. Tatsächliche Datenpersistenz und Favoriten nach einem Neustart prüfen, einschließlich eines Tests ohne die Wiederherstellungs-Cookies.
+4. Quellenabruf von Tangled und echte Ergebnisabrufe durch die Unikraft-Instanz prüfen. Dateizugriff und Swift NIO sind durch den gestarteten Server und die öffentlichen APIs bereits bestätigt.
+5. Den Benutzerkontext dokumentieren: Die Docker-Anweisung USER wird von der Kompatibilitätslaufzeit nicht automatisch als Laufzeitbenutzer übernommen. Die Anwendung läuft innerhalb einer isolierten Unikraft-MicroVM; die UID-Garantie des Docker-Images darf nicht als Nachweis für den Unikraft-Gast ausgegeben werden.
+6. Domainwechsel dokumentieren: bestehende Cookies für `onrender.com` werden vom Browser nicht an die neue Domain gesendet. Alte Favoriten sind weiterhin auf der bisherigen Adresse erreichbar; eine automatische Übernahme in den Browser des Benutzers wurde nicht durchgeführt.
+7. Erst nach bestandener Abnahme die neue Adresse als Hauptveröffentlichung bestätigen und den vollständigen Prüfbericht aktualisieren.
 
 ## Aktuelle Referenzen
 

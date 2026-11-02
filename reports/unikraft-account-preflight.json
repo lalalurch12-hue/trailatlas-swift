@@ -1,5 +1,5 @@
 {
-  "status": "HOBBY_FREE_CONFIRMED_CLI_GRANT_PENDING",
+  "status": "APP_RUNNING_ACCEPTANCE_PENDING",
   "organization": "trailatlas",
   "observedAt": "2026-11-02T19:24:26.116423+00:00",
   "billingUI": {
@@ -18,14 +18,23 @@
   "cliAuthorization": {
     "version": "0.6.2",
     "organization": "Trail Atlas",
-    "accessGranted": false,
+    "accessGranted": true,
     "pendingControl": "Grant Access",
-    "automaticReview": "Explicit user approval for this CLI access is required"
+    "automaticReview": "Explicit user permission supplied; Grant Access completed successfully",
+    "authorizedAt": "2026-11-02T23:08:42.448386+00:00"
   },
   "build": {
     "runId": 41508962423,
     "sourceCommit": "ee5045d2f5950bf40df6da087afda43701811ad1",
     "credentialsSentToCI": false
   },
-  "publicDeploymentCompleted": false
+  "publicDeploymentCompleted": true,
+  "publicURL": "https://silent-water-yl7acse4.fra.unikraft.app/",
+  "persistentVolume": {
+    "name": "trailatlas-data",
+    "size": "128MiB",
+    "persistent": true,
+    "filesystem": "ext4",
+    "quotaBytes": 1073741824
+  }
 }
