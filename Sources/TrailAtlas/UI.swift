@@ -37,6 +37,10 @@ struct TrailUI: Sendable {
         let selectedLiveURL=activeLive.flatMap{state.session.liveLinks[$0.id]} ?? safeAutoURL ?? officialLive ?? ""
         let checkedLinks=autoTracking.verification.values.filter{$0.status == "erreichbar"}.count
         let autoSummary="\(autoTracking.links.count) Quellen gefunden · \(autoTracking.checkedCount) Rennen durchsucht · \(checkedLinks) Quellen erreichbar · Prüfung alle 96 Min. (während Server läuft)"
+        let trackingNote:String
+        if autoTracking.lastError.isEmpty {trackingNote=""}
+        else if autoTracking.lastError.hasPrefix("Keine eindeutige Quelle") {trackingNote=" · Zuletzt keine eindeutige Quelle für die Rennausgabe gefunden"}
+        else {trackingNote=" · Suchdienst teilweise nicht erreichbar"}
         let selectedLiveInfo: String
         if let a=autoLink {
             let check=autoTracking.verification[a.raceID]
@@ -74,7 +78,7 @@ struct TrailUI: Sendable {
             "@@WEEKEND_COUNT@@":"\(onWeekend.count) Rennen",
             "@@WEEKEND_DATES@@":"\(germanDate(wstart)) – \(germanDate(wend)) · Kommendes Wochenende",
             "@@LIVE_CONNECTION@@":selectedLiveURL.isEmpty ? "Noch keine verifizierte Live-Quelle für dieses Rennen gefunden. Es werden keine Ergebnisse erfunden." : "Ergebnisquelle gefunden · Anzeige wird im Live-Bereich etwa alle 90 Sekunden neu geladen.",
-            "@@LIVE_DISCOVERY_STATUS@@":esc(autoSummary + (autoTracking.lastAttempt.isEmpty ? " · Noch keine laufende Kontrolle abgeschlossen" : " · Letzter Tracking-Abgleich: " + autoTracking.lastAttempt) + (autoTracking.running ? " · Prüfung läuft …" : "") + (!autoTracking.lastError.isEmpty ? " · Suchdienst teilweise nicht erreichbar" : "")),
+            "@@LIVE_DISCOVERY_STATUS@@":esc(autoSummary + (autoTracking.lastAttempt.isEmpty ? " · Noch keine laufende Kontrolle abgeschlossen" : " · Letzter Tracking-Abgleich: " + autoTracking.lastAttempt) + (autoTracking.running ? " · Prüfung läuft …" : "") + trackingNote),
             "@@LIVE_DISCOVERY_SOURCE@@":esc(selectedLiveInfo),
             "@@LIVE_MANUAL_RACE@@":esc(f.liveRace),
             "@@LIVE_SEARCH_URL@@":f.link(["action":"discover-live","section":"live","race":f.liveRace],fragment:"#live-panel"),
