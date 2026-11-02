@@ -1,5 +1,5 @@
 name: One-time Tangled migration
-# Final audit handoff; the temporary repository secret is removed after this transfer.
+# Transfer the prepared Unikraft configuration to the primary Tangled repository.
 on:
   push:
     branches: [main]

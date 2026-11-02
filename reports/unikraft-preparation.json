@@ -1,0 +1,39 @@
+{
+  "status": "PREPARED_AWAITING_ACCOUNT_LOGIN",
+  "checkedAt": "2026-11-02T18:58:49.287899+00:00",
+  "target": "Unikraft Cloud Hobby free tier",
+  "sourceRevisionBeforePreparation": "bdf001566962c641bee106c37ac16d47892e2d14",
+  "applicationCodeChanged": false,
+  "runtimeResources": {
+    "metro": "fra",
+    "memory": "512MiB",
+    "vcpus": 1,
+    "replicas": 1
+  },
+  "publicPorts": [
+    "443:10000/http+tls",
+    "80:443/http+redirect"
+  ],
+  "cli": {
+    "version": "0.6.2",
+    "officialArchiveSHA256": "7ebdf1fd3b1bfb459c9008a92ff1429070a5a6d4ce7917b373ad99600d28a97d",
+    "checksumVerified": true,
+    "dryRunExitCode": 0
+  },
+  "configurationYAML": "PASS",
+  "originalRaces": 352,
+  "originalResourcesSHA256": {
+    "Resources/races.json": "d80fff4ebb1f3edddcd523426c8ed9ac3046526e442590ba257e6253f920b301",
+    "Resources/original_unmodified.html": "bc859a024cb3e37089a72a4910a426ef63ee40a1e7c5198f86491fd134ec975c"
+  },
+  "configurationContainsSecrets": false,
+  "realUnikraftDeploymentCompleted": false,
+  "requiredBeforeCutover": [
+    "Account login and any initial terms acceptance by the user",
+    "Confirm actual Hobby plan and quotas",
+    "Build and boot the Swift image on Unikraft",
+    "Check non-root runtime startup",
+    "Transfer domain-bound personal favorites explicitly",
+    "Run full public HTTPS acceptance"
+  ]
+}

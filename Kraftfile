@@ -1,0 +1,21 @@
+# TrailAtlas on Unikraft Cloud. Runtime secrets are injected only at deployment.
+spec: v0.7
+name: trailatlas-swift
+runtime: base-compat:latest
+targets:
+- kraftcloud/x86_64
+rootfs:
+  source:
+    type: dockerfile
+    path: .
+    dockerfile: ./Dockerfile
+  format: erofs
+cmd:
+- /bin/sh
+- -c
+- cd /app && exec /app/TrailAtlas
+env:
+  PORT: '10000'
+  DATA_DIR: /tmp/trailatlas
+  COOKIE_SECURE: '1'
+  SHARED_DATA_BASE_URL: https://tangled.org/lalalurch.tngl.sh/trailatlas-swift/raw/trailatlas-data
