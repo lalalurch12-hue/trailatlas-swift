@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/refresh.yml'
+      - 'scripts/refresh_public_data.sh'
 permissions:
   contents: write
 concurrency:

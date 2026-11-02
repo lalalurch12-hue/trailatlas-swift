@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
-TASK_ROOT=$(git rev-parse --show-toplevel)
+TASK_ROOT=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)
+# The checkout belongs to the runner UID; the Swift container runs as root.
+# Trust only this checkout and its own data worktree.
+if [[ "${GITHUB_ACTIONS:-}" == "true" ]]; then
+  git config --global --add safe.directory "$TASK_ROOT"
+  git config --global --add safe.directory "$TASK_ROOT/.data-worktree"
+fi
+git -C "$TASK_ROOT" rev-parse --show-toplevel >/dev/null
 cd "$TASK_ROOT"
 mkdir -p .runtime .public-data
 if git fetch origin trailatlas-data; then

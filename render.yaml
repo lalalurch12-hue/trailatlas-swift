@@ -19,4 +19,4 @@ services:
       - key: SESSION_SECRET
         generateValue: true
       - key: SHARED_DATA_BASE_URL
-        sync: false
+        value: https://raw.githubusercontent.com/lalalurch12-hue/trailatlas-swift/trailatlas-data
