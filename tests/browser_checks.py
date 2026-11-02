@@ -26,7 +26,14 @@ def main():
         geometry = page.evaluate('''() => ({
             viewport: innerWidth,
             document: document.documentElement.scrollWidth,
-            body: document.body.scrollWidth
+            body: document.body.scrollWidth,
+            overflow: [...document.querySelectorAll('body *')].map(element => {
+                const box = element.getBoundingClientRect();
+                const style = getComputedStyle(element);
+                return {tag: element.tagName, id: element.id, class: element.className,
+                        x: box.x, right: box.right, width: box.width,
+                        minWidth: style.minWidth, whiteSpace: style.whiteSpace};
+            }).filter(box => box.x >= 0 && box.right > innerWidth + 1).slice(0, 18)
         })''')
         assert geometry['viewport'] == width, geometry
         assert max(geometry['document'], geometry['body']) <= width + 1, geometry
@@ -52,9 +59,9 @@ def main():
                     assert response and response.status == 200
                     assert "script-src 'none'" in response.headers.get('content-security-policy', '')
                     expect(page.locator('.brand')).to_be_visible()
-                    geometry = check_width(page, width)
                     screenshot = f'{label}-{width}.png'
                     page.screenshot(path=str(destination / screenshot))
+                    geometry = check_width(page, width)
                     results.append({'width': width, 'view': label, 'geometry': geometry,
                                     'javascriptEnabled': False, 'screenshot': screenshot})
 

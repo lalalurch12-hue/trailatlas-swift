@@ -1,5 +1,5 @@
 name: One-time Tangled migration
-# Transfer public browser acceptance checks for the free Unikraft deployment to Tangled.
+# Transfer precise mobile overflow diagnostics for the Unikraft deployment to Tangled.
 on:
   push:
     branches: [main]

@@ -1,4 +1,5 @@
 name: Unikraft mobile and JavaScript-free browser acceptance
+# Keep font-ready screenshots and element geometry for mobile overflow diagnostics.
 on:
   push:
     branches: [main]
