@@ -1,4 +1,4 @@
-name: Build the TrailAtlas Unikraft image
+name: Build the TrailAtlas Docker filesystem
 on:
   push:
     branches: [main]
@@ -12,39 +12,30 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-      - name: Install the official checksum-verified Unikraft CLI
-        run: |
-          python3 - <<'PYCLI'
-          import hashlib, io, os, pathlib, tarfile, urllib.request
-          base = 'https://pkg.unikraft.com/endpoints/cli/content/v0.6.2/'
-          with urllib.request.urlopen(base + 'unikraft-linux-amd64.tar.gz', timeout=120) as response:
-              archive = response.read()
-          expected = '7ebdf1fd3b1bfb459c9008a92ff1429070a5a6d4ce7917b373ad99600d28a97d'
-          assert hashlib.sha256(archive).hexdigest() == expected, 'CLI checksum mismatch'
-          bundle = tarfile.open(fileobj=io.BytesIO(archive), mode='r:gz')
-          member = bundle.getmember('unikraft')
-          assert member.isfile()
-          target = pathlib.Path(os.environ['RUNNER_TEMP']) / 'unikraft-bin'
-          target.mkdir()
-          binary = target / 'unikraft'
-          binary.write_bytes(bundle.extractfile(member).read())
-          binary.chmod(0o755)
-          with open(os.environ['GITHUB_PATH'], 'a') as path:
-              path.write(str(target) + '\n')
-          print('PASS: official Unikraft CLI checksum verified')
-          PYCLI
-      - name: Build the complete Swift server as an Unikraft OCI archive
+      - name: Build the complete Swift server and export its runtime filesystem
         run: |
           mkdir -p dist
-          docker run -d --name trailatlas-buildkit --privileged moby/buildkit:latest
-          export BUILDKIT_HOST=docker-container://trailatlas-buildkit
-          unikraft --telemetry=false --timeout=20m build . --output ./dist/trailatlas.oci.tar
-          sha256sum dist/trailatlas.oci.tar > dist/trailatlas.oci.tar.sha256
-          docker inspect trailatlas-buildkit --format '{{.Image}}' > dist/buildkit-image.txt
+          docker build --platform linux/amd64 -t trailatlas-swift:unikraft .
+          docker create --name trailatlas-export trailatlas-swift:unikraft
+          docker export trailatlas-export | gzip -6 > dist/trailatlas-rootfs.tar.gz
+          sha256sum dist/trailatlas-rootfs.tar.gz > dist/trailatlas-rootfs.tar.gz.sha256
+          docker image inspect trailatlas-swift:unikraft --format '{{json .Config}}' > dist/container-config.json
           git rev-parse HEAD > dist/source-commit.txt
-      - name: Preserve the deployment archive without credentials
+          python3 - <<'PYPROOF'
+          import pathlib, hashlib, json
+          root = pathlib.Path('.')
+          expected = {'Resources/races.json': 'd80fff4ebb1f3edddcd523426c8ed9ac3046526e442590ba257e6253f920b301', 'Resources/original_unmodified.html': 'bc859a024cb3e37089a72a4910a426ef63ee40a1e7c5198f86491fd134ec975c'}
+          for name, digest in expected.items():
+              assert hashlib.sha256((root / name).read_bytes()).hexdigest() == digest
+          size = (root / 'dist/trailatlas-rootfs.tar.gz').stat().st_size
+          assert size < 400 * 1024 * 1024, 'Archive exceeds the conservative free artifact-storage budget'
+          assert len(json.loads((root / 'Resources/races.json').read_text())) == 352
+          print('PASS: complete Swift runtime built; original 352 races and design reference preserved; compressed archive bytes:', size)
+          PYPROOF
+      - name: Preserve the deployment filesystem without credentials
         uses: actions/upload-artifact@v4
         with:
-          name: trailatlas-unikraft-image-${{ github.run_attempt }}
+          name: trailatlas-unikraft-rootfs-${{ github.run_attempt }}
           path: dist/
-          retention-days: 14
+          compression-level: 0
+          retention-days: 3
