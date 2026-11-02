@@ -1,0 +1,33 @@
+name: Refresh public event dates and tracking sources
+on:
+  schedule:
+    - cron: '17 */2 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refresh.yml'
+permissions:
+  contents: write
+concurrency:
+  group: trailatlas-public-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    container: swift:6.2-noble
+    timeout-minutes: 25
+    steps:
+      - name: Install required system libraries
+        run: apt-get update && apt-get install -y --no-install-recommends pkg-config zlib1g-dev curl python3 git
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/cache@v4
+        with:
+          path: .build
+          key: swift62-release-${{ runner.os }}-${{ hashFiles('Package.resolved') }}
+      - name: Build Swift refresher
+        run: swift build -c release --jobs 2
+      - name: Refresh and persist public data without personal sessions
+        run: bash scripts/refresh_public_data.sh

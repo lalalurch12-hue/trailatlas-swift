@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "method": "Cloud browser inspecting HTML snapshots emitted by the actual Swift HTTP server; functional requests tested separately against that server",
+  "desktop": {
+    "viewportWidth": 1363,
+    "calendarX": 285,
+    "calendarWidth": 1063,
+    "calendarY": 102,
+    "scrimDisplay": "none",
+    "gridDetailWidth": 444.984375,
+    "gridDetailHeight": 95,
+    "gridDetailDisplay": "block"
+  },
+  "mobile": [
+    {
+      "nominalWidth": 360,
+      "clientWidth": 345,
+      "scrollWidth": 345
+    },
+    {
+      "nominalWidth": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "nominalWidth": 768,
+      "clientWidth": 753,
+      "scrollWidth": 753
+    }
+  ],
+  "drawer": {
+    "openX": 0,
+    "closedX": -318,
+    "openTarget": "sidebar",
+    "closeAnchor": "#calendar",
+    "keyboardClose": "PASS"
+  }
+}

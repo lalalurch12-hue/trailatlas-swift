@@ -1,0 +1,15 @@
+.build
+.git
+.DS_Store
+tests
+*.zip
+.swiftpm
+.github
+.openai
+.env*
+.runtime
+.public-data
+.data-worktree
+node_modules
+*.log
+reports

@@ -1,0 +1,30 @@
+name: Swift build and functional checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    container: swift:6.2-noble
+    timeout-minutes: 25
+    steps:
+      - name: Install required system libraries
+        run: apt-get update && apt-get install -y --no-install-recommends pkg-config zlib1g-dev curl python3 git
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: .build
+          key: swift62-release-${{ runner.os }}-${{ hashFiles('Package.resolved') }}
+      - name: Core and extraction regression checks
+        run: bash scripts/pruefen.sh
+      - name: Full Hummingbird and Elementary release build
+        run: swift build -c release --jobs 2
+      - name: HTTP interface, filters and durable cookie checks
+        run: python3 tests/http_checks.py --binary .build/release/TrailAtlas
+      - name: Open every original race card and verify its source links
+        run: python3 tests/card_checks.py --binary .build/release/TrailAtlas

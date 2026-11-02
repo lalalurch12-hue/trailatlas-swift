@@ -1,0 +1,837 @@
+{
+  "automaticDates" : {
+    "old-0001" : {
+      "checkedAt" : "2026-11-02T00:24:04Z",
+      "end" : "2026-01-11",
+      "evidence" : "Bandera Endurance Trail Race 2026 · startDate=2026-01-10T07:30:00-06:00",
+      "raceID" : "old-0001",
+      "sourceURL" : "https:\/\/ultramarathondatabase.com\/races\/bandera-endurance-trail-race\/2026",
+      "start" : "2026-01-10"
+    },
+    "old-0003" : {
+      "checkedAt" : "2026-11-02T00:24:07Z",
+      "end" : "2026-01-18",
+      "evidence" : "HURT 100 2026 · startDate=2026-01-17T06:00:00-10:00",
+      "raceID" : "old-0003",
+      "sourceURL" : "https:\/\/ultramarathondatabase.com\/races\/hurt-100\/2026",
+      "start" : "2026-01-17"
+    },
+    "seed-grossglockner-ggut" : {
+      "checkedAt" : "2026-11-02T00:23:33Z",
+      "end" : "2027-07-25",
+      "evidence" : "t springen (Alt+0) Zum Hauptmenü springen (Alt+1) Anmeldung The North Face Großglockner Ultra-Trail 22. - 25. Juli 2027 Your comfort zone ends here. Zur Anmeldung Die Distanzen 10 Tage 10 Stunden 10 Minuten 10 Sekunden ",
+      "raceID" : "seed-grossglockner-ggut",
+      "sourceURL" : "https:\/\/www.ultratrail.at\/de",
+      "start" : "2027-07-22"
+    },
+    "seed-grossglockner-mountain" : {
+      "checkedAt" : "2026-11-02T00:23:28Z",
+      "end" : "2027-07-04",
+      "evidence" : "ok package Book accommodation Book package REGISTER German Grossglockner Mountain Run Heiligenblut, 2. - 4. July 2027 Register now Grossglockner Mountain Run Heiligenblut, 2. - 4. July 2027 Register now Grossglockner ",
+      "raceID" : "seed-grossglockner-mountain",
+      "sourceURL" : "https:\/\/grossglockner-mountainrun.at\/en\/",
+      "start" : "2027-07-02"
+    },
+    "seed-innsbruck-iatf" : {
+      "checkedAt" : "2026-11-02T00:23:23Z",
+      "end" : "2027-05-08",
+      "evidence" : "eringbus Expo Sideevents Race Magazine Partner Nachhaltigkeit EN Trailrun Festival Innsbruck Alpine 05.05. – 08.05.2027 JETZT ANMELDEN! Anmeldestart: 09.09.2026, 09:09 Uhr Strecken für jedes Level Einzigartige Trailrunn",
+      "raceID" : "seed-innsbruck-iatf",
+      "sourceURL" : "https:\/\/www.innsbruckalpine.at\/",
+      "start" : "2027-05-05"
+    },
+    "seed-oberaudorf-otf" : {
+      "checkedAt" : "2026-11-02T00:23:20Z",
+      "end" : "2027-10-03",
+      "evidence" : "ny Search Search Clear Something went wrong. Please try again! Log in Cart OTF PRESENTED BY DYNAFIT 30.09 - 03.10.2027 Registration OTF26 Routes Event Info OTF Camp Trail Club SAT Performance WELCOME TO THE AFTERPARTY ",
+      "raceID" : "seed-oberaudorf-otf",
+      "sourceURL" : "https:\/\/saltytrailrunning.com\/en-de\/pages\/otf",
+      "start" : "2027-09-30"
+    }
+  },
+  "checks" : [
+    {
+      "checkedAt" : "2026-11-02T00:23:20Z",
+      "message" : "1 Datumshinweise · 1 eindeutig zugeordnete Termine automatisch übernommen",
+      "name" : "Oberaudorf Trail Festival (OTF)"
+    },
+    {
+      "checkedAt" : "2026-11-02T00:23:23Z",
+      "message" : "6 Datumshinweise · 1 eindeutig zugeordnete Termine automatisch übernommen",
+      "name" : "Innsbruck Alpine Trailrun Festival (IATF) – Trail Hunt"
+    },
+    {
+      "checkedAt" : "2026-11-02T00:23:28Z",
+      "message" : "2 Datumshinweise · 1 eindeutig zugeordnete Termine automatisch übernommen",
+      "name" : "Grossglockner Mountain Run (Heiligenblut)"
+    },
+    {
+      "checkedAt" : "2026-11-02T00:23:33Z",
+      "message" : "2 Datumshinweise · 1 eindeutig zugeordnete Termine automatisch übernommen",
+      "name" : "The North Face Großglockner Ultra-Trail (GGUT)"
+    },
+    {
+      "checkedAt" : "2026-11-02T00:23:37Z",
+      "message" : "6 Datumshinweise · 0 eindeutig zugeordnete Termine automatisch übernommen",
+      "name" : "Zegama-Aizkorri"
+    },
+    {
+      "checkedAt" : "2026-11-02T00:23:41Z",
+      "message" : "40 Datumshinweise · 0 eindeutig zugeordnete Termine automatisch übernommen",
+      "name" : "Lavaredo Ultra Trail"
+    },
+    {
+      "checkedAt" : "2026-11-02T00:23:45Z",
+      "message" : "2 Datumshinweise · 0 eindeutig zugeordnete Termine automatisch übernommen",
+      "name" : "Broken Arrow Skyrace"
+    },
+    {
+      "checkedAt" : "2026-11-02T00:23:49Z",
+      "message" : "2 Datumshinweise · 0 eindeutig zugeordnete Termine automatisch übernommen",
+      "name" : "JFK 50 Mile"
+    },
+    {
+      "checkedAt" : "2026-11-02T00:23:53Z",
+      "message" : "0 Datumshinweise · 0 eindeutig zugeordnete Termine automatisch übernommen",
+      "name" : "Dolomyths Run – SkyRace \/ Ultra"
+    },
+    {
+      "checkedAt" : "2026-11-02T00:23:59Z",
+      "message" : "0 Datumshinweise · 0 eindeutig zugeordnete Termine automatisch übernommen",
+      "name" : "Transvulcania La Palma"
+    },
+    {
+      "checkedAt" : "2026-11-02T00:24:04Z",
+      "message" : "3 Datumshinweise · 1 eindeutig zugeordnete Termine automatisch übernommen",
+      "name" : "Bandera Endurance Trail Race"
+    },
+    {
+      "checkedAt" : "2026-11-02T00:24:07Z",
+      "message" : "3 Datumshinweise · 1 eindeutig zugeordnete Termine automatisch übernommen",
+      "name" : "HURT 100"
+    }
+  ],
+  "findings" : [
+    {
+      "confidence" : "official-label",
+      "end" : "2027-10-03",
+      "evidence" : "ny Search Search Clear Something went wrong. Please try again! Log in Cart OTF PRESENTED BY DYNAFIT 30.09 - 03.10.2027 Registration OTF26 Routes Event Info OTF Camp Trail Club SAT Performance WELCOME TO THE AFTERPARTY ",
+      "id" : "oberaudorf-otf|2027-09-30",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "oberaudorf-otf",
+      "sourceName" : "Oberaudorf Trail Festival (OTF)",
+      "sourceURL" : "https:\/\/saltytrailrunning.com\/en-de\/pages\/otf",
+      "start" : "2027-09-30"
+    },
+    {
+      "confidence" : "official-label",
+      "end" : "2027-05-08",
+      "evidence" : "eringbus Expo Sideevents Race Magazine Partner Nachhaltigkeit EN Trailrun Festival Innsbruck Alpine 05.05. – 08.05.2027 JETZT ANMELDEN! Anmeldestart: 09.09.2026, 09:09 Uhr Strecken für jedes Level Einzigartige Trailrunn",
+      "id" : "innsbruck-iatf|2027-05-05",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "innsbruck-iatf",
+      "sourceName" : "Innsbruck Alpine Trailrun Festival (IATF) – Trail Hunt",
+      "sourceURL" : "https:\/\/www.innsbruckalpine.at\/",
+      "start" : "2027-05-05"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "hhaltigkeit EN Trailrun Festival Innsbruck Alpine 05.05. – 08.05.2027 JETZT ANMELDEN! Anmeldestart: 09.09.2026, 09:09 Uhr Strecken für jedes Level Einzigartige Trailrunning-Kulisse 0 Tage 0 Stunden 0 Minuten 0 ",
+      "id" : "innsbruck-iatf|2026-09-09",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "innsbruck-iatf",
+      "sourceName" : "Innsbruck Alpine Trailrun Festival (IATF) – Trail Hunt",
+      "sourceURL" : "https:\/\/www.innsbruckalpine.at\/",
+      "start" : "2026-09-09"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "hau dir jetzt unser IATF26 Highlightvideo an & erlebe die Action noch einmal! IATF26 Highlights Mi, 29.04.2026 Do, 30.04.2026 Fr, 01.05.2026 Sa, 02.05.2026 Die Trails warten auf dich! Bewerbe 2027 Egal, ob du e",
+      "id" : "innsbruck-iatf|2026-04-29",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "innsbruck-iatf",
+      "sourceName" : "Innsbruck Alpine Trailrun Festival (IATF) – Trail Hunt",
+      "sourceURL" : "https:\/\/www.innsbruckalpine.at\/",
+      "start" : "2026-04-29"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "nser IATF26 Highlightvideo an & erlebe die Action noch einmal! IATF26 Highlights Mi, 29.04.2026 Do, 30.04.2026 Fr, 01.05.2026 Sa, 02.05.2026 Die Trails warten auf dich! Bewerbe 2027 Egal, ob du erste Trail-Erfa",
+      "id" : "innsbruck-iatf|2026-04-30",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "innsbruck-iatf",
+      "sourceName" : "Innsbruck Alpine Trailrun Festival (IATF) – Trail Hunt",
+      "sourceURL" : "https:\/\/www.innsbruckalpine.at\/",
+      "start" : "2026-04-30"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "hlightvideo an & erlebe die Action noch einmal! IATF26 Highlights Mi, 29.04.2026 Do, 30.04.2026 Fr, 01.05.2026 Sa, 02.05.2026 Die Trails warten auf dich! Bewerbe 2027 Egal, ob du erste Trail-Erfahrungen sammeln",
+      "id" : "innsbruck-iatf|2026-05-01",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "innsbruck-iatf",
+      "sourceName" : "Innsbruck Alpine Trailrun Festival (IATF) – Trail Hunt",
+      "sourceURL" : "https:\/\/www.innsbruckalpine.at\/",
+      "start" : "2026-05-01"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "& erlebe die Action noch einmal! IATF26 Highlights Mi, 29.04.2026 Do, 30.04.2026 Fr, 01.05.2026 Sa, 02.05.2026 Die Trails warten auf dich! Bewerbe 2027 Egal, ob du erste Trail-Erfahrungen sammeln möchtest, als ",
+      "id" : "innsbruck-iatf|2026-05-02",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "innsbruck-iatf",
+      "sourceName" : "Innsbruck Alpine Trailrun Festival (IATF) – Trail Hunt",
+      "sourceURL" : "https:\/\/www.innsbruckalpine.at\/",
+      "start" : "2026-05-02"
+    },
+    {
+      "confidence" : "official-label",
+      "end" : "2027-07-04",
+      "evidence" : "ok package Book accommodation Book package REGISTER German Grossglockner Mountain Run Heiligenblut, 2. - 4. July 2027 Register now Grossglockner Mountain Run Heiligenblut, 2. - 4. July 2027 Register now Grossglockner ",
+      "id" : "grossglockner-mountain|2027-07-02",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "grossglockner-mountain",
+      "sourceName" : "Grossglockner Mountain Run (Heiligenblut)",
+      "sourceURL" : "https:\/\/grossglockner-mountainrun.at\/en\/",
+      "start" : "2027-07-02"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : " Grossglockner Mountain Run Heiligenblut, 2. - 4. July 2027 Register now Days Hours Minutes Seconds July 4, 2027 \/ 9 am The Grossglockner Mountain Run The highest mountain in Austria &#8211; the Grossglockner &#8",
+      "id" : "grossglockner-mountain|2027-07-04",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "grossglockner-mountain",
+      "sourceName" : "Grossglockner Mountain Run (Heiligenblut)",
+      "sourceURL" : "https:\/\/grossglockner-mountainrun.at\/en\/",
+      "start" : "2027-07-04"
+    },
+    {
+      "confidence" : "official-label",
+      "end" : "2027-07-25",
+      "evidence" : "t springen (Alt+0) Zum Hauptmenü springen (Alt+1) Anmeldung The North Face Großglockner Ultra-Trail 22. - 25. Juli 2027 Your comfort zone ends here. Zur Anmeldung Die Distanzen 10 Tage 10 Stunden 10 Minuten 10 Sekunden ",
+      "id" : "grossglockner-ggut|2027-07-22",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "grossglockner-ggut",
+      "sourceName" : "The North Face Großglockner Ultra-Trail (GGUT)",
+      "sourceURL" : "https:\/\/www.ultratrail.at\/de",
+      "start" : "2027-07-22"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "ner-Unterkünfte Webcams Kontakt SALTY Trailrunning Sponsoren & Partner Volunteer werden Von 22. bis 25. Juli 2027 treffen sich die besten der besten Trailrunner und Bergläufer in der Region Zell am See-Kaprun. Um ",
+      "id" : "grossglockner-ggut|2027-07-25",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "grossglockner-ggut",
+      "sourceName" : "The North Face Großglockner Ultra-Trail (GGUT)",
+      "sourceURL" : "https:\/\/www.ultratrail.at\/de",
+      "start" : "2027-07-25"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "ofiles Tracks Vertical kilometer Junior trail Classifications Gallery News We have a date for 2027! 09 October 2026 The 26th Zegama-Aizkorri will be held on 6 June and pre-registration will open on 11 January for th",
+      "id" : "zegama|2026-10-09",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "zegama",
+      "sourceName" : "Zegama-Aizkorri",
+      "sourceURL" : "https:\/\/www.zegama-aizkorri.com\/en\/news\/368-date-2027",
+      "start" : "2026-10-09"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : " dates for the 26th edition of what is considered the most iconic mountain marathon are now set. On June 6, 2027, hundreds of spectators will once again carry the runners on a wave of passion through world-renown",
+      "id" : "zegama|2027-06-06",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "zegama",
+      "sourceName" : "Zegama-Aizkorri",
+      "sourceURL" : "https:\/\/www.zegama-aizkorri.com\/en\/news\/368-date-2027",
+      "start" : "2027-06-06"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : " runner after Kilian Jornet to repeat a victory in Zegama's town square. DATES ZEGAMA-AIZKORRI 2027 January 11, 2027: Pre-registration for the 26th Zegama-Aizkorri Marathon January 25, 2027: Pre-registration 13th Zeg",
+      "id" : "zegama|2027-01-11",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "zegama",
+      "sourceName" : "Zegama-Aizkorri",
+      "sourceURL" : "https:\/\/www.zegama-aizkorri.com\/en\/news\/368-date-2027",
+      "start" : "2027-01-11"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "DATES ZEGAMA-AIZKORRI 2027 January 11, 2027: Pre-registration for the 26th Zegama-Aizkorri Marathon January 25, 2027: Pre-registration 13th Zegama-Aizkorri KV and 16th Zegama-Aizkorri Junior Trail February 12, 2027: ",
+      "id" : "zegama|2027-01-25",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "zegama",
+      "sourceName" : "Zegama-Aizkorri",
+      "sourceURL" : "https:\/\/www.zegama-aizkorri.com\/en\/news\/368-date-2027",
+      "start" : "2027-01-25"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "on January 25, 2027: Pre-registration 13th Zegama-Aizkorri KV and 16th Zegama-Aizkorri Junior Trail February 12, 2027: Bib lottery June 4, 2027: 13th Zegama-Aizkorri Vertical Kilometer June 6, 2027: 26th Zegama-Aizkor",
+      "id" : "zegama|2027-02-12",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "zegama",
+      "sourceName" : "Zegama-Aizkorri",
+      "sourceURL" : "https:\/\/www.zegama-aizkorri.com\/en\/news\/368-date-2027",
+      "start" : "2027-02-12"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "ration 13th Zegama-Aizkorri KV and 16th Zegama-Aizkorri Junior Trail February 12, 2027: Bib lottery June 4, 2027: 13th Zegama-Aizkorri Vertical Kilometer June 6, 2027: 26th Zegama-Aizkorri Marathon and 16th Zegam",
+      "id" : "zegama|2027-06-04",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "zegama",
+      "sourceName" : "Zegama-Aizkorri",
+      "sourceURL" : "https:\/\/www.zegama-aizkorri.com\/en\/news\/368-date-2027",
+      "start" : "2027-06-04"
+    },
+    {
+      "confidence" : "structured",
+      "end" : "2027-06-27",
+      "evidence" : "La Sportiva Lavaredo Ultra Trail by UTMB · startDate=2027-06-23",
+      "id" : "lavaredo|2027-06-23",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-06-23"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2026-11-08",
+      "evidence" : "B World Series Events Select the event you&#x27;re interested in Register to discover the race Asia 06 - 08 November 2026 13 - 15 November 2026 27 November - 06 December 2026 10 - 12 December 2026 07 - 10 January 2027 05 ",
+      "id" : "lavaredo|2026-11-06",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2026-11-06"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2026-11-15",
+      "evidence" : "Select the event you&#x27;re interested in Register to discover the race Asia 06 - 08 November 2026 13 - 15 November 2026 27 November - 06 December 2026 10 - 12 December 2026 07 - 10 January 2027 05 - 07 March 2027 09 - 1",
+      "id" : "lavaredo|2026-11-13",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2026-11-13"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2026-12-12",
+      "evidence" : "o discover the race Asia 06 - 08 November 2026 13 - 15 November 2026 27 November - 06 December 2026 10 - 12 December 2026 07 - 10 January 2027 05 - 07 March 2027 09 - 11 April 2027 29 April - 02 May 2027 11 - 13 June 2027",
+      "id" : "lavaredo|2026-12-10",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2026-12-10"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-01-10",
+      "evidence" : "ia 06 - 08 November 2026 13 - 15 November 2026 27 November - 06 December 2026 10 - 12 December 2026 07 - 10 January 2027 05 - 07 March 2027 09 - 11 April 2027 29 April - 02 May 2027 11 - 13 June 2027 17 - 20 June 2027 04",
+      "id" : "lavaredo|2027-01-07",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-01-07"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-03-07",
+      "evidence" : "026 13 - 15 November 2026 27 November - 06 December 2026 10 - 12 December 2026 07 - 10 January 2027 05 - 07 March 2027 09 - 11 April 2027 29 April - 02 May 2027 11 - 13 June 2027 17 - 20 June 2027 04 - 05 September 202",
+      "id" : "lavaredo|2027-03-05",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-03-05"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-04-11",
+      "evidence" : "r 2026 27 November - 06 December 2026 10 - 12 December 2026 07 - 10 January 2027 05 - 07 March 2027 09 - 11 April 2027 29 April - 02 May 2027 11 - 13 June 2027 17 - 20 June 2027 04 - 05 September 2027 16 - 18 October 2",
+      "id" : "lavaredo|2027-04-09",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-04-09"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-06-13",
+      "evidence" : " 12 December 2026 07 - 10 January 2027 05 - 07 March 2027 09 - 11 April 2027 29 April - 02 May 2027 11 - 13 June 2027 17 - 20 June 2027 04 - 05 September 2027 16 - 18 October 2026 02 - 04 October 2026 11 - 13 Septembe",
+      "id" : "lavaredo|2027-06-11",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-06-11"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-06-20",
+      "evidence" : "07 - 10 January 2027 05 - 07 March 2027 09 - 11 April 2027 29 April - 02 May 2027 11 - 13 June 2027 17 - 20 June 2027 04 - 05 September 2027 16 - 18 October 2026 02 - 04 October 2026 11 - 13 September 2026 10 - 12 Apr",
+      "id" : "lavaredo|2027-06-17",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-06-17"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-09-05",
+      "evidence" : "27 05 - 07 March 2027 09 - 11 April 2027 29 April - 02 May 2027 11 - 13 June 2027 17 - 20 June 2027 04 - 05 September 2027 16 - 18 October 2026 02 - 04 October 2026 11 - 13 September 2026 10 - 12 April 2026 14 - 15 March 2",
+      "id" : "lavaredo|2027-09-04",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-09-04"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2026-10-18",
+      "evidence" : "9 - 11 April 2027 29 April - 02 May 2027 11 - 13 June 2027 17 - 20 June 2027 04 - 05 September 2027 16 - 18 October 2026 02 - 04 October 2026 11 - 13 September 2026 10 - 12 April 2026 14 - 15 March 2026 North America 13 ",
+      "id" : "lavaredo|2026-10-16",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2026-10-16"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2026-10-04",
+      "evidence" : "April - 02 May 2027 11 - 13 June 2027 17 - 20 June 2027 04 - 05 September 2027 16 - 18 October 2026 02 - 04 October 2026 11 - 13 September 2026 10 - 12 April 2026 14 - 15 March 2026 North America 13 - 15 November 2026 04",
+      "id" : "lavaredo|2026-10-02",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2026-10-02"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2026-09-13",
+      "evidence" : "1 - 13 June 2027 17 - 20 June 2027 04 - 05 September 2027 16 - 18 October 2026 02 - 04 October 2026 11 - 13 September 2026 10 - 12 April 2026 14 - 15 March 2026 North America 13 - 15 November 2026 04 - 06 March 2027 08 - 1",
+      "id" : "lavaredo|2026-09-11",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2026-09-11"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2026-04-12",
+      "evidence" : "0 June 2027 04 - 05 September 2027 16 - 18 October 2026 02 - 04 October 2026 11 - 13 September 2026 10 - 12 April 2026 14 - 15 March 2026 North America 13 - 15 November 2026 04 - 06 March 2027 08 - 11 April 2027 22 - 2",
+      "id" : "lavaredo|2026-04-10",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2026-04-10"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2026-03-15",
+      "evidence" : " September 2027 16 - 18 October 2026 02 - 04 October 2026 11 - 13 September 2026 10 - 12 April 2026 14 - 15 March 2026 North America 13 - 15 November 2026 04 - 06 March 2027 08 - 11 April 2027 22 - 25 April 2027 14 - 1",
+      "id" : "lavaredo|2026-03-14",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2026-03-14"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-03-06",
+      "evidence" : "26 11 - 13 September 2026 10 - 12 April 2026 14 - 15 March 2026 North America 13 - 15 November 2026 04 - 06 March 2027 08 - 11 April 2027 22 - 25 April 2027 14 - 16 May 2027 04 - 06 June 2027 25 - 27 June 2027 22 - 24 ",
+      "id" : "lavaredo|2027-03-04",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-03-04"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-04-11",
+      "evidence" : "r 2026 10 - 12 April 2026 14 - 15 March 2026 North America 13 - 15 November 2026 04 - 06 March 2027 08 - 11 April 2027 22 - 25 April 2027 14 - 16 May 2027 04 - 06 June 2027 25 - 27 June 2027 22 - 24 July 2027 16 - 18 S",
+      "id" : "lavaredo|2027-04-08",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-04-08"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-04-25",
+      "evidence" : "l 2026 14 - 15 March 2026 North America 13 - 15 November 2026 04 - 06 March 2027 08 - 11 April 2027 22 - 25 April 2027 14 - 16 May 2027 04 - 06 June 2027 25 - 27 June 2027 22 - 24 July 2027 16 - 18 September 2027 23 - ",
+      "id" : "lavaredo|2027-04-22",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-04-22"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-05-16",
+      "evidence" : "h 2026 North America 13 - 15 November 2026 04 - 06 March 2027 08 - 11 April 2027 22 - 25 April 2027 14 - 16 May 2027 04 - 06 June 2027 25 - 27 June 2027 22 - 24 July 2027 16 - 18 September 2027 23 - 26 September 2027",
+      "id" : "lavaredo|2027-05-14",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-05-14"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-06-06",
+      "evidence" : "ica 13 - 15 November 2026 04 - 06 March 2027 08 - 11 April 2027 22 - 25 April 2027 14 - 16 May 2027 04 - 06 June 2027 25 - 27 June 2027 22 - 24 July 2027 16 - 18 September 2027 23 - 26 September 2027 07 - 10 October 2",
+      "id" : "lavaredo|2027-06-04",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-06-04"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-06-27",
+      "evidence" : "er 2026 04 - 06 March 2027 08 - 11 April 2027 22 - 25 April 2027 14 - 16 May 2027 04 - 06 June 2027 25 - 27 June 2027 22 - 24 July 2027 16 - 18 September 2027 23 - 26 September 2027 07 - 10 October 2027 01 - 03 Octobe",
+      "id" : "lavaredo|2027-06-25",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-06-25"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-07-24",
+      "evidence" : "rch 2027 08 - 11 April 2027 22 - 25 April 2027 14 - 16 May 2027 04 - 06 June 2027 25 - 27 June 2027 22 - 24 July 2027 16 - 18 September 2027 23 - 26 September 2027 07 - 10 October 2027 01 - 03 October 2026 14 - 16 Aug",
+      "id" : "lavaredo|2027-07-22",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-07-22"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-09-18",
+      "evidence" : "pril 2027 22 - 25 April 2027 14 - 16 May 2027 04 - 06 June 2027 25 - 27 June 2027 22 - 24 July 2027 16 - 18 September 2027 23 - 26 September 2027 07 - 10 October 2027 01 - 03 October 2026 14 - 16 August 2026 27 - 28 June 2",
+      "id" : "lavaredo|2027-09-16",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-09-16"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-09-26",
+      "evidence" : " 2027 14 - 16 May 2027 04 - 06 June 2027 25 - 27 June 2027 22 - 24 July 2027 16 - 18 September 2027 23 - 26 September 2027 07 - 10 October 2027 01 - 03 October 2026 14 - 16 August 2026 27 - 28 June 2026 South America 18 - ",
+      "id" : "lavaredo|2027-09-23",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-09-23"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-10-10",
+      "evidence" : "04 - 06 June 2027 25 - 27 June 2027 22 - 24 July 2027 16 - 18 September 2027 23 - 26 September 2027 07 - 10 October 2027 01 - 03 October 2026 14 - 16 August 2026 27 - 28 June 2026 South America 18 - 22 November 2026 31 M",
+      "id" : "lavaredo|2027-10-07",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-10-07"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2026-10-03",
+      "evidence" : "- 27 June 2027 22 - 24 July 2027 16 - 18 September 2027 23 - 26 September 2027 07 - 10 October 2027 01 - 03 October 2026 14 - 16 August 2026 27 - 28 June 2026 South America 18 - 22 November 2026 31 March - 04 April 2027 ",
+      "id" : "lavaredo|2026-10-01",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2026-10-01"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2026-08-16",
+      "evidence" : "4 July 2027 16 - 18 September 2027 23 - 26 September 2027 07 - 10 October 2027 01 - 03 October 2026 14 - 16 August 2026 27 - 28 June 2026 South America 18 - 22 November 2026 31 March - 04 April 2027 24 - 27 June 2027 30",
+      "id" : "lavaredo|2026-08-14",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2026-08-14"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2026-06-28",
+      "evidence" : "September 2027 23 - 26 September 2027 07 - 10 October 2027 01 - 03 October 2026 14 - 16 August 2026 27 - 28 June 2026 South America 18 - 22 November 2026 31 March - 04 April 2027 24 - 27 June 2027 30 July - 01 August ",
+      "id" : "lavaredo|2026-06-27",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2026-06-27"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2026-11-22",
+      "evidence" : " 2027 07 - 10 October 2027 01 - 03 October 2026 14 - 16 August 2026 27 - 28 June 2026 South America 18 - 22 November 2026 31 March - 04 April 2027 24 - 27 June 2027 30 July - 01 August 2027 23 - 26 September 2027 Oceania ",
+      "id" : "lavaredo|2026-11-18",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2026-11-18"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-06-27",
+      "evidence" : " 14 - 16 August 2026 27 - 28 June 2026 South America 18 - 22 November 2026 31 March - 04 April 2027 24 - 27 June 2027 30 July - 01 August 2027 23 - 26 September 2027 Oceania 26 - 28 November 2026 13 - 14 February 2027",
+      "id" : "lavaredo|2027-06-24",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-06-24"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2026-11-28",
+      "evidence" : " 31 March - 04 April 2027 24 - 27 June 2027 30 July - 01 August 2027 23 - 26 September 2027 Oceania 26 - 28 November 2026 13 - 14 February 2027 13 - 16 May 2027 Europe 22 - 24 January 2027 18 - 21 March 2027 01 - 04 April",
+      "id" : "lavaredo|2026-11-26",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2026-11-26"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-02-14",
+      "evidence" : "027 24 - 27 June 2027 30 July - 01 August 2027 23 - 26 September 2027 Oceania 26 - 28 November 2026 13 - 14 February 2027 13 - 16 May 2027 Europe 22 - 24 January 2027 18 - 21 March 2027 01 - 04 April 2027 08 - 10 April 20",
+      "id" : "lavaredo|2027-02-13",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-02-13"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-05-16",
+      "evidence" : "30 July - 01 August 2027 23 - 26 September 2027 Oceania 26 - 28 November 2026 13 - 14 February 2027 13 - 16 May 2027 Europe 22 - 24 January 2027 18 - 21 March 2027 01 - 04 April 2027 08 - 10 April 2027 22 - 25 April ",
+      "id" : "lavaredo|2027-05-13",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-05-13"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-01-24",
+      "evidence" : " 23 - 26 September 2027 Oceania 26 - 28 November 2026 13 - 14 February 2027 13 - 16 May 2027 Europe 22 - 24 January 2027 18 - 21 March 2027 01 - 04 April 2027 08 - 10 April 2027 22 - 25 April 2027 23 - 25 April 2027 30 A",
+      "id" : "lavaredo|2027-01-22",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-01-22"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-03-21",
+      "evidence" : "27 Oceania 26 - 28 November 2026 13 - 14 February 2027 13 - 16 May 2027 Europe 22 - 24 January 2027 18 - 21 March 2027 01 - 04 April 2027 08 - 10 April 2027 22 - 25 April 2027 23 - 25 April 2027 30 April - 02 May 2027 ",
+      "id" : "lavaredo|2027-03-18",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-03-18"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-04-04",
+      "evidence" : "November 2026 13 - 14 February 2027 13 - 16 May 2027 Europe 22 - 24 January 2027 18 - 21 March 2027 01 - 04 April 2027 08 - 10 April 2027 22 - 25 April 2027 23 - 25 April 2027 30 April - 02 May 2027 13 - 16 May 2027 14",
+      "id" : "lavaredo|2027-04-01",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-04-01"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-04-25",
+      "evidence" : "pe 22 - 24 January 2027 18 - 21 March 2027 01 - 04 April 2027 08 - 10 April 2027 22 - 25 April 2027 23 - 25 April 2027 30 April - 02 May 2027 13 - 16 May 2027 14 - 16 May 2027 5th June 2027 10 - 13 June 2027 17 - 20 Ju",
+      "id" : "lavaredo|2027-04-23",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-04-23"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-06-13",
+      "evidence" : "pril 2027 23 - 25 April 2027 30 April - 02 May 2027 13 - 16 May 2027 14 - 16 May 2027 5th June 2027 10 - 13 June 2027 17 - 20 June 2027 18 - 20 June 2027 23 - 27 June 2027 06 - 10 July 2027 07 - 11 July 2027 09 - 11 J",
+      "id" : "lavaredo|2027-06-10",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-06-10"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-06-20",
+      "evidence" : "l - 02 May 2027 13 - 16 May 2027 14 - 16 May 2027 5th June 2027 10 - 13 June 2027 17 - 20 June 2027 18 - 20 June 2027 23 - 27 June 2027 06 - 10 July 2027 07 - 11 July 2027 09 - 11 July 2027 14 - 18 July 2027 15 - 18 J",
+      "id" : "lavaredo|2027-06-18",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-06-18"
+    },
+    {
+      "confidence" : "hint",
+      "end" : "2027-07-10",
+      "evidence" : "- 16 May 2027 5th June 2027 10 - 13 June 2027 17 - 20 June 2027 18 - 20 June 2027 23 - 27 June 2027 06 - 10 July 2027 07 - 11 July 2027 09 - 11 July 2027 14 - 18 July 2027 15 - 18 July 2027 23 - 25 July 2027 05 - 07 A",
+      "id" : "lavaredo|2027-07-06",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "lavaredo",
+      "sourceName" : "Lavaredo Ultra Trail",
+      "sourceURL" : "https:\/\/lavaredo.utmb.world\/en",
+      "start" : "2027-07-06"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "CIES & PROCEDURES RESULTS More Use tab to navigate through the menu items. 2027 registration begins DECEMBER 7, 2026 9AM PST Broken Arrow Skyrace Announces New Multi-Year Partnership with ACG ​ Featuring the Largest ",
+      "id" : "broken-arrow|2026-12-07",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "broken-arrow",
+      "sourceName" : "Broken Arrow Skyrace",
+      "sourceURL" : "https:\/\/www.brokenarrowskyrace.com\/",
+      "start" : "2026-12-07"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "es NTN (Nike Trail Nationals) are youth national championship-caliber events, scheduled for Friday, June 19th, 2026. Designed to encourage the development of the next generation of up-and-coming trail runners, Trail",
+      "id" : "broken-arrow|2026-06-19",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "broken-arrow",
+      "sourceName" : "Broken Arrow Skyrace",
+      "sourceURL" : "https:\/\/www.brokenarrowskyrace.com\/",
+      "start" : "2026-06-19"
+    },
+    {
+      "confidence" : "structured",
+      "evidence" : "The Legends' Dinner - JFK 50 Mile · startDate=2026-11-20",
+      "id" : "jfk50|2026-11-20",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "jfk50",
+      "sourceName" : "JFK 50 Mile",
+      "sourceURL" : "https:\/\/www.jfk50mile.org\/",
+      "start" : "2026-11-20"
+    },
+    {
+      "confidence" : "structured",
+      "evidence" : "Race Day: The 64th Running - JFK 50 Mile · startDate=2026-11-21",
+      "id" : "jfk50|2026-11-21",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "jfk50",
+      "sourceName" : "JFK 50 Mile",
+      "sourceURL" : "https:\/\/www.jfk50mile.org\/",
+      "start" : "2026-11-21"
+    },
+    {
+      "confidence" : "structured",
+      "end" : "2026-01-11",
+      "evidence" : "Bandera Endurance Trail Race 2026 · startDate=2026-01-10T07:30:00-06:00",
+      "id" : "race-old-0001|2026-01-10",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "race-old-0001",
+      "sourceName" : "Bandera Endurance Trail Race",
+      "sourceURL" : "https:\/\/ultramarathondatabase.com\/races\/bandera-endurance-trail-race\/2026",
+      "start" : "2026-01-10"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "amin Melisi 4:15:49 2 . Collin Bohne 4:38:59 3 . Landon King 4:45:05 Full results ↗ Results updated August 20, 2026 How it went Jared Rothlauf won the 2026 Bandera 100K in 8:54:58, and Anneke Durkan won the women&#x",
+      "id" : "race-old-0001|2026-08-20",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "race-old-0001",
+      "sourceName" : "Bandera Endurance Trail Race",
+      "sourceURL" : "https:\/\/ultramarathondatabase.com\/races\/bandera-endurance-trail-race\/2026",
+      "start" : "2026-08-20"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "-competitive 50K starts alongside the 100K on the Saturday and is scored separately Every year 2027 January 9, 2027 · upcoming 2026 January 10, 2026 · completed 100K: Jared Rothlauf 8:54:58 · Anneke Durkan 11:08:14;",
+      "id" : "race-old-0001|2027-01-09",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "race-old-0001",
+      "sourceName" : "Bandera Endurance Trail Race",
+      "sourceURL" : "https:\/\/ultramarathondatabase.com\/races\/bandera-endurance-trail-race\/2026",
+      "start" : "2027-01-09"
+    },
+    {
+      "confidence" : "structured",
+      "end" : "2026-01-18",
+      "evidence" : "HURT 100 2026 · startDate=2026-01-17T06:00:00-10:00",
+      "id" : "race-old-0003|2026-01-17",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "race-old-0003",
+      "sourceName" : "HURT 100",
+      "sourceURL" : "https:\/\/ultramarathondatabase.com\/races\/hurt-100\/2026",
+      "start" : "2026-01-17"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : " 2 . Gabe Joyes 21:58:42 3 . Riley Robertson 22:49:10 84 finishers · Full results ↗ Results updated July 21, 2026 Distances Distance 100 mi (161 km) Vert gain 23,750 ft (7,200 m) Cutoff 36 hr WSER 2027 qualifier (",
+      "id" : "race-old-0003|2026-07-21",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "race-old-0003",
+      "sourceName" : "HURT 100",
+      "sourceURL" : "https:\/\/ultramarathondatabase.com\/races\/hurt-100\/2026",
+      "start" : "2026-07-21"
+    },
+    {
+      "confidence" : "hint",
+      "evidence" : "off Notes 100 mi (161 km) 23,750 ft (7,200 m) 36 hr WSER 2027 qualifier (sub-36:00) Every year 2027 January 16, 2027 · upcoming 2026 January 17, 2026 · completed Tyler Juza 19:22:44 (CR) · Aimee Warnke 27:24:47 More ",
+      "id" : "race-old-0003|2027-01-16",
+      "inspectedAt" : "2026-11-02",
+      "sourceID" : "race-old-0003",
+      "sourceName" : "HURT 100",
+      "sourceURL" : "https:\/\/ultramarathondatabase.com\/races\/hurt-100\/2026",
+      "start" : "2027-01-16"
+    }
+  ],
+  "lastScan" : "2026-11-02T00:24:07Z",
+  "sessions" : {
+
+  },
+  "sourceCursor" : 12
+}

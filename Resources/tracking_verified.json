@@ -1,0 +1,37 @@
+[
+  {
+    "raceID": "old-0144",
+    "url": "https://grindstone.v3.livetrail.net/en/2026",
+    "provider": "LiveTrail",
+    "evidence": "Bereits im ursprünglichen Rennkalender hinterlegte LiveTrail-Ergebnisquelle (2026)",
+    "verifiedOn": "2026-11-01"
+  },
+  {
+    "raceID": "old-0195",
+    "url": "https://live.utmb.world/kullamannen/2026",
+    "provider": "UTMB Live",
+    "evidence": "Direkter Ergebnislink auf der offiziellen Seite kullamannen.utmb.world (2026)",
+    "verifiedOn": "2026-11-01"
+  },
+  {
+    "raceID": "old-0196",
+    "url": "https://live.utmb.world/mallorcabyutmb/2026",
+    "provider": "UTMB Live",
+    "evidence": "Direkter RESULTATS/RESULTS-Link von mallorca.utmb.world (2026)",
+    "verifiedOn": "2026-11-01"
+  },
+  {
+    "raceID": "old-0198",
+    "url": "https://www.aravaiparunning.com/race-results/javelina-jundred/",
+    "provider": "Aravaipa Running",
+    "evidence": "Offizielle Javelina-Ergebnisübersicht bei Aravaipa mit 2026 Live Results",
+    "verifiedOn": "2026-11-01"
+  },
+  {
+    "url": "https://werun.hk/game/yangxian100",
+    "verifiedOn": "2026-11-02",
+    "evidence": "Direkt aus dem öffentlichen WeRun-Ergebnisverzeichnis; Rennname und Ausgabe stimmen überein",
+    "raceID": "old-0208",
+    "provider": "WeRun"
+  }
+]

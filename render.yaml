@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: trailatlas-swift
+    runtime: docker
+    plan: free
+    region: frankfurt
+    branch: main
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: DATA_DIR
+        value: /tmp/trailatlas
+      - key: COOKIE_SECURE
+        value: "1"
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: SHARED_DATA_BASE_URL
+        sync: false

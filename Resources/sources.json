@@ -1,0 +1,62 @@
+[
+  {
+    "id": "oberaudorf-otf",
+    "name": "Oberaudorf Trail Festival (OTF)",
+    "country": "DE",
+    "url": "https://saltytrailrunning.com/en-de/pages/otf"
+  },
+  {
+    "id": "innsbruck-iatf",
+    "name": "Innsbruck Alpine Trailrun Festival (IATF) – Trail Hunt",
+    "country": "AT",
+    "url": "https://www.innsbruckalpine.at/"
+  },
+  {
+    "id": "grossglockner-mountain",
+    "name": "Grossglockner Mountain Run (Heiligenblut)",
+    "country": "AT",
+    "url": "https://grossglockner-mountainrun.at/en/"
+  },
+  {
+    "id": "grossglockner-ggut",
+    "name": "The North Face Großglockner Ultra-Trail (GGUT)",
+    "country": "AT",
+    "url": "https://www.ultratrail.at/de"
+  },
+  {
+    "id": "zegama",
+    "name": "Zegama-Aizkorri",
+    "country": "ES",
+    "url": "https://www.zegama-aizkorri.com/en/news/368-date-2027"
+  },
+  {
+    "id": "lavaredo",
+    "name": "Lavaredo Ultra Trail",
+    "country": "IT",
+    "url": "https://lavaredo.utmb.world/en"
+  },
+  {
+    "id": "broken-arrow",
+    "name": "Broken Arrow Skyrace",
+    "country": "US",
+    "url": "https://www.brokenarrowskyrace.com/"
+  },
+  {
+    "id": "jfk50",
+    "name": "JFK 50 Mile",
+    "country": "US",
+    "url": "https://www.jfk50mile.org/"
+  },
+  {
+    "id": "dolomyths",
+    "name": "Dolomyths Run – SkyRace / Ultra",
+    "country": "IT",
+    "url": "https://www.dolomyths.run/"
+  },
+  {
+    "id": "transvulcania",
+    "name": "Transvulcania La Palma",
+    "country": "ES",
+    "url": "https://transvulcania.com/en/"
+  }
+]
