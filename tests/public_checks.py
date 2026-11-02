@@ -31,6 +31,7 @@ def main():
     client = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
     checks = []
     requests = 0
+    cards_checked = 0
     request_lock = threading.Lock()
 
     def get(path='/', fields=None, opener=client):
@@ -108,6 +109,7 @@ def main():
             record('All 65 countries, 12 months, years, categories, distances, search, sorts and views')
 
             def check_card(race):
+                nonlocal cards_checked
                 reader=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
                 query = urllib.parse.urlencode({'q':race['name'],'detail':race['id'],'page':25})
                 card, text = page('/?'+query,opener=reader)
@@ -115,8 +117,10 @@ def main():
                 assert html.escape(race['name'],quote=True).replace('&#x27;','&#39;') in text
                 if race['source_url']:
                     assert race['source_url'] in card.links, race['id']
-                    return 1
-                return 0
+                with request_lock:
+                    cards_checked += 1
+                    if cards_checked % 32 == 0:print(f'PROGRESS {cards_checked}/352 public race cards',flush=True)
+                return int(bool(race['source_url']))
             with ThreadPoolExecutor(max_workers=4) as pool:
                 source_count=sum(pool.map(check_card,original))
             record(f'All 352 detail cards and {source_count} original source links over public HTTPS')
