@@ -8,8 +8,9 @@ struct TrailUI: Sendable {
 
     func page(filters f: Filters, state: Snapshot, sessionID: String, autoTracking: TrackingSnapshot, livePayload: String? = nil) -> String {
         let favs=Set(state.session.favorites)
+        let today=dateOnly()
         let allRaces=CalendarRaces.materialize(races,snapshot:state)
-        let filtered=allRaces.filter{f.matches($0,favorites:favs)}.sorted { a,b in
+        let filtered=allRaces.filter{f.matches($0,favorites:favs,today:today)}.sorted { a,b in
             if f.sort == "name-asc" {return a.name.localizedStandardCompare(b.name)==ComparisonResult.orderedAscending}
             if a.start.isEmpty != b.start.isEmpty{return !a.start.isEmpty}
             if f.sort == "date-desc" {return a.start==b.start ? a.name.localizedStandardCompare(b.name)==ComparisonResult.orderedAscending : a.start>b.start}
@@ -23,7 +24,7 @@ struct TrailUI: Sendable {
             return !start.isEmpty && start<=wend && effectiveEnd(r,start:start)>=wstart
         }.sorted{effectiveStart($0,state.session)<effectiveStart($1,state.session)}
         let running=allRaces.filter{r in
-            let start=effectiveStart(r,state.session);return !start.isEmpty && start<=dateOnly() && effectiveEnd(r,start:start)>=dateOnly()
+            let start=effectiveStart(r,state.session);return !start.isEmpty && start<=today && effectiveEnd(r,start:start)>=today
         }
         let activeLive=allRaces.first{$0.id == f.liveRace}
         let officialLive = activeLive.flatMap { race -> String? in
@@ -54,7 +55,7 @@ struct TrailUI: Sendable {
             selectedLiveInfo="Ergebnisquelle aus dem Kalender übernommen."
         }
         let months=["Alle","Jan","Feb","Mär","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"]
-        let replacements:[String:String] = [
+        var replacements:[String:String] = [
             "@@RACES@@":renderRaces(shown,whole:filtered,filters:f,favorites:favs,inlineContent:livePayload,selectedURL:selectedLiveURL),
             "@@WEEKEND@@":renderWeekend(f.weekendAll ? onWeekend : Array(onWeekend.prefix(10)), f:f, tracking:autoTracking),
             "@@RUNNING@@":renderRunning(running, f:f),
@@ -103,10 +104,21 @@ struct TrailUI: Sendable {
             "@@VIEW_LIST@@":f.link(["view":nil]),
             "@@VIEW_GRID@@":f.link(["view":"grid"]),
         ]
-        var result=template
-        for (key,value) in replacements {result=result.replacingOccurrences(of:key,with:value)}
         let jumps = ["ALL":"", "Deutschland":"Deutschland", "Österreich":"Österreich", "Schweiz":"Schweiz", "Italien":"Italien", "Frankreich":"Frankreich", "Spanien":"Spanien", "USA":"USA", "China":"China", "Japan":"Japan"]
-        for (key,value) in jumps { result=result.replacingOccurrences(of:"@@COUNTRY_JUMP_\(key)@@",with:esc(f.link(["country": value.isEmpty ? nil : value,"page":nil]))) }
+        for (key,value) in jumps {replacements["@@COUNTRY_JUMP_\(key)@@"]=esc(f.link(["country":value.isEmpty ? nil : value,"page":nil]))}
+        // Expand the original template in one pass instead of repeatedly copying
+        // a complete page for each marker. Preserve markers handled below.
+        let ns=template as NSString
+        let markers=try! NSRegularExpression(pattern:#"@@[^@\r\n]+@@"#)
+        var parts:[String]=[];var offset=0
+        for match in markers.matches(in:template,range:NSRange(location:0,length:ns.length)) {
+            parts.append(ns.substring(with:NSRange(location:offset,length:match.range.location-offset)))
+            let token=ns.substring(with:match.range)
+            parts.append(replacements[token] ?? token)
+            offset=NSMaxRange(match.range)
+        }
+        parts.append(ns.substring(from:offset))
+        var result=parts.joined()
 
         // The old website hid controls and sections until JavaScript booted. Swift now supplies state.
         if f.section == "radar" {

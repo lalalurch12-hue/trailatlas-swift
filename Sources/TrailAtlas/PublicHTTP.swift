@@ -1,5 +1,6 @@
 import Foundation
 import FoundationNetworking
+import Dispatch
 #if canImport(Glibc)
 import Glibc
 #else
@@ -57,7 +58,14 @@ enum PublicHTTP {
     /// curl bounds time and response size before buffering. DNS is resolved and
     /// pinned for untrusted custom sources; redirects are validated individually.
     static func fetch(_ raw:String, trusted:Bool=false, maxBytes:Int=2_000_000, headers:[String:String]=[:]) async throws -> PublicPage {
-        try await Task.detached(priority:.utility) {
+        try await withCheckedThrowingContinuation { continuation in
+            DispatchQueue.global(qos:.utility).async {
+                do {continuation.resume(returning:try fetchBlocking(raw,trusted:trusted,maxBytes:maxBytes,headers:headers))}
+                catch {continuation.resume(throwing:error)}
+            }
+        }
+    }
+    private static func fetchBlocking(_ raw:String,trusted:Bool,maxBytes:Int,headers:[String:String]) throws -> PublicPage {
             var target=raw
             for _ in 0..<4 {
                 guard let url=validURL(target),let host=url.host else{throw URLError(.badURL)}
@@ -93,6 +101,5 @@ enum PublicHTTP {
                 return PublicPage(data:data,url:url.absoluteString,status:status,contentType:header("content-type"))
             }
             throw URLError(.httpTooManyRedirects)
-        }.value
     }
 }

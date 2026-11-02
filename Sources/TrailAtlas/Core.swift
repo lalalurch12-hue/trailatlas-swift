@@ -186,7 +186,7 @@ struct Filters: Sendable {
         var c=URLComponents();c.path="/";c.queryItems=p.sorted{$0.key<$1.key}.map{URLQueryItem(name:$0.key,value:$0.value)}
         return (c.string ?? "/")+fragment
     }
-    func matches(_ r: Race, favorites: Set<String>) -> Bool {
+    func matches(_ r: Race, favorites: Set<String>, today:String?=nil) -> Bool {
         if !q.isEmpty && !r.searchText.contains(q.folded){return false}
         if !country.isEmpty && r.countryName != country{return false}
         if year != "all" && r.year != year{return false}
@@ -194,17 +194,19 @@ struct Filters: Sendable {
         if elite && r.category != "elite" && r.category != "series"{return false}
         if series && r.category != "series"{return false}
         if tba && !r.start.isEmpty{return false}
-        if upcoming && (r.start.isEmpty || (r.end ?? r.start) < dateOnly()){return false}
+        if upcoming && (r.start.isEmpty || (r.end ?? r.start) < (today ?? dateOnly())){return false}
         if favs && !favorites.contains(r.id){return false}
-        let ds=r.distancesKM
-        if minKm != nil || maxKm != nil {
-            if !ds.contains(where:{d in (minKm == nil || d >= minKm!) && (maxKm == nil || d <= maxKm!)}){return false}
-        }
-        switch distance {
-        case "short": if !ds.contains(where:{$0>=10 && $0<20}){return false}
-        case "medium": if !ds.contains(where:{$0>=20 && $0<35}){return false}
-        case "long": if !ds.contains(where:{$0>=35}){return false}
-        default: break
+        if minKm != nil || maxKm != nil || distance != "all" {
+            let ds=r.distancesKM
+            if minKm != nil || maxKm != nil {
+                if !ds.contains(where:{d in (minKm == nil || d >= minKm!) && (maxKm == nil || d <= maxKm!)}){return false}
+            }
+            switch distance {
+            case "short": if !ds.contains(where:{$0>=10 && $0<20}){return false}
+            case "medium": if !ds.contains(where:{$0>=20 && $0<35}){return false}
+            case "long": if !ds.contains(where:{$0>=35}){return false}
+            default: break
+            }
         }
         return true
     }

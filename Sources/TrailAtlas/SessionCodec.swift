@@ -67,18 +67,21 @@ struct SessionCodec: Sendable {
 enum ActionForms {
     static func render(_ html:String, csrf:String) -> String {
         let re=try! NSRegularExpression(pattern:#"<a\b([^>]*?)href="([^"]+)"([^>]*)>(.*?)</a>"#, options:[.dotMatchesLineSeparators,.caseInsensitive])
-        var result=html
         let ns=html as NSString
-        for m in re.matches(in:html,range:NSRange(location:0,length:ns.length)).reversed() {
+        var parts:[String]=[]
+        var offset=0
+        for m in re.matches(in:html,range:NSRange(location:0,length:ns.length)) {
             let href=ns.substring(with:m.range(at:2)).replacingOccurrences(of:"&amp;",with:"&")
             guard let u=URLComponents(string:href),u.path=="/",u.queryItems?.contains(where:{$0.name=="action"}) == true else {continue}
             var attrs=ns.substring(with:m.range(at:1))+ns.substring(with:m.range(at:3))
             attrs=attrs.replacingOccurrences(of:#"\s*role="[^"]*""#,with:"",options:.regularExpression)
             let fields=(u.queryItems ?? []).map{"<input type=\"hidden\" name=\"\(esc($0.name))\" value=\"\(esc($0.value ?? ""))\">"}.joined()
             let form="<form method=\"post\" action=\"/\" style=\"display:contents\">\(fields)<input type=\"hidden\" name=\"csrf\" value=\"\(esc(csrf))\"><button type=\"submit\" \(attrs)>\(ns.substring(with:m.range(at:4)))</button></form>"
-            result=(result as NSString).replacingCharacters(in:m.range,with:form)
+            parts.append(ns.substring(with:NSRange(location:offset,length:m.range.location-offset)))
+            parts.append(form)
+            offset=NSMaxRange(m.range)
         }
-        result=result.replacingOccurrences(of:"@@CSRF@@",with:esc(csrf))
-        return result
+        parts.append(ns.substring(from:offset))
+        return parts.joined().replacingOccurrences(of:"@@CSRF@@",with:esc(csrf))
     }
 }
