@@ -20,6 +20,7 @@ jobs:
           ssh-keyscan -T 15 -t ed25519 tangled.org > .runtime/tangled-known-hosts
           test -s .runtime/tangled-known-hosts
           ssh-keygen -lf .runtime/tangled-known-hosts
+          cmp .tangled/ssh_known_hosts .runtime/tangled-known-hosts
       - name: Transfer history only after the write credential is approved and configured
         env:
           TANGLED_BOOTSTRAP_KEY_B64: ${{ secrets.TANGLED_BOOTSTRAP_KEY_B64 }}
