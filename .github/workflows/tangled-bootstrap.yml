@@ -1,5 +1,5 @@
 name: One-time Tangled migration
-# Transfer the narrow-phone header fix and complete Swift rebuild to Tangled.
+# Transfer final public and mobile acceptance checks for Unikraft to Tangled.
 on:
   push:
     branches: [main]

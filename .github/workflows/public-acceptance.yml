@@ -1,4 +1,5 @@
 name: Public HTTPS acceptance
+# Verify the primary Unikraft website after the mobile correction is deployed.
 on:
   push:
     branches: [main]
@@ -15,7 +16,7 @@ jobs:
       - name: Check the deployed site, every filter and all original race cards
         run: |
           mkdir -p .runtime
-          python3 tests/public_checks.py --url https://trailatlas-swift.onrender.com --report public-https.json --cookie-file .runtime/acceptance-cookies.txt
+          python3 tests/public_checks.py --url https://silent-water-yl7acse4.fra.unikraft.app --report public-https.json --cookie-file .runtime/acceptance-cookies.txt
       - name: Preserve the public acceptance report without personal cookies
         if: always()
         uses: actions/upload-artifact@v4

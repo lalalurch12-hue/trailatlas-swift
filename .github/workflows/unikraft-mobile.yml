@@ -1,5 +1,5 @@
 name: Unikraft mobile and JavaScript-free browser acceptance
-# Keep font-ready screenshots and element geometry for mobile overflow diagnostics.
+# Verify the deployed narrow-phone header correction with JavaScript disabled.
 on:
   push:
     branches: [main]
