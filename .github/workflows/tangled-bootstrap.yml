@@ -1,4 +1,5 @@
 name: One-time Tangled migration
+# Temporary bridge for migration completion; remove its secret after acceptance.
 on:
   push:
     branches: [main]
@@ -42,7 +43,11 @@ jobs:
           git for-each-ref --format='%(refname)' refs/remotes/origin/ | while read -r ref; do
             branch=${ref#refs/remotes/origin/}
             if [[ "$branch" != 'HEAD' && "$branch" != 'main' ]]; then
-              git push tangled "$ref:refs/heads/$branch"
+              if [[ "$branch" == 'trailatlas-data' ]] && git ls-remote --exit-code --heads tangled "refs/heads/$branch" > /dev/null; then
+                echo 'Preserving the public data branch already maintained by Tangled CI.'
+              else
+                git push tangled "$ref:refs/heads/$branch"
+              fi
             fi
           done
           git push tangled --tags

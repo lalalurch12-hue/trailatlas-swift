@@ -2,10 +2,12 @@ services:
   - type: web
     name: trailatlas-swift
     runtime: docker
-    repo: https://tangled.org/lalalurch.tngl.sh/trailatlas-swift
+    # Render rejects Tangled Git URLs. This branch contains only the bootstrap
+    # Dockerfile; application sources and public state are read from Tangled.
+    repo: https://github.com/lalalurch12-hue/trailatlas-swift
     plan: free
     region: frankfurt
-    branch: main
+    branch: render-bootstrap
     dockerfilePath: ./Dockerfile
     dockerContext: .
     healthCheckPath: /health
