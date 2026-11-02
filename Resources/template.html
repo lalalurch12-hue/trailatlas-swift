@@ -74,6 +74,8 @@ html{scroll-behavior:smooth}body{background:#fff;color:#24352e;font-family:Inter
 
 /* Server-rendered expanded cards retain their details in both view modes. */
 .events-grid .event-extra.open{display:block!important;margin:0 12px 12px;max-width:100%;overflow-wrap:anywhere}
+/* Keep both header actions visible on narrow phones without changing the desktop layout. */
+@media(max-width:380px){.topbar{padding-inline:10px;gap:4px}.brand{gap:7px}.head-actions{gap:4px}.menu-btn{padding-inline:5px}}
 </style></head><body><header class="topbar">
 <a aria-label="TrailAtlas Start" class="brand" href="#calendar"><span class="brand-mark"><svg aria-hidden="true" fill="none" height="26" viewbox="0 0 28 28" width="26"><path d="m2 20 7.7-11 4.2 6 4.2-9 8 14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path><path d="M3 24h22" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path></svg></span><span>trailatlas<span class="brand-domain">.run</span></span></a>
 <nav aria-label="Hauptnavigation" class="nav"><a class="nav-active" href="/?section=calendar" id="nav-calendar">Kalender</a><a class="" href="/?section=radar" id="nav-radar" role="button">Terminradar</a><a href="#about">Über uns</a></nav>

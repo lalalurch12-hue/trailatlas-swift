@@ -1,5 +1,5 @@
 name: One-time Tangled migration
-# Transfer precise mobile overflow diagnostics for the Unikraft deployment to Tangled.
+# Transfer the narrow-phone header fix and complete Swift rebuild to Tangled.
 on:
   push:
     branches: [main]
