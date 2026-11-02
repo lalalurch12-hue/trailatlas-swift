@@ -8,6 +8,10 @@ on:
     paths:
       - '.github/workflows/refresh.yml'
       - 'scripts/refresh_public_data.sh'
+      - 'Sources/TrailAtlas/**'
+      - 'Resources/races.json'
+      - 'Resources/sources.json'
+      - 'Resources/tracking_verified.json'
 permissions:
   contents: write
 concurrency:

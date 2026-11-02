@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Verify the deployed Swift service over HTTPS without deployment credentials."""
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 import html
 import http.cookiejar
@@ -9,6 +10,7 @@ from pathlib import Path
 import urllib.error
 import urllib.parse
 import urllib.request
+import threading
 from http_checks import Page
 
 
@@ -29,10 +31,11 @@ def main():
     client = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
     checks = []
     requests = 0
+    request_lock = threading.Lock()
 
     def get(path='/', fields=None, opener=client):
         nonlocal requests
-        requests += 1
+        with request_lock: requests += 1
         req = urllib.request.Request(origin+path,
             data=None if fields is None else urllib.parse.urlencode(fields).encode(),
             headers={'User-Agent':'TrailAtlas-Functional-Acceptance/1.0'})
@@ -43,8 +46,8 @@ def main():
         except urllib.error.HTTPError as error:
             return error.code, error.read().decode(), error.headers
 
-    def page(path='/'):
-        code, text, headers = get(path)
+    def page(path='/', opener=client):
+        code, text, headers = get(path,opener=opener)
         assert code == 200, (path, code, text[:200])
         parsed = Page(text)
         assert not parsed.scripts and not parsed.handlers and not parsed.duplicate_attributes, path
@@ -74,11 +77,13 @@ def main():
             assert page('/?favs=1')[0].rows == 1, 'Favorite lost after server replacement'
             record('Saved secure-cookie favorite survives the actual Render redeployment')
         else:
-            total = 0
-            for country in home.countries:
-                subset, _ = page('/?'+urllib.parse.urlencode({'country':country,'page':25}))
+            def check_country(country):
+                reader=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
+                subset, _ = page('/?'+urllib.parse.urlencode({'country':country,'page':25}),opener=reader)
                 assert subset.rows > 0, country
-                total += subset.rows
+                return subset.rows
+            with ThreadPoolExecutor(max_workers=4) as pool:
+                total=sum(pool.map(check_country,home.countries))
             assert total == len(races), (total,len(races))
             # The public calendar may gain dates while its initial scan completes.
             races = json.loads(get('/api/races')[1])
@@ -102,15 +107,18 @@ def main():
                 page(path)
             record('All 65 countries, 12 months, years, categories, distances, search, sorts and views')
 
-            source_count = 0
-            for race in original:
+            def check_card(race):
+                reader=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
                 query = urllib.parse.urlencode({'q':race['name'],'detail':race['id'],'page':25})
-                card, text = page('/?'+query)
+                card, text = page('/?'+query,opener=reader)
                 assert f'class="event-extra open" id="details-{race["id"]}"' in text, race['id']
                 assert html.escape(race['name'],quote=True).replace('&#x27;','&#39;') in text
                 if race['source_url']:
                     assert race['source_url'] in card.links, race['id']
-                    source_count += 1
+                    return 1
+                return 0
+            with ThreadPoolExecutor(max_workers=4) as pool:
+                source_count=sum(pool.map(check_card,original))
             record(f'All 352 detail cards and {source_count} original source links over public HTTPS')
 
             assert page('/?favs=1')[0].rows == 0
