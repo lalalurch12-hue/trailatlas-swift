@@ -2,6 +2,7 @@ services:
   - type: web
     name: trailatlas-swift
     runtime: docker
+    repo: https://tangled.org/lalalurch.tngl.sh/trailatlas-swift
     plan: free
     region: frankfurt
     branch: main
@@ -19,4 +20,4 @@ services:
       - key: SESSION_SECRET
         generateValue: true
       - key: SHARED_DATA_BASE_URL
-        value: https://raw.githubusercontent.com/lalalurch12-hue/trailatlas-swift/trailatlas-data
+        value: https://tangled.org/lalalurch.tngl.sh/trailatlas-swift/raw/trailatlas-data

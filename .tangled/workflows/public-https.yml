@@ -1,0 +1,10 @@
+when:
+  - event: manual
+engine: microvm
+image: nixos
+dependencies: [python3]
+steps:
+  - name: Verify the actual Render website, all filters and 352 original cards
+    command: |
+      mkdir -p .runtime
+      python3 tests/public_checks.py --url https://trailatlas-swift.onrender.com --report .runtime/public-https.json --cookie-file .runtime/public-https-cookies.txt

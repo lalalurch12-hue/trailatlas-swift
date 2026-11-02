@@ -3,7 +3,7 @@ set -euo pipefail
 TASK_ROOT=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)
 # The checkout belongs to the runner UID; the Swift container runs as root.
 # Trust only this checkout and its own data worktree.
-if [[ "${GITHUB_ACTIONS:-}" == "true" ]]; then
+if [[ "${GITHUB_ACTIONS:-}" == "true" || "${TRAILATLAS_CONTAINER:-}" == "1" ]]; then
   git config --global --add safe.directory "$TASK_ROOT"
   git config --global --add safe.directory "$TASK_ROOT/.data-worktree"
 fi
@@ -28,7 +28,7 @@ assert public.get('sessions') == {}, 'Refusing to publish private sessions'
 CHECK_PUBLIC
 cp .public-data/public-state.json .public-data/tracking-discovery.json .data-worktree/
 git -C .data-worktree config user.name 'TrailAtlas source refresher'
-git -C .data-worktree config user.email 'trailatlas-refresh@users.noreply.github.com'
+git -C .data-worktree config user.email "${TRAILATLAS_BOT_EMAIL:-trailatlas-refresh@users.noreply.github.com}"
 git -C .data-worktree add public-state.json tracking-discovery.json
 if ! git -C .data-worktree diff --cached --quiet; then
   git -C .data-worktree commit -m 'Refresh public race dates and timing sources'
