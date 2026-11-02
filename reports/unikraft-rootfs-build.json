@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "runId": 41508962423,
+  "artifactId": 13171253801,
+  "sourceCommit": "ee5045d2f5950bf40df6da087afda43701811ad1",
+  "artifactZIP_SHA256": "76d368fce16f2d3c96806c2787c51af4efcf36349abe3d849f1fd76abbca5e10",
+  "runtimeFilesystemSHA256": "4aae6bade4a26fc8573d9185a31c9477f64bf19cca613998ac49f40b5d692409",
+  "compressedBytes": 114465531,
+  "swiftBinarySHA256": "39859f8e2da5ae17ef06087b41718cb58f9df80b45be786ebbc49aaa6f33c754",
+  "binaryArchitecture": "ELF Linux x86_64",
+  "originalRaces": 352,
+  "originalResourcesPreserved": true,
+  "sessionSecretInImage": false,
+  "user": "65534:65534",
+  "workingDirectory": "/app",
+  "artifactExpiresAt": "2026-11-05T19:23:46Z",
+  "swiftReleaseBuildSeconds": 161.85,
+  "userAppliesTo": "Docker image configuration only; Unikraft runtime user remains unverified",
+  "unikraftRuntimeCompatibilityVerified": false
+}

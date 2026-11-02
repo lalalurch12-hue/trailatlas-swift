@@ -1,0 +1,31 @@
+{
+  "status": "HOBBY_FREE_CONFIRMED_CLI_GRANT_PENDING",
+  "organization": "trailatlas",
+  "observedAt": "2026-11-02T19:24:26.116423+00:00",
+  "billingUI": {
+    "currentPlan": "Hobby",
+    "description": "This plan is free.",
+    "vcpus": 2,
+    "memoryMB": 4096,
+    "instances": 5
+  },
+  "target": {
+    "metro": "fra",
+    "vcpus": 1,
+    "memory": "512MiB",
+    "replicas": 1
+  },
+  "cliAuthorization": {
+    "version": "0.6.2",
+    "organization": "Trail Atlas",
+    "accessGranted": false,
+    "pendingControl": "Grant Access",
+    "automaticReview": "Explicit user approval for this CLI access is required"
+  },
+  "build": {
+    "runId": 41508962423,
+    "sourceCommit": "ee5045d2f5950bf40df6da087afda43701811ad1",
+    "credentialsSentToCI": false
+  },
+  "publicDeploymentCompleted": false
+}

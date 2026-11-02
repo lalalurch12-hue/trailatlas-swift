@@ -1,5 +1,5 @@
 name: One-time Tangled migration
-# Transfer the Docker filesystem build for the free Unikraft migration to Tangled.
+# Transfer the verified Swift build and free Unikraft migration checkpoint to Tangled.
 on:
   push:
     branches: [main]
