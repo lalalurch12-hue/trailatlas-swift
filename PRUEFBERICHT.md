@@ -1,14 +1,14 @@
 # TrailAtlas – Funktions- und Veröffentlichungsprüfung
 
-Stand: 2. November 2026. Öffentliche Website: https://trailatlas-swift.onrender.com/ . Angaben im Bericht verwenden UTC-Zeitstempel; Rohprotokolle können zusätzlich explizite Zeitzonen-Offsets enthalten.
+Stand der abschließenden öffentlichen Prüfung: 2026-11-03T00:01:45.077117+00:00. Aktuelle Website: https://silent-water-yl7acse4.fra.unikraft.app/ . Die bisherige Render-Adresse bleibt als Rückfallmöglichkeit erhalten. Angaben im Bericht verwenden UTC-Zeitstempel; Rohprotokolle können zusätzlich explizite Zeitzonen-Offsets enthalten.
 
 ## Ergebnis
 
-TrailAtlas ist als Swift-/Hummingbird-/Elementary-Dienst auf Render veröffentlicht: **https://trailatlas-swift.onrender.com/**. Das verwendete Laufzeitpaket wurde mit Swift 6.2.4 vollständig gebaut; zuvor bestanden auch lokale Builds mit Swift 6.2.1. Die 352 Originalrennen, die Originalreferenz und das ursprüngliche CSS sind erhalten. Die aktive Oberfläche enthält kein Browser-JavaScript.
+TrailAtlas ist entsprechend dem anschließend gewünschten Umzug als Swift-/Hummingbird-/Elementary-Dienst auf Unikraft veröffentlicht: **https://silent-water-yl7acse4.fra.unikraft.app/**. Der tatsächliche Hobby-Tarif ist kostenlos; die Instanz in Frankfurt nutzt eine vCPU, 512 MiB RAM und 128 MiB dauerhaften Speicher. Das Laufzeitpaket wurde vollständig mit Swift 6.2 gebaut. Die 352 Originalrennen und die Originalreferenz bleiben bytegleich; Farben, Schriftgestaltung, Karten und Funktionen sind erhalten. Eine zusätzliche CSS-Regel korrigiert ausschließlich die Kopfzeilenabstände unterhalb von 381 Pixeln. Die aktive Oberfläche enthält kein Browser-JavaScript.
 
-Der kostenlose Render-Webdienst, ein stabiler Sitzungsschlüssel und die externe Sicherung gemeinsamer Daten sind eingerichtet. GitHub-Build, HTTP-Regressionen, alle 352 Detailkarten und der geplante Quellenlauf sind erfolgreich ausgeführt worden. Die abschließende öffentliche HTTPS-Abnahme ist unten gesondert dokumentiert. Es wurden keine kostenpflichtigen Dienste eingerichtet.
+Der kostenlose Unikraft-Betrieb, ein stabiler Sitzungsschlüssel, ein persistenter ext4-Datenträger und die zusätzliche Tangled-Sicherung gemeinsamer Daten sind eingerichtet. Der vollständige Swift-Build, 462 öffentliche HTTPS-Anfragen und 16 Browserprüfungen mit ausgeschaltetem JavaScript bestanden. Ein tatsächlicher Imagewechsel mit Neustart erhielt den Favoriten anhand der Sitzungskennung, ohne Wiederherstellungs-Cookies. Die früheren Render-Prüfungen bleiben als Historie erhalten. Es wurden keine kostenpflichtigen Dienste eingerichtet.
 
-Tangled ist jetzt das Hauptrepository: **https://tangled.org/lalalurch.tngl.sh/trailatlas-swift**. Git-Historie, Quellcode und öffentlicher Datenbranch wurden übertragen. Spindle baut und prüft die Anwendung und führt die geplanten Quellenläufe aus. Render lehnt die Tangled-Gitadresse als direkte Buildquelle ab. Deshalb bleibt ein kleiner GitHub-Branch `render-bootstrap` mit ausschließlich Dockerfile und README als Einstieg nötig; er lädt den festgelegten Quellstand aus Tangled. Ein vollständiger Verzicht auf GitHub wurde mit diesem Render-Betriebsweg nicht erreicht und wird nicht behauptet.
+Tangled ist jetzt das Hauptrepository: **https://tangled.org/lalalurch.tngl.sh/trailatlas-swift**. Git-Historie, Quellcode und öffentlicher Datenbranch wurden übertragen. Spindle baut und prüft die Anwendung und führt die geplanten Quellenläufe aus. Für den beibehaltenen Render-Rückfalldienst bleibt ein kleiner GitHub-Branch `render-bootstrap` mit ausschließlich Dockerfile und README nötig, weil Render die Tangled-Gitadresse als direkte Buildquelle ablehnt. Der aktive Unikraft-Dienst verwendet diesen Adapter nicht. Ein vollständiger Verzicht auf GitHub wurde mit diesem Render-Betriebsweg nicht erreicht und wird nicht behauptet.
 
 ## Anforderungen und Nachweis
 
@@ -23,11 +23,11 @@ Tangled ist jetzt das Hauptrepository: **https://tangled.org/lalalurch.tngl.sh/t
 | Live-Ergebnisse innerhalb der Website | Bestanden für abrufbare Daten | Tatsächliche UTMB-Live-API-Daten als native HTML-Tabellen; öffentliche HTML-/JSON-Tabellen weiterer Quellen nach Strukturerkennung; eingeschränkter iframe-Fallback und Originalverweis |
 | Regelmäßige Aktualisierung der Ergebnisse | Implementiert und öffentlich geprüft | Ergebnis-Cache etwa 80 Sekunden; HTML-Meta-Refresh etwa alle 90 Sekunden. Keine Garantie für die Aktualität der Daten beim Anbieter |
 | Termin- und Trackingquellen erneut prüfen | Aktiv | Server prüft bei Fälligkeit und im 96-Minuten-Takt Teilmengen; Tangled-Zeitplan ungefähr alle zwei Stunden eingerichtet, tatsächlicher geplanter Lauf und Cloud-Läufe erfolgreich |
-| Dauerhafte Favoriten und persönliche Quellen | Bestanden unter dokumentierten Voraussetzungen | Verschlüsselte Cookies; Neustart und vollständige Löschung des lokalen Servercaches getestet. Stabiler Sitzungsschlüssel und erhaltener Browser-Cookie erforderlich |
-| Dauerhafte gemeinsame Daten und gefundene Quellen | Eingerichtet und getestet | Tangled-Datenbranch `trailatlas-data` mit tatsächlichen Sicherungen; erneuter Abruf durch den Render-Server. Neue reine Serverfunde bleiben bis zum unabhängigen Quellenlauf lokal |
+| Dauerhafte Favoriten und persönliche Quellen | Bestanden unter dokumentierten Voraussetzungen | Persistenter Unikraft-Datenträger; tatsächlicher Imagewechsel mit unverändertem Favoriten ohne Wiederherstellungs-Cookie. Verschlüsselte Cookies bleiben zusätzliche Sicherung. Zuordnung über den Browser erforderlich |
+| Dauerhafte gemeinsame Daten und gefundene Quellen | Eingerichtet und getestet | Tangled-Datenbranch `trailatlas-data` und persistenter Datenträger auf Unikraft; neue Serverfunde bleiben lokal dauerhaft erhalten, die unabhängige Tangled-Prüfung sichert ihre eigenen öffentlichen Ergebnisse |
 | Alle Filter, Links, Rennkarten und Mobilansichten testen | Bestanden im beschriebenen Umfang | Alle 65 Ländergruppen, zwölf Monate, Jahre, Kategorien und Distanzfilter; alle 352 Karten; 120 Originalquellen tatsächlich abgerufen; Desktop und drei mobile Breiten geprüft |
 | Vollständigen Swift-Build durchführen | Bestanden | Swift 6.2.4 in GitHub und Docker; reale Abhängigkeiten und vollständiger Release-Build erfolgreich |
-| Veröffentlichung auf Render und echte HTTPS-Abnahme | Veröffentlicht | Kostenloser Docker-Webdienst in Frankfurt im Zustand live; öffentliche Prüfungen separat protokolliert |
+| Veröffentlichung und echte HTTPS-Abnahme | Bestanden | Ursprünglich Render, anschließend auf Wunsch Unikraft; kostenloser Hobby-Tarif, öffentliche HTTPS-Adresse und vollständige erneute Abnahme |
 
 ## Durchgeführte Reparaturen
 
@@ -104,11 +104,13 @@ Bei nominal 360, 390 und 768 Pixel breiten mobilen Ansichten waren Seitenbreite 
 
 Persönliche Daten liegen als komprimierte, authentifiziert verschlüsselte HttpOnly-Cookies vor; serverseitige Daten dienen als zusätzlicher Cache. Wiederherstellung nach Cacheverlust wurde mit gleichbleibendem Sitzungsschlüssel getestet. Auf Render wurde ein stabiler geheimer Sitzungsschlüssel gesetzt. Cookies werden für HTTPS als `Secure` ausgeliefert und besitzen eine begrenzte Laufzeit.
 
+Auf Unikraft liegen öffentliche und persönliche Zustände außerdem dauerhaft auf dem Datenträger `trailatlas-data` unter `/data/trailatlas`. Die Wiederherstellung eines Favoriten wurde nach echtem Imagewechsel und Neustart allein mit dem Sitzungs-Cookie geprüft; keine verschlüsselte Datensicherung wurde bei diesem Nachweis mitgesendet. Cookies der alten Render-Domain werden aus Browser-Sicherheitsgründen nicht automatisch an die neue Domain übertragen. Alte Favoriten bleiben auf der weiterhin erreichbaren Render-Adresse zugänglich. Eine automatische Übernahme aus dem Browser des Benutzers wurde nicht durchgeführt.
+
 Diese Lösung bleibt an den jeweiligen Browser gebunden. Cookie-Löschung, Ablauf oder ein Wechsel des Sitzungsschlüssels verhindert die Wiederherstellung. Eine geräteübergreifende Benutzerkonten-Synchronisierung wurde nicht hinzugefügt. Bei Erreichen des Cookie-Größenlimits meldet die Anwendung den Fehler ausdrücklich, statt Favoriten stillschweigend zu verwerfen.
 
 Gemeinsame Termin- und Trackingdaten werden durch den eingerichteten Tangled-Workflow in `trailatlas-data` dauerhaft versioniert. Die Website liest öffentliche Momentaufnahmen daraus ein. Sessions, persönliche Quellen und Favoriten werden nicht in diesen Branch veröffentlicht. Dieser Betriebsweg wurde mit dem echten Repository aktiviert; mehrere erfolgreiche Cloud-Läufe haben öffentliche Daten geschrieben, und der Render-Server hat sie eingelesen. Insbesondere schreibt eine kostenlose Render-Instanz neue Funde nicht sofort selbst in Tangled zurück; bis zum unabhängigen Prüflauf sind solche Funde nur lokal vorhanden.
 
-Der Render-Plan `free` besitzt keinen dauerhaften lokalen Datenträger und kann bei Inaktivität schlafen. Währenddessen läuft seine periodische Swift-Prüfung nicht. Der eingerichtete Tangled-Zeitplan arbeitet davon unabhängig; der Anbieter kann geplante Ausführungen verzögern oder aussetzen. Im Serverlauf werden pro Runde Teilmengen kontrolliert, nicht alle Rennen im 96-Minuten-Abstand. Ein vollständiger Quelldurchlauf dauert entsprechend länger.
+Die aktuelle Unikraft-Instanz ist ohne Scale-to-Zero eingerichtet und verwendet den bestätigten kostenlosen Hobby-Tarif. Die folgenden Render-Einschränkungen betreffen den beibehaltenen Rückfalldienst: Der Render-Plan `free` besitzt keinen dauerhaften lokalen Datenträger und kann bei Inaktivität schlafen. Währenddessen läuft seine periodische Swift-Prüfung nicht. Der eingerichtete Tangled-Zeitplan arbeitet davon unabhängig; der Anbieter kann geplante Ausführungen verzögern oder aussetzen. Im Serverlauf werden pro Runde Teilmengen kontrolliert, nicht alle Rennen im 96-Minuten-Abstand. Ein vollständiger Quelldurchlauf dauert entsprechend länger.
 
 ## Unvermeidbare und offene Einschränkungen
 
@@ -167,8 +169,53 @@ Die erneute vollständige Abnahme gegen **https://trailatlas-swift.onrender.com/
 
 Der unabhängige öffentliche Prüflauf [41456672999](https://github.com/lalalurch12-hue/trailatlas-swift/actions/runs/41456672999), **Versuch 2**, endete erfolgreich; Job `125460830505`, Artefakt `13168795625` (`public-https-acceptance-2`). Die Prüfdatei ist gegenüber dem bereits geprüften Ausgangsstand unverändert. Maschinenlesbare Ergebnisse: `reports/public-https-tangled.json`; Zeitstempel und Laufnachweise: `reports/public-https-tangled-evidence.json`.
 
-GitHub-Zeitpläne sind zugunsten der Tangled-Zeitpläne deaktiviert; manuelle Kompatibilitätsprüfungen bleiben vorhanden. Der temporäre GitHub-Schlüssel ist für den laufenden Dienst nicht erforderlich und wird nach der abschließenden Übertragung entfernt. Der freigegebene Tangled-CI-Schlüssel bleibt für die automatischen öffentlichen Datensicherungen aktiv.
+GitHub-Zeitpläne sind zugunsten der Tangled-Zeitpläne deaktiviert; manuelle Kompatibilitätsprüfungen bleiben vorhanden. Der temporäre GitHub-Schlüssel ist für den laufenden Dienst nicht erforderlich und bleibt bis zu einer ausdrücklichen Löschfreigabe hinterlegt; die abschließende Berechtigungssituation ist unten dokumentiert. Der freigegebene Tangled-CI-Schlüssel bleibt für die automatischen öffentlichen Datensicherungen aktiv.
 
 ## Beiliegende Evidenz
 
 Der Ordner `reports` enthält maschinenlesbare Ergebnisse der HTTP- und Kartenprüfungen, den erfolgreichen Kernprüflauf, den erfolgreichen Release-Build, den tatsächlichen öffentlichen Quellenprüflauf, die 120 einzelnen Linkabrufe, die Schema-Validierung, Datenintegritätswerte und Browsermessungen. Persönliche Testcookies, Sitzungsschlüssel, SDKs und Build-Caches sind nicht Bestandteil des Auslieferungspakets.
+
+## Abschluss der Übertragung und offener Bereinigungsschritt
+
+Die abschließende Dokumentation liegt auf Tangled im Hauptbranch bei Commit `bdf001566962c641bee106c37ac16d47892e2d14`. Dieser Stand wurde über die öffentliche Repository-Oberfläche und per Git-Abruf bestätigt. Der Tangled-Datenbranch entwickelte sich unabhängig weiter; sein Stand nach der Übertragung war `39196f73f272ecb04f0ee279b361053132a33b06`. Der veröffentlichte Laufzeitcode bleibt bei dem oben geprüften Commit `eaddc37eefb69e95710b76479f499569fd5ef401`; ein weiterer Deploy ist für diese reinen Berichtsänderungen nicht nötig.
+
+Das temporäre GitHub-Geheimnis `TANGLED_BOOTSTRAP_KEY_B64` ist noch hinterlegt. Der abschließende Löschklick wurde von der automatischen Freigabeprüfung blockiert: Sie verlangt eine ausdrückliche Zustimmung zur Entfernung genau dieses Repository-Geheimnisses und nennt eine mögliche Störung der CI als Risiko. Der Löschdialog wurde ohne Änderung geschlossen. Die Website, laufende Render-Builds und regelmäßige Tangled-Quellenprüfungen benötigen dieses Geheimnis nicht. Der reguläre Tangled-CI-Schlüssel bleibt aktiv. Die Entfernung des temporären GitHub-Geheimnisses ist der einzige ausstehende Bereinigungsschritt und wird nicht als erledigt ausgegeben.
+
+Abschlussstand der vorangehenden Render-/Tangled-Übernahme: 2026-11-02T18:28:48.200013+00:00 (UTC).
+
+
+## Abschließender Umzug auf Unikraft
+
+Die aktuelle Hauptadresse ist **https://silent-water-yl7acse4.fra.unikraft.app/**. Die Browser-Freigabe für die lokale Unikraft-CLI wurde nach ausdrücklicher Zustimmung des Benutzers abgeschlossen. Die Anmelderückmeldung musste innerhalb des 30-Sekunden-Fensters des CLI-Kanals bestätigt werden; anschließend funktionierten Anmeldung, Registry-Upload und Bereitstellung. Unikraft-Zugangsdaten wurden nicht an GitHub oder Tangled weitergegeben.
+
+Der tatsächlich angemeldete Abrechnungsdialog nennt den Tarif **Hobby** und **„This plan is free.“**. Die Ressourcenkontrolle zeigte zwei verfügbare laufende Instanzen, zwei vCPUs, 4 GiB RAM und ein 1-GiB-Datenträgerkontingent. Verwendet werden eine Instanz mit einer vCPU und 512 MiB RAM sowie ein persistenter, statisch begrenzter ext4-Datenträger mit 128 MiB. Kein Upgrade, keine zusätzlichen kostenpflichtigen Datenbanken und keine kostenpflichtigen Screenshotdienste wurden eingerichtet.
+
+Tangled bleibt das Hauptrepository und betreibt die regelmäßigen öffentlichen Quellenprüfungen. GitHub diente zusätzlich als Build- und Prüfumgebung. Der neue Unikraft-Dienst benötigt den alten Render-Buildadapter zur Laufzeit nicht; der ursprüngliche Render-Dienst bleibt als Rückfallmöglichkeit und für den Zugriff auf alte Browserfavoriten bestehen.
+
+### Aktuell veröffentlichter und geprüfter Stand
+
+- Swift-Laufzeitquellstand: `416e14db47ceb3b7cf6be025e41e4414a080ab61`.
+- Vollständiger erfolgreicher Swift-Release-Build: [41547877617](https://github.com/lalalurch12-hue/trailatlas-swift/actions/runs/41547877617).
+- Registry-Image: `trailatlas/trailatlas-swift@sha256:d6224e3c37121f765e4843e1f98444f753ffde4c4c800add9c2a0c7ea4fea73b`.
+- Dauerhafte Speicherung: `trailatlas-data`, 128 MiB, eingehängt unter `/data`; Anwendungsdaten unter `/data/trailatlas`. Datenträger und öffentliche Adresse blieben bei Imagewechseln erhalten.
+- Die 352 Originalrennen und die originale HTML-Referenz wurden erneut gegen ihre SHA-256-Werte geprüft. Das Image enthält keinen Sitzungsschlüssel; dieser bleibt eine Laufzeitkonfiguration.
+
+### Öffentliche Abnahme der endgültigen Version
+
+Der unabhängige Lauf [41549501335](https://github.com/lalalurch12-hue/trailatlas-swift/actions/runs/41549501335) bestand mit **462 HTTPS-Anfragen** am **2026-11-03T00:01:45.077117+00:00**. Alle 65 Ländergruppen, zwölf Monate, Jahre, Kategorien, Distanzbereiche, Suchfälle, Sortierungen, Ansichten und sämtliche 352 Original-Rennkarten mit 120 Quellenverweisen bestanden. Favoriten per POST, CSRF-Abweisung, sichere GETs, Besuchertrennung, Secure-/HttpOnly-Cookies, vollständiger HTML-Export und sichere Textausgabe bestanden ebenfalls. Der Swift-Server rief echte UTMB-Daten ab und zeigte die chinesische WeRun-Quelle sicher an.
+
+Die Browserprüfung [41549501161](https://github.com/lalalurch12-hue/trailatlas-swift/actions/runs/41549501161) bestand mit **16 Prüfungen und 16 Screenshots** bei **360, 390, 768 und 1280 Pixeln**. JavaScript war in allen Browserkontexten ausgeschaltet. Kalender, Raster und Ergebnisansicht passten jeweils ohne horizontalen Seitenüberlauf; Filtermenü, Suche per Formular und aufgeklappte Details funktionierten. Die frühere statische Momentaufnahmenprüfung wurde damit durch Interaktionen an der tatsächlichen öffentlichen Website ergänzt.
+
+Der dabei gefundene 13-Pixel-Überlauf der Kopfzeile bei 360 Pixeln wurde durch engere Abstände unterhalb von 381 Pixeln behoben. Beschriftungen und beide Aktionen bleiben sichtbar. Zusätzlich unterscheidet die Trackingmeldung jetzt einen fehlenden eindeutigen Treffer von einem nicht erreichbaren Suchdienst. Farben, Kartenaufbau und Desktopgestaltung wurden dafür nicht geändert.
+
+Der tatsächliche Stop-/Imagewechsel-/Start-Test erhielt **einen Favoriten ohne Wiederherstellungs-Cookies**. Beim ersten Favoritenabruf nach dem Neustart wurde ausschließlich `trail_session` mitgesendet. Das weist die Erhaltung des Serverzustands auf dem Datenträger nach und stützt sich nicht lediglich auf die verschlüsselte Cookie-Sicherung. Ein HTTP-Aufruf wird auf die geprüfte HTTPS-Adresse weitergeleitet.
+
+### Gemessene Quellenabdeckung und Grenzen
+
+Ein dokumentierter aktueller Status enthält **28 automatische Terminübernahmen**, **123 Terminquellen**, **5 Trackingquellen** und **64 durchsuchte Rennen**. Die Prüfung läuft in rotierenden Teilmengen. Diese Zahlen sind kein Nachweis dafür, dass für alle 352 Rennen frei abrufbare Live-Daten existieren. Für die bevorstehende Yangxian-Ausgabe zeigte WeRun noch keine gemessenen Zeiten; es werden keine Ergebnisse erfunden. Gesperrte Quellen, Loginpflichten, private WeChat-Angebote und fremde JavaScript-/GPS-Widgets bleiben im bereits beschriebenen Umfang eingeschränkt und werden gegebenenfalls extern verlinkt.
+
+Die Docker-Anweisung `USER 65534:65534` wird von der Unikraft-Kompatibilitätslaufzeit nicht automatisch als Benutzeridentität des Gasts übernommen. Die Anwendung läuft in einer isolierten MicroVM; die UID-Garantie des Docker-Images wird für den Gast nicht als nachgewiesen ausgegeben. Die funktionsfähigen Datei-, Netzwerk-, TLS-, Swift-NIO- und Speicherzugriffe wurden durch den tatsächlichen Betrieb geprüft. Ein kostenpflichtiger vollständiger Linux-VM-Tarif wurde nicht aktiviert.
+
+Maschinenlesbare Nachweise: `reports/unikraft-deployment.json`, `reports/unikraft-rootfs-build-final.json`, `reports/public-https-unikraft-final.json`, `reports/public-https-unikraft-evidence.json`, `reports/unikraft-browser-acceptance.json`, `reports/unikraft-browser-evidence.json`, `reports/unikraft-persistence.json`, `reports/unikraft-source-status.json` und `reports/unikraft-http-redirect.json`. Die CI-Screenshots besitzen eine begrenzte Aufbewahrungsdauer; die Prüfprotokolle bleiben im Repository erhalten.
+
+Abschlussstand dieses aktualisierten Berichts: 2026-11-03T00:04:45.230345+00:00 (UTC).

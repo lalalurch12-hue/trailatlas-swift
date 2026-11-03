@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "url": "https://silent-water-yl7acse4.fra.unikraft.app",
+  "checkedAt": "2026-11-02T23:19:27.663385+00:00",
+  "requests": 462,
+  "originalRaces": 352,
+  "effectiveRaces": 352,
+  "checks": [
+    "HTTPS, /health, public APIs and all 352 original race IDs",
+    "All 65 countries, 12 months, years, categories, distances, search, sorts and views",
+    "All 352 detail cards and 120 original source links over public HTTPS",
+    "Favorite POST/redirect, safe GET, CSRF rejection, isolation and Secure HttpOnly cookies",
+    "Complete HTML export and escaping; no browser scripts across tested pages",
+    "Real UTMB API fetched by the Swift server and Chinese WeRun source displayed safely"
+  ],
+  "serverStatus": {
+    "automaticDates": 28,
+    "browserJavaScript": false,
+    "dateScanRunning": false,
+    "dateSources": 123,
+    "durablePersonalCookiesConfigured": true,
+    "durablePublicDataConfigured": true,
+    "lastDateScan": "2026-11-02T22:20:15Z",
+    "lastTrackingScan": "2026-11-02T22:20:24Z",
+    "races": 352,
+    "racesSearched": 55,
+    "trackingError": "Keine eindeutige Quelle für diese Rennausgabe im öffentlichen Suchindex gefunden",
+    "trackingScanRunning": false,
+    "trackingSources": 5
+  }
+}

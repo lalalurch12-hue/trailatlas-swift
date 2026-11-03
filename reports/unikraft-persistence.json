@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "url": "https://silent-water-yl7acse4.fra.unikraft.app",
+  "checkedAt": "2026-11-02T23:59:32.283655+00:00",
+  "sourceCommit": "416e14db47ceb3b7cf6be025e41e4414a080ab61",
+  "operation": "real stop, final image replacement and start of the same instance",
+  "cookieNamesSentBeforeFirstFavoriteRequest": [
+    "trail_session"
+  ],
+  "recoveryCookiesSupplied": false,
+  "favoriteCountAfterRestart": 1,
+  "persistentVolume": "trailatlas-data",
+  "persistentVolumeMiB": 128,
+  "mount": "/data",
+  "mobileCorrectionServed": true,
+  "accurateTrackingHintServed": true,
+  "serverStatus": {
+    "automaticDates": 28,
+    "browserJavaScript": false,
+    "dateScanRunning": false,
+    "dateSources": 123,
+    "durablePersonalCookiesConfigured": true,
+    "durablePublicDataConfigured": true,
+    "lastDateScan": "2026-11-02T23:50:04Z",
+    "lastTrackingScan": "2026-11-02T23:34:17Z",
+    "races": 352,
+    "racesSearched": 64,
+    "trackingError": "Keine eindeutige Quelle für diese Rennausgabe im öffentlichen Suchindex gefunden",
+    "trackingScanRunning": false,
+    "trackingSources": 5
+  }
+}

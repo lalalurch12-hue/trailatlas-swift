@@ -1,5 +1,5 @@
 {
-  "status": "APP_RUNNING_ACCEPTANCE_PENDING",
+  "status": "PASS_DEPLOYED_AND_FULLY_TESTED",
   "organization": "trailatlas",
   "observedAt": "2026-11-02T19:24:26.116423+00:00",
   "billingUI": {
@@ -24,8 +24,8 @@
     "authorizedAt": "2026-11-02T23:08:42.448386+00:00"
   },
   "build": {
-    "runId": 41508962423,
-    "sourceCommit": "ee5045d2f5950bf40df6da087afda43701811ad1",
+    "runId": 41547877617,
+    "sourceCommit": "416e14db47ceb3b7cf6be025e41e4414a080ab61",
     "credentialsSentToCI": false
   },
   "publicDeploymentCompleted": true,
@@ -36,5 +36,18 @@
     "persistent": true,
     "filesystem": "ext4",
     "quotaBytes": 1073741824
+  },
+  "lastVerifiedAt": "2026-11-03T00:04:45.291227+00:00",
+  "acceptance": {
+    "publicHTTPSRequests": 462,
+    "browserChecks": 16,
+    "widths": [
+      360,
+      390,
+      768,
+      1280
+    ],
+    "javascriptEnabled": false,
+    "restartPersistenceWithoutRecoveryCookie": true
   }
 }

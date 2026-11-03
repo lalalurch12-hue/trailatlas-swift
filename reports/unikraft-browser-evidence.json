@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "runId": 41549501161,
+  "jobId": 125633277124,
+  "artifactId": 13189598955,
+  "artifactSHA256": "24f166e818824103c2801c61f200fdadbf3482c23333ed09bc1ce8c7e9cc69f6",
+  "deployedSourceCommit": "416e14db47ceb3b7cf6be025e41e4414a080ab61",
+  "widths": [
+    360,
+    390,
+    768,
+    1280
+  ],
+  "javascriptEnabled": false,
+  "checks": 16,
+  "screenshots": 16
+}

@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-11-02T23:59:32.283655+00:00",
+  "publicURL": "https://silent-water-yl7acse4.fra.unikraft.app/",
+  "plan": "Hobby",
+  "planConfirmedFree": true,
+  "sourceCommit": "416e14db47ceb3b7cf6be025e41e4414a080ab61",
+  "swiftReleaseBuildRun": 41547877617,
+  "privateCredentialsInReport": false,
+  "instance": {
+    "image": "trailatlas/trailatlas-swift@sha256:d6224e3c37121f765e4843e1f98444f753ffde4c4c800add9c2a0c7ea4fea73b",
+    "name": "trailatlas-swift",
+    "resources": {
+      "gpus": 0,
+      "memory": "512MiB",
+      "vcpus": 1
+    },
+    "restart": {
+      "policy": "on-failure",
+      "restart-count": 0,
+      "start-count": 3
+    },
+    "scale-to-zero": {
+      "cooldown-time": "0s",
+      "enabled": false,
+      "notify-time": "0s",
+      "policy": "",
+      "stateful": false
+    },
+    "service": {
+      "domains": [
+        {
+          "certificate": {
+            "name": "",
+            "uuid": ""
+          },
+          "fqdn": "silent-water-yl7acse4.fra.unikraft.app"
+        }
+      ],
+      "name": "silent-water-yl7acse4",
+      "uuid": "f2654c12-67d9-4133-ba28-893e59734123"
+    },
+    "state": "running",
+    "uuid": "c4922977-b1d0-4f25-9643-01d2b5f3956c",
+    "volumes": [
+      {
+        "at": "/data",
+        "name": "trailatlas-data",
+        "readonly": false,
+        "uuid": "2948619a-a257-4400-8554-c13b673bea14"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1217 @@
+{
+  "status": "PASS",
+  "url": "https://silent-water-yl7acse4.fra.unikraft.app",
+  "checkedAt": "2026-11-02T23:59:48.017540+00:00",
+  "checks": [
+    {
+      "width": 360,
+      "view": "calendar",
+      "geometry": {
+        "viewport": 360,
+        "document": 360,
+        "body": 360,
+        "overflow": [
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 292.40625,
+            "right": 366.765625,
+            "width": 74.359375,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 370.765625,
+            "right": 434.1875,
+            "width": 63.421875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 438.1875,
+            "right": 529,
+            "width": 90.8125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 533,
+            "right": 607.390625,
+            "width": 74.390625,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 611.390625,
+            "right": 659.921875,
+            "width": 48.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 663.921875,
+            "right": 722.453125,
+            "width": 58.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 726.453125,
+            "right": 784.671875,
+            "width": 58.21875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 1.7684288024902344,
+            "right": 364.9152183532715,
+            "width": 363.14678955078125,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 3.9963245391845703,
+            "right": 364.4696521759033,
+            "width": 360.47332763671875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          }
+        ]
+      },
+      "javascriptEnabled": false,
+      "screenshot": "calendar-360.png"
+    },
+    {
+      "width": 360,
+      "view": "grid",
+      "geometry": {
+        "viewport": 360,
+        "document": 360,
+        "body": 360,
+        "overflow": [
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 292.40625,
+            "right": 366.765625,
+            "width": 74.359375,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 370.765625,
+            "right": 434.1875,
+            "width": 63.421875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 438.1875,
+            "right": 529,
+            "width": 90.8125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 533,
+            "right": 607.390625,
+            "width": 74.390625,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 611.390625,
+            "right": 659.921875,
+            "width": 48.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 663.921875,
+            "right": 722.453125,
+            "width": 58.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 726.453125,
+            "right": 784.671875,
+            "width": 58.21875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 1.7684288024902344,
+            "right": 364.9152183532715,
+            "width": 363.14678955078125,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 3.9963245391845703,
+            "right": 364.4696521759033,
+            "width": 360.47332763671875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          }
+        ]
+      },
+      "javascriptEnabled": false,
+      "screenshot": "grid-360.png"
+    },
+    {
+      "width": 360,
+      "view": "live",
+      "geometry": {
+        "viewport": 360,
+        "document": 360,
+        "body": 360,
+        "overflow": [
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 292.40625,
+            "right": 366.765625,
+            "width": 74.359375,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 370.765625,
+            "right": 434.1875,
+            "width": 63.421875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 438.1875,
+            "right": 529,
+            "width": 90.8125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 533,
+            "right": 607.390625,
+            "width": 74.390625,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 611.390625,
+            "right": 659.921875,
+            "width": 48.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 663.921875,
+            "right": 722.453125,
+            "width": 58.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 726.453125,
+            "right": 784.671875,
+            "width": 58.21875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 1.7684288024902344,
+            "right": 364.9152183532715,
+            "width": 363.14678955078125,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 3.9963245391845703,
+            "right": 364.4696521759033,
+            "width": 360.47332763671875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TABLE",
+            "id": "",
+            "class": "live-inline-table",
+            "x": 48,
+            "right": 568,
+            "width": 520,
+            "minWidth": "520px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "THEAD",
+            "id": "",
+            "class": "",
+            "x": 48,
+            "right": 568,
+            "width": 520,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TR",
+            "id": "",
+            "class": "",
+            "x": 48,
+            "right": 568,
+            "width": 520,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TH",
+            "id": "",
+            "class": "",
+            "x": 105.796875,
+            "right": 363.984375,
+            "width": 258.1875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TH",
+            "id": "",
+            "class": "",
+            "x": 363.984375,
+            "right": 420.90625,
+            "width": 56.921875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TH",
+            "id": "",
+            "class": "",
+            "x": 420.90625,
+            "right": 499.625,
+            "width": 78.71875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TH",
+            "id": "",
+            "class": "",
+            "x": 499.625,
+            "right": 568,
+            "width": 68.375,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TBODY",
+            "id": "",
+            "class": "",
+            "x": 48,
+            "right": 568,
+            "width": 520,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TR",
+            "id": "",
+            "class": "",
+            "x": 48,
+            "right": 568,
+            "width": 520,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          }
+        ]
+      },
+      "javascriptEnabled": false,
+      "screenshot": "live-360.png"
+    },
+    {
+      "width": 360,
+      "view": "filter-and-details",
+      "javascriptEnabled": false,
+      "mobileMenuTested": true
+    },
+    {
+      "width": 390,
+      "view": "calendar",
+      "geometry": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "overflow": [
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 370.765625,
+            "right": 434.1875,
+            "width": 63.421875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 438.1875,
+            "right": 529,
+            "width": 90.8125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 533,
+            "right": 607.390625,
+            "width": 74.390625,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 611.390625,
+            "right": 659.921875,
+            "width": 48.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 663.921875,
+            "right": 722.453125,
+            "width": 58.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 726.453125,
+            "right": 784.671875,
+            "width": 58.21875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 0.6631631851196289,
+            "right": 396.62446689605713,
+            "width": 395.9613037109375,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 3.0923728942871094,
+            "right": 396.1386070251465,
+            "width": 393.0462341308594,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          }
+        ]
+      },
+      "javascriptEnabled": false,
+      "screenshot": "calendar-390.png"
+    },
+    {
+      "width": 390,
+      "view": "grid",
+      "geometry": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "overflow": [
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 370.765625,
+            "right": 434.1875,
+            "width": 63.421875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 438.1875,
+            "right": 529,
+            "width": 90.8125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 533,
+            "right": 607.390625,
+            "width": 74.390625,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 611.390625,
+            "right": 659.921875,
+            "width": 48.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 663.921875,
+            "right": 722.453125,
+            "width": 58.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 726.453125,
+            "right": 784.671875,
+            "width": 58.21875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 0.6631631851196289,
+            "right": 396.62446689605713,
+            "width": 395.9613037109375,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 3.0923728942871094,
+            "right": 396.1386070251465,
+            "width": 393.0462341308594,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          }
+        ]
+      },
+      "javascriptEnabled": false,
+      "screenshot": "grid-390.png"
+    },
+    {
+      "width": 390,
+      "view": "live",
+      "geometry": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "overflow": [
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 370.765625,
+            "right": 434.1875,
+            "width": 63.421875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 438.1875,
+            "right": 529,
+            "width": 90.8125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 533,
+            "right": 607.390625,
+            "width": 74.390625,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 611.390625,
+            "right": 659.921875,
+            "width": 48.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 663.921875,
+            "right": 722.453125,
+            "width": 58.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 726.453125,
+            "right": 784.671875,
+            "width": 58.21875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 0.6631631851196289,
+            "right": 396.62446689605713,
+            "width": 395.9613037109375,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 3.0923728942871094,
+            "right": 396.1386070251465,
+            "width": 393.0462341308594,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TABLE",
+            "id": "",
+            "class": "live-inline-table",
+            "x": 48,
+            "right": 568,
+            "width": 520,
+            "minWidth": "520px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "THEAD",
+            "id": "",
+            "class": "",
+            "x": 48,
+            "right": 568,
+            "width": 520,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TR",
+            "id": "",
+            "class": "",
+            "x": 48,
+            "right": 568,
+            "width": 520,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TH",
+            "id": "",
+            "class": "",
+            "x": 363.984375,
+            "right": 420.90625,
+            "width": 56.921875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TH",
+            "id": "",
+            "class": "",
+            "x": 420.90625,
+            "right": 499.625,
+            "width": 78.71875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TH",
+            "id": "",
+            "class": "",
+            "x": 499.625,
+            "right": 568,
+            "width": 68.375,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TBODY",
+            "id": "",
+            "class": "",
+            "x": 48,
+            "right": 568,
+            "width": 520,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TR",
+            "id": "",
+            "class": "",
+            "x": 48,
+            "right": 568,
+            "width": 520,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TD",
+            "id": "",
+            "class": "",
+            "x": 363.984375,
+            "right": 420.90625,
+            "width": 56.921875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "TD",
+            "id": "",
+            "class": "",
+            "x": 420.90625,
+            "right": 499.625,
+            "width": 78.71875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          }
+        ]
+      },
+      "javascriptEnabled": false,
+      "screenshot": "live-390.png"
+    },
+    {
+      "width": 390,
+      "view": "filter-and-details",
+      "javascriptEnabled": false,
+      "mobileMenuTested": true
+    },
+    {
+      "width": 768,
+      "view": "calendar",
+      "geometry": {
+        "viewport": 768,
+        "document": 768,
+        "body": 768,
+        "overflow": [
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 742.671875,
+            "right": 801.203125,
+            "width": 58.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 805.203125,
+            "right": 863.421875,
+            "width": 58.21875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "rect",
+            "id": "",
+            "class": {},
+            "x": 446.296142578125,
+            "right": 784.203857421875,
+            "width": 337.90771484375,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 428.51153564453125,
+            "right": 797.5422973632812,
+            "width": 369.03076171875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 435.1807861328125,
+            "right": 789.5391845703125,
+            "width": 354.3583984375,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 437.4038391113281,
+            "right": 799.765380859375,
+            "width": 362.3615417480469,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 439.6269226074219,
+            "right": 799.32080078125,
+            "width": 359.6938781738281,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          }
+        ]
+      },
+      "javascriptEnabled": false,
+      "screenshot": "calendar-768.png"
+    },
+    {
+      "width": 768,
+      "view": "grid",
+      "geometry": {
+        "viewport": 768,
+        "document": 768,
+        "body": 768,
+        "overflow": [
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 742.671875,
+            "right": 801.203125,
+            "width": 58.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 805.203125,
+            "right": 863.421875,
+            "width": 58.21875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "rect",
+            "id": "",
+            "class": {},
+            "x": 446.296142578125,
+            "right": 784.203857421875,
+            "width": 337.90771484375,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 428.51153564453125,
+            "right": 797.5422973632812,
+            "width": 369.03076171875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 435.1807861328125,
+            "right": 789.5391845703125,
+            "width": 354.3583984375,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 437.4038391113281,
+            "right": 799.765380859375,
+            "width": 362.3615417480469,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 439.6269226074219,
+            "right": 799.32080078125,
+            "width": 359.6938781738281,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          }
+        ]
+      },
+      "javascriptEnabled": false,
+      "screenshot": "grid-768.png"
+    },
+    {
+      "width": 768,
+      "view": "live",
+      "geometry": {
+        "viewport": 768,
+        "document": 768,
+        "body": 768,
+        "overflow": [
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 742.671875,
+            "right": 801.203125,
+            "width": 58.53125,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "x": 805.203125,
+            "right": 863.421875,
+            "width": 58.21875,
+            "minWidth": "auto",
+            "whiteSpace": "nowrap"
+          },
+          {
+            "tag": "rect",
+            "id": "",
+            "class": {},
+            "x": 446.296142578125,
+            "right": 784.203857421875,
+            "width": 337.90771484375,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 428.51153564453125,
+            "right": 797.5422973632812,
+            "width": 369.03076171875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 435.1807861328125,
+            "right": 789.5391845703125,
+            "width": 354.3583984375,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 437.4038391113281,
+            "right": 799.765380859375,
+            "width": 362.3615417480469,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 439.6269226074219,
+            "right": 799.32080078125,
+            "width": 359.6938781738281,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          }
+        ]
+      },
+      "javascriptEnabled": false,
+      "screenshot": "live-768.png"
+    },
+    {
+      "width": 768,
+      "view": "filter-and-details",
+      "javascriptEnabled": false,
+      "mobileMenuTested": true
+    },
+    {
+      "width": 1280,
+      "view": "calendar",
+      "geometry": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280,
+        "overflow": [
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 856.4170532226562,
+            "right": 1290.5709228515625,
+            "width": 434.15386962890625,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 864.2632446289062,
+            "right": 1281.155517578125,
+            "width": 416.89227294921875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 866.8786010742188,
+            "right": 1293.186279296875,
+            "width": 426.30767822265625,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 869.4940185546875,
+            "right": 1292.6632080078125,
+            "width": 423.169189453125,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          }
+        ]
+      },
+      "javascriptEnabled": false,
+      "screenshot": "calendar-1280.png"
+    },
+    {
+      "width": 1280,
+      "view": "grid",
+      "geometry": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280,
+        "overflow": [
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 856.4170532226562,
+            "right": 1290.5709228515625,
+            "width": 434.15386962890625,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 864.2632446289062,
+            "right": 1281.155517578125,
+            "width": 416.89227294921875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 866.8786010742188,
+            "right": 1293.186279296875,
+            "width": 426.30767822265625,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 869.4940185546875,
+            "right": 1292.6632080078125,
+            "width": 423.169189453125,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          }
+        ]
+      },
+      "javascriptEnabled": false,
+      "screenshot": "grid-1280.png"
+    },
+    {
+      "width": 1280,
+      "view": "live",
+      "geometry": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280,
+        "overflow": [
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 856.4170532226562,
+            "right": 1290.5709228515625,
+            "width": 434.15386962890625,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 864.2632446289062,
+            "right": 1281.155517578125,
+            "width": 416.89227294921875,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 866.8786010742188,
+            "right": 1293.186279296875,
+            "width": 426.30767822265625,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "class": {},
+            "x": 869.4940185546875,
+            "right": 1292.6632080078125,
+            "width": 423.169189453125,
+            "minWidth": "0px",
+            "whiteSpace": "normal"
+          }
+        ]
+      },
+      "javascriptEnabled": false,
+      "screenshot": "live-1280.png"
+    },
+    {
+      "width": 1280,
+      "view": "filter-and-details",
+      "javascriptEnabled": false,
+      "mobileMenuTested": false
+    }
+  ]
+}

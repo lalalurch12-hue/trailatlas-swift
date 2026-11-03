@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "runId": 41544280034,
+  "jobId": 125615908293,
+  "artifactId": 13187841598,
+  "sourceCommit": "6c7e9772fb45f251c6ed609e7ad912a206f431e7",
+  "swiftReleaseBuildSeconds": 188.56,
+  "artifactZIP_SHA256": "3217e76135f59178900d291a5eec784b2dbea7963be678cc912048aa19a59bdb",
+  "runtimeFilesystemSHA256": "36d713891203cbed8d0b2998d462b718efb8fe9da2d200cf86f7194cf9f48787",
+  "compressedBytes": 114468364,
+  "swiftBinarySHA256": "1bc6c28a71bbc5d9cc6cd6e491a3d29dfa7d3aad5249cad7699c261d79b7cf54",
+  "swiftBinaryUnchanged": false,
+  "originalRaces": 352,
+  "originalResourcesPreserved": true,
+  "templateMatchesMobileFix": true,
+  "sessionSecretInImage": false
+}

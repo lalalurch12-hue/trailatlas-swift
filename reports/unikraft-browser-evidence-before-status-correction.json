@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "runId": 41546148087,
+  "jobId": 125622109447,
+  "artifactId": 13189436041,
+  "artifactSHA256": "8ae49e6053e636864173ada9cdcb2fba8a610891a622e716e4429ff18d3aaacb",
+  "widths": [
+    360,
+    390,
+    768,
+    1280
+  ],
+  "javascriptEnabled": false,
+  "checks": 16,
+  "screenshots": 16
+}

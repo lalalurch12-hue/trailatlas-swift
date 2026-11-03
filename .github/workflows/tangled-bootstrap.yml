@@ -1,5 +1,5 @@
 name: One-time Tangled migration
-# Transfer acceptance checks for the final Unikraft runtime to Tangled.
+# Archive the verified Unikraft deployment, complete acceptance evidence and final audit on Tangled.
 on:
   push:
     branches: [main]
